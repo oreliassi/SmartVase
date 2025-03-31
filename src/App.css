@@ -1,0 +1,25 @@
+.screen {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial;
+}
+
+.color-picker {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.color-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.color-box.selected {
+  border: 2px solid black;
+}
