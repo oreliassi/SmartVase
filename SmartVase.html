@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartVase - עיצוב כדים חכם</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AdNNo_Wy7fmERwZ7z3S8yVbETB8pn_OScHvoYELtXOC0CIfJ5YMkLjVE9MHfqv6rtugJi9kRV7NaWRR1&currency=ILS"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            text-align: right;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: white;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        input, select, button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #ff7a59;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff5733;
+        }
+
+        #color-options {
+            text-align: center;
+        }
+
+        #color-options p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .color-box {
+            display: inline-block;
+            margin: 5px;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .color-box.selected {
+            border-color: #444;
+        }
+
+        #3d-model-container canvas {
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 250px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .slider-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #cart-icon {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #ff7a59;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            font-size: 18px;
+            z-index: 9999;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        #cart-icon:hover {
+            background-color: #ff5733;
+        }
+
+        #cart-details {
+            position: fixed;
+            top: 80px;
+            left: 20px;
+            width: 300px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            z-index: 9998;
+            display: none;
+        }
+
+        #cart-details h3 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        #cart-items {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px 0;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        #cart-items li {
+            margin-bottom: 8px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 4px;
+        }
+
+        #cart-details button {
+            margin-top: 10px;
+            width: 100%;
+            background-color: #ff7a59;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #cart-details button:hover {
+            background-color: #ff5733;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="checkout-screen" style="display: none;">
+        <h2>פרטי הזמנה</h2>
+        <form id="order-form">
+            <input type="text" name="first_name" placeholder="שם פרטי" required>
+            <input type="text" name="last_name" placeholder="שם משפחה" required>
+            <input type="email" name="email" placeholder="אימייל" required>
+            <input type="tel" name="phone" placeholder="טלפון" required>
+            <input type="text" name="address" placeholder="כתובת למשלוח" required>
+
+            <label for="shipping-type">סוג משלוח:</label>
+            <select name="shipping_type" id="shipping-type" required>
+                <option value="regular" data-price="20">משלוח רגיל - 20 ש"ח</option>
+                <option value="express" data-price="40">שליח עד הבית - 40 ש"ח</option>
+                <option value="pickup" data-price="0">איסוף עצמי - חינם</option>
+            </select>
+
+            <input type="text" name="coupon" placeholder="קוד קופון (אם יש)">
+
+            <p id="final-total" style="font-weight: bold; font-size: 18px;">סה"כ לתשלום: 0 ש"ח</p>
+
+            <button type="submit">אשר והמשך לתשלום</button>
+        </form>
+        <div id="paypal-button-container" style="margin-top: 20px; display: none;"></div>
+    </div>
+
+    <div id="cart-container" style="display: none;">
+        <div id="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+        <div id="cart-details">
+            <h3>העגלה שלך</h3>
+            <ul id="cart-items"></ul>
+            <p id="total-price">סה"כ: 0 ש"ח</p>
+            <button id="continue-shopping">המשך קנייה</button>
+            <button id="checkout">לתשלום</button>
+            <div id="paypal-button-container" style="margin-top: 15px;"></div>
+        </div>
+    </div>
+
+    <div class="container" id="login-screen">
+        <div class="logo">
+            <img src="../images/logo.png" alt="SmartVase Logo">
+        </div>
+        <h2>התחברות</h2>
+        <input type="text" id="username" placeholder="שם משתמש">
+        <input type="password" id="password" placeholder="סיסמה">
+        <button onclick="login()">התחבר</button>
+    </div>
+
+    <div class="container" id="design-screen" style="display:none;">
+        <div class="logo">
+            <img src="../images/logo.png" alt="SmartVase Logo">
+        </div>
+        <h2>עצב את הכד שלך</h2>
+        <button id="choose-pot">בחר כד</button>
+        <div id="pot-gallery" style="display:none;"></div>
+
+        <div id="3d-model-container" style="width: 100%; height: 500px;"></div>
+
+        <div class="slider-label">
+            <label for="height-slider">גובה:</label>
+            <span id="height-value">50 ס"מ</span>
+        </div>
+        <input type="range" id="height-slider" min="10" max="100" value="50">
+
+        <div class="slider-label">
+            <label for="width-slider">רוחב:</label>
+            <span id="width-value">50 ס"מ</span>
+        </div>
+        <input type="range" id="width-slider" min="10" max="100" value="50">
+
+        <div id="color-options">
+            <p>בחר צבע:</p>
+            <div class="color-box" style="background-color:#ffffff" data-color="#ffffff"></div>
+            <div class="color-box" style="background-color:#000000" data-color="#000000"></div>
+            <div class="color-box" style="background-color:#ff0000" data-color="#ff0000"></div>
+            <div class="color-box" style="background-color:#00ff00" data-color="#00ff00"></div>
+            <div class="color-box" style="background-color:#0000ff" data-color="#0000ff"></div>
+            <div class="color-box" style="background-color:#ffff00" data-color="#ffff00"></div>
+            <div class="color-box" style="background-color:#ff00ff" data-color="#ff00ff"></div>
+            <div class="color-box" style="background-color:#00ffff" data-color="#00ffff"></div>
+            <div class="color-box" style="background-color:#aaaaaa" data-color="#aaaaaa"></div>
+            <div class="color-box" style="background-color:#ffa500" data-color="#ffa500"></div>
+        </div>
+
+        <label>בחר טקסטורה:</label>
+        <select id="texture-select">
+            <option value="smooth">חלק</option>
+            <option value="rough">מחוספס</option>
+            <option value="matte">מט</option>
+        </select>
+
+        <button id="calculate-price">חשב מחיר</button>
+        <p id="price-display"></p>
+
+        <button id="add-to-cart">הוסף לעגלה</button>
+    </div>
+
+    <script>
+        const colorNames = {
+    "#ffffff": "לבן",
+    "#000000": "שחור",
+    "#ff0000": "אדום",
+    "#00ff00": "ירוק",
+    "#0000ff": "כחול",
+    "#ffff00": "צהוב",
+    "#ff00ff": "ורוד",
+    "#00ffff": "טורקיז",
+    "#aaaaaa": "אפור",
+    "#ffa500": "כתום"
+};
+
+        let scene, camera, renderer, potMesh;
+        let cartCount = 0;
+        let cartItems = [];
+        let totalPrice = 0;
+
+        function init3DModel() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(600, 500);
+            document.getElementById("3d-model-container").appendChild(renderer.domElement);
+
+            const geometry = new THREE.CylinderGeometry(5, 5, 10, 32);
+            const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+            potMesh = new THREE.Mesh(geometry, material);
+            scene.add(potMesh);
+
+            const light = new THREE.PointLight(0xffffff, 1);
+            light.position.set(10, 10, 10);
+            scene.add(light);
+
+            camera.position.z = 20;
+
+            function animate() {
+                requestAnimationFrame(animate);
+                potMesh.rotation.y += 0.01;
+                renderer.render(scene, camera);
+            }
+            animate();
+        }
+
+        function login() {
+    const user = $('#username').val();
+    const pass = $('#password').val();
+    if (user && pass) {
+        $('#login-screen').hide();
+        $('#design-screen').show();
+        $('#cart-container').show();
+        init3DModel();
+    } else {
+        alert('נא למלא שם משתמש וסיסמה.');
+    }
+}
+
+
+        function updateCartDisplay() {
+            cartCount++;
+            $('#cart-count').text(cartCount);
+        }
+
+        function addItemToCart() {
+    const height = $('#height-slider').val();
+    const width = $('#width-slider').val();
+    const selectedColorBox = $('.color-box.selected');
+    const color = selectedColorBox.data('color');
+    const texture = $('#texture-select').val();
+
+    if (!selectedColorBox.length) {
+        alert('אנא בחר צבע לפני הוספה לעגלה.');
+        return;
+    }
+
+    if (!texture) {
+        alert('אנא בחר טקסטורה לפני הוספה לעגלה.');
+        return;
+    }
+
+    const colorName = colorNames[color] || color;
+    const price = (parseInt(height) + parseInt(width)) * 2;
+
+    const item = {
+        id: Date.now(), // מזהה ייחודי לפי זמן
+        height,
+        width,
+        color,
+        texture,
+        price
+    };
+
+    cartItems.push(item);
+    totalPrice += price;
+
+    const listItem = `
+        <li data-id="${item.id}">
+            <span style="float:left; color: red; cursor: pointer;" class="remove-item">✖</span>
+            גובה: ${height} ס"מ, רוחב: ${width} ס"מ<br>
+            צבע: ${colorName}, טקסטורה: ${getTextureName(texture)}<br>
+            מחיר: ${price} ש"ח
+        </li>
+    `;
+
+    $('#cart-items').append(listItem);
+    $('#total-price').text("סה\"כ: " + totalPrice + " ש\"ח");
+    updateCartDisplay();
+}
+
+
+        $(document).ready(function () {
+            const updateSliderValues = () => {
+                $('#height-value').text($('#height-slider').val() + ' ס"מ');
+                $('#width-value').text($('#width-slider').val() + ' ס"מ');
+            };
+
+            $('#choose-pot').click(function () {
+                $('#pot-gallery').toggle();
+                $('#pot-gallery').html('<img src="pot1.jpg" width="100"><img src="pot2.jpg" width="100">');
+            });
+
+            $('.color-box').click(function () {
+                $('.color-box').removeClass('selected');
+                $(this).addClass('selected');
+                const selectedColor = $(this).data('color');
+                if (potMesh) {
+                    potMesh.material.color.set(selectedColor);
+                }
+            });
+
+            $('#height-slider').on('input', function () {
+                const height = $(this).val();
+                if (potMesh) potMesh.scale.y = height / 50;
+                updateSliderValues();
+            });
+
+            $('#width-slider').on('input', function () {
+                const width = $(this).val();
+                if (potMesh) {
+                    potMesh.scale.x = width / 50;
+                    potMesh.scale.z = width / 50;
+                }
+                updateSliderValues();
+            });
+
+            $('#calculate-price').click(function () {
+    const height = $('#height-slider').val();
+    const width = $('#width-slider').val();
+    const selectedColorBox = $('.color-box.selected');
+    const texture = $('#texture-select').val();
+
+    if (!selectedColorBox.length) {
+        alert('אנא בחר צבע לפני חישוב מחיר.');
+        return;
+    }
+
+    if (!texture) {
+        alert('אנא בחר טקסטורה לפני חישוב מחיר.');
+        return;
+    }
+
+    const price = (parseInt(height) + parseInt(width)) * 2;
+    $('#price-display').text('המחיר: ' + price + ' ש"ח');
+});
+
+
+            $('#order-now').click(function () {
+                alert('טופס הזמנה יופיע כאן');
+            });
+
+            $('#add-to-cart').click(function () {
+                addItemToCart();
+                alert('הכד נוסף לעגלה');
+            });
+
+            $('#cart-icon').click(function () {
+                $('#cart-details').toggle();
+            });
+
+            $('#continue-shopping').click(function () {
+                $('#cart-details').hide();
+            });
+
+            $('#checkout').click(function () {
+    $('#paypal-button-container').empty(); // מנקה כל כפתור ישן
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: totalPrice.toFixed(2)
+                    },
+                    description: 'הזמנה מ-SmartVase'
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('התשלום הצליח! תודה ' + details.payer.name.given_name);
+                // איפוס עגלה אחרי תשלום
+                cartItems = [];
+                cartCount = 0;
+                totalPrice = 0;
+                $('#cart-items').empty();
+                $('#cart-count').text('0');
+                $('#total-price').text('סה\"כ: 0 ש\"ח');
+                $('#paypal-button-container').empty();
+                $('#cart-details').hide();
+            });
+        },
+        onCancel: function(data) {
+            alert('התשלום בוטל.');
+        },
+        onError: function(err) {
+            console.error('שגיאה בתשלום:', err);
+            alert('אירעה שגיאה במהלך התשלום.');
+        }
+    }).render('#paypal-button-container');
+});
+
+            $(document).on('click', '.remove-item', function () {
+    const li = $(this).closest('li');
+    const itemId = parseInt(li.data('id'));
+
+    const itemIndex = cartItems.findIndex(item => item.id === itemId);
+    if (itemIndex !== -1) {
+        totalPrice -= cartItems[itemIndex].price;
+        cartItems.splice(itemIndex, 1);
+    }
+
+    li.remove();
+
+    $('#total-price').text("סה\"כ: " + totalPrice + " ש\"ח");
+    cartCount--;
+    $('#cart-count').text(cartCount);
+});
+
+
+            updateSliderValues();
+        });
+
+        function getTextureName(value) {
+    switch (value) {
+        case 'smooth': return 'חלק';
+        case 'rough': return 'מחוספס';
+        case 'matte': return 'מט';
+        default: return value;
+    }
+}
+function goToCheckout() {
+            $('#design-screen').hide();
+            $('#cart-container').hide(); // מסתיר את עגלת הקניות
+            $('#checkout-screen').show();
+            updateFinalTotal();
+        }
+
+        function updateFinalTotal() {
+            const selectedShipping = $('#shipping-type option:selected');
+            const shippingCost = parseFloat(selectedShipping.data('price')) || 0;
+            const finalTotal = totalPrice + shippingCost;
+            $('#final-total').text('סה"כ לתשלום: ' + finalTotal + ' ש"ח');
+            return finalTotal;
+        }
+
+        $('#shipping-type').change(updateFinalTotal);
+
+        $('#order-now, #checkout').click(function () {
+            if (cartItems.length === 0) {
+                alert('העגלה ריקה. אנא הוסף מוצר לפני ההזמנה.');
+                return;
+            }
+            goToCheckout();
+        });
+
+        $('#order-form').submit(function(e) {
+            e.preventDefault();
+            const formData = $(this).serializeArray();
+            console.log('נתוני טופס:', formData);
+
+            const selectedShipping = $('#shipping-type option:selected');
+            const shippingCost = parseFloat(selectedShipping.data('price')) || 0;
+            const finalTotal = totalPrice + shippingCost;
+
+            $('#order-form').hide();
+            $('#paypal-button-container').empty().show();
+
+            if (!window.paypalRendered) {
+                window.paypalRendered = true;
+
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: finalTotal.toFixed(2)
+                                },
+                                description: 'הזמנה מ-SmartVase'
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            alert('תודה, ' + details.payer.name.given_name + '! ההזמנה בוצעה בהצלחה.');
+                            cartItems = [];
+                            cartCount = 0;
+                            totalPrice = 0;
+                            $('#cart-items').empty();
+                            $('#cart-count').text('0');
+                            $('#total-price').text('סה"כ: 0 ש"ח');
+                            $('#paypal-button-container').empty();
+                            $('#checkout-screen').hide();
+                            $('#design-screen').show();
+                            window.paypalRendered = false;
+                        });
+                    },
+                    onCancel: function() {
+                        alert('התשלום בוטל.');
+                        window.paypalRendered = false;
+                    },
+                    onError: function(err) {
+                        console.error('שגיאה בתשלום:', err);
+                        alert('אירעה שגיאה במהלך התשלום.');
+                        window.paypalRendered = false;
+                    }
+                }).render('#paypal-button-container');
+            }
+        });
+
+    </script>
+</body>
+</html>
