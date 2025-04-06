@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartVase - עיצוב כדים חכם</title>
+    <link rel="stylesheet" type="text/css" href="/css/homePage.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AdNNo_Wy7fmERwZ7z3S8yVbETB8pn_OScHvoYELtXOC0CIfJ5YMkLjVE9MHfqv6rtugJi9kRV7NaWRR1&currency=ILS"></script>
+</head>
+<body>
+    <div class="container" id="checkout-screen" style="display: none;">
+        <h2>פרטי הזמנה</h2>
+        <form id="order-form">
+            <input type="text" name="first_name" placeholder="שם פרטי" required>
+            <input type="text" name="last_name" placeholder="שם משפחה" required>
+            <input type="email" name="email" placeholder="אימייל" required>
+            <input type="tel" name="phone" placeholder="טלפון" required>
+            <input type="text" name="address" placeholder="כתובת למשלוח" required>
+
+            <label for="shipping-type">סוג משלוח:</label>
+            <select name="shipping_type" id="shipping-type" required>
+                <option value="regular" data-price="20">משלוח רגיל - 20 ש"ח</option>
+                <option value="express" data-price="40">שליח עד הבית - 40 ש"ח</option>
+                <option value="pickup" data-price="0">איסוף עצמי - חינם</option>
+            </select>
+
+            <input type="text" name="coupon" placeholder="קוד קופון (אם יש)">
+
+            <p id="final-total" style="font-weight: bold; font-size: 18px;">סה"כ לתשלום: 0 ש"ח</p>
+
+            <button type="submit">אשר והמשך לתשלום</button>
+        </form>
+        <div id="paypal-button-container" style="margin-top: 20px; display: none;"></div>
+    </div>
+
+    <div id="cart-container" style="display: none;">
+        <div id="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+        <div id="cart-details">
+            <h3>העגלה שלך</h3>
+            <ul id="cart-items"></ul>
+            <p id="total-price">סה"כ: 0 ש"ח</p>
+            <button id="continue-shopping">המשך קנייה</button>
+            <button id="checkout">לתשלום</button>
+            <div id="paypal-button-container" style="margin-top: 15px;"></div>
+        </div>
+    </div>
+
+    <div class="container" id="login-screen">
+        <div class="logo">
+            <img src="../images/logo.png" alt="SmartVase Logo">
+        </div>
+        <h2>התחברות</h2>
+        <input type="text" id="username" placeholder="שם משתמש">
+        <input type="password" id="password" placeholder="סיסמה">
+        <button onclick="login()">התחבר</button>
+    </div>
+
+    <div class="container" id="design-screen" style="display:none;">
+        <div class="logo">
+            <img src="../images/logo.png" alt="SmartVase Logo">
+        </div>
+        <h2>עצב את הכד שלך</h2>
+        <div class="carousel-wrapper">
+            <button class="carousel-arrow left">&#10094;</button>
+          
+            <div class="carousel-track" id="pot-gallery">
+              <!-- הדגמים שלך -->
+              <div class="pot-option" data-model="models/vase1.stl">
+                <img src="images/vase1.png" alt="כד 1">
+              </div>
+              <div class="pot-option" data-model="models/vase2.stl">
+                <img src="images/vase2.png" alt="כד 2">
+              </div>
+              <div class="pot-option" data-model="models/vase3.stl">
+                <img src="images/vase3.png" alt="כד 3">
+              </div>
+              <div class="pot-option" data-model="models/vase4.stl">
+                <img src="images/vase4.png" alt="כד 4">
+              </div>
+              <div class="pot-option" data-model="models/vase5.stl">
+                <img src="images/vase5.png" alt="כד 5">
+              </div>
+              <div class="pot-option" data-model="models/vase6.stl">
+                <img src="images/vase6.png" alt="כד 6">
+              </div>
+              <div class="pot-option" data-model="models/vase7.stl">
+                <img src="images/vase7.png" alt="כד 7">
+              </div>
+              <div class="pot-option" data-model="models/vase8.stl">
+                <img src="images/vase8.png" alt="כד 8">
+              </div>
+            </div>
+          
+            <button class="carousel-arrow right">&#10095;</button>
+          </div>
+          
+        
+        <div class="model-wrapper">
+        <div id="3d-model-container" style="width: 100%; height: 500px;"></div>
+        </div>
+
+        <div class="slider-label">
+            <label for="height-slider">גובה:</label>
+            <span id="height-value">50 ס"מ</span>
+        </div>
+        <input type="range" id="height-slider" min="10" max="100" value="50">
+
+        <div class="slider-label">
+            <label for="width-slider">רוחב:</label>
+            <span id="width-value">50 ס"מ</span>
+        </div>
+        <input type="range" id="width-slider" min="10" max="100" value="50">
+        
+
+        <div id="color-options">
+            <p>בחר צבע:</p>
+            <div class="color-box" style="background-color:#ffffff" data-color="#ffffff"></div>
+            <div class="color-box" style="background-color:#000000" data-color="#000000"></div>
+            <div class="color-box" style="background-color:#ff0000" data-color="#ff0000"></div>
+            <div class="color-box" style="background-color:#00ff00" data-color="#00ff00"></div>
+            <div class="color-box" style="background-color:#0000ff" data-color="#0000ff"></div>
+            <div class="color-box" style="background-color:#ffff00" data-color="#ffff00"></div>
+            <div class="color-box" style="background-color:#ff00ff" data-color="#ff00ff"></div>
+            <div class="color-box" style="background-color:#00ffff" data-color="#00ffff"></div>
+            <div class="color-box" style="background-color:#aaaaaa" data-color="#aaaaaa"></div>
+            <div class="color-box" style="background-color:#ffa500" data-color="#ffa500"></div>
+        </div>
+
+        <label>בחר טקסטורה:</label>
+        <select id="texture-select">
+            <option value="smooth">חלק</option>
+            <option value="rough">מחוספס</option>
+            <option value="matte">מט</option>
+        </select>
+
+        <button id="calculate-price">חשב מחיר</button>
+        <p id="price-display"></p>
+
+        <button id="add-to-cart">הוסף לעגלה</button>
+    </div>
+
+<script src="/javaScript/homePage.js" ></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    text-align: right;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: white;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+input, select, button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #ff7a59;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff5733;
+}
+
+#color-options {
+    text-align: center;
+}
+
+#color-options p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.color-box {
+    display: inline-block;
+    margin: 5px;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.color-box.selected {
+    border-color: #444;
+}
+
+canvas {
+padding: 0;
+margin: 0 auto;
+display: block;
+}
+#3d-model-container canvas {
+display: block;
+margin: 0 auto;
+max-width: 100%;
+max-height: 100%;
+}
+
+#3d-model-container {
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 250px;
+}
+
+h2 {
+    color: #333;
+}
+
+.slider-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #ff7a59;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-size: 18px;
+    z-index: 9999;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#cart-icon:hover {
+    background-color: #ff5733;
+}
+
+#cart-details {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    width: 300px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    z-index: 9998;
+    display: none;
+}
+
+#cart-details h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#cart-items li {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+}
+
+#cart-details button {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #ff7a59;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#cart-details button:hover {
+    background-color: #ff5733;
+}
+
+.carousel-wrapper {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+margin-bottom: 20px;
+position: relative;
+}
+
+.carousel-track {
+display: flex;
+align-items: center; /* מרכז אנכית את כל הילדים */
+overflow-x: auto;
+gap: 10px;
+padding: 10px;
+scroll-behavior: smooth;
+max-width: 90%;
+background: #222;
+border-radius: 12px;
+scrollbar-width: none;
+height: 140px; /* גובה קבוע לקרוסלה */
+}
+
+.carousel-track::-webkit-scrollbar {
+display: none; /* Chrome */
+}
+
+.pot-option {
+flex: 0 0 auto;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%; /* תופס את כל גובה הקרוסלה */
+cursor: pointer;
+transition: transform 0.2s ease;
+border-radius: 8px;
+padding: 4px;
+background-color: #333;
+}
+
+.pot-option img {
+height: 100px; /* גובה אחיד לתמונה */
+width: auto;
+border-radius: 6px;
+}
+
+.pot-option:hover {
+transform: scale(1.05);
+background-color: #444;
+}
+
+.pot-option.selected {
+outline: 2px solid #ff7a59;
+}
+
+.carousel-arrow {
+background: none; 
+color: #ff7a59;        
+border: none;
+font-size: 28px;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+cursor: pointer;
+transition: background-color 0.3s;
+z-index: 2;
+}
+
+.carousel-arrow:hover {
+color: #ff5733; /* רק משנה את צבע החץ כשעוברים עם העכבר */
+background: none;
+}
+
+
+.carousel-arrow.left {
+order: -1;
+}
+
+.model-wrapper {
+display: flex;
+justify-content: center; /* מרכז אופקית */
+align-items: center;     /* מרכז אנכית */
+height: 500px;
+background-color: #f0f0f0;
+border-radius: 8px;
+margin-bottom: 30px;
+}

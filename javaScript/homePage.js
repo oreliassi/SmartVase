@@ -1,0 +1,471 @@
+const colorNames = {
+    "#ffffff": "לבן",
+    "#000000": "שחור",
+    "#ff0000": "אדום",
+    "#00ff00": "ירוק",
+    "#0000ff": "כחול",
+    "#ffff00": "צהוב",
+    "#ff00ff": "ורוד",
+    "#00ffff": "טורקיז",
+    "#aaaaaa": "אפור",
+    "#ffa500": "כתום"
+  };
+  
+  let scene, camera, renderer, potMesh, controls;
+  let cartCount = 0;
+  let cartItems = [];
+  let totalPrice = 0;
+  let currentModelPath = 'models/vase1.stl';
+  
+  function init3DModel() {
+    const container = document.getElementById("3d-model-container");
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+  
+    scene = new THREE.Scene();
+  
+    camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+    camera.position.set(0, 0, 100);
+  
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(width, height);
+    renderer.setClearColor(0xf9f9f9);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  
+    container.appendChild(renderer.domElement);
+  
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+    scene.add(ambientLight);
+  
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    directionalLight.position.set(50, 50, 100);
+    directionalLight.castShadow = true;
+    directionalLight.shadow.mapSize.width = 1024;
+    directionalLight.shadow.mapSize.height = 1024;
+    directionalLight.shadow.radius = 4;
+    scene.add(directionalLight);
+  
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.rotateSpeed = 0.8;
+  
+    loadSTLModel(currentModelPath);
+  
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+  
+    animate();
+  
+    // התאמה לגודל חלון משתנה (רספונסיבי)
+    window.addEventListener('resize', () => {
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    });
+  }
+  
+  
+  function loadSTLModel(modelPath) {
+    const loader = new THREE.STLLoader();
+  
+    loader.load(
+      modelPath,
+      function (geometry) {
+        geometry.computeBoundingBox();
+        geometry.center();
+  
+        const material = new THREE.MeshStandardMaterial({
+          color: 0xff0000,
+          roughness: 0.4,
+          metalness: 0.1
+        });
+  
+        if (potMesh) {
+          scene.remove(potMesh);
+        }
+  
+        potMesh = new THREE.Mesh(geometry, material);
+        potMesh.rotation.set(-Math.PI / 2, 0, 0);
+        potMesh.castShadow = true;
+        potMesh.receiveShadow = true;
+  
+        potMesh.updateMatrixWorld(true);
+        const box = new THREE.Box3().setFromObject(potMesh);
+        const size = new THREE.Vector3();
+        box.getSize(size);
+  
+          // המודל עומד לאורך ציר Z
+          const modelHeight = size.z;
+          const modelWidth = (size.x + size.y) / 2;
+  
+          potMesh.userData.originalHeight = modelHeight;
+          potMesh.userData.originalWidth = modelWidth;
+  
+          // גובה זה Z, רוחב זה X+Y
+          const scaleZ = 50 / modelHeight;
+          const scaleXY = 50 / modelWidth;
+          potMesh.scale.set(scaleXY, scaleXY, scaleZ); // <-- הכי חשוב
+  
+  
+        scene.add(potMesh);
+  
+        const center = new THREE.Vector3();
+        geometry.boundingBox.getCenter(center);
+        controls.target.copy(center);
+        camera.position.set(center.x, center.y, center.z + 100);
+        controls.update();
+  
+        const ground = new THREE.Mesh(
+          new THREE.PlaneGeometry(200, 200),
+          new THREE.ShadowMaterial({ opacity: 0.15 })
+        );
+        ground.rotation.x = -Math.PI / 2;
+        ground.position.y = -30;
+        ground.receiveShadow = true;
+        scene.add(ground);
+      },
+      undefined,
+      function (error) {
+        console.error('שגיאה בטעינת STL:', error);
+      }
+    );
+  }
+  
+  
+  
+  function login() {
+    const user = $('#username').val();
+    const pass = $('#password').val();
+    if (user && pass) {
+      $('#login-screen').hide();
+      $('#design-screen').show();
+      $('#cart-container').show();
+      init3DModel();
+    } else {
+      alert('נא למלא שם משתמש וסיסמה.');
+    }
+  }
+  
+  function getTextureName(value) {
+    switch (value) {
+      case 'smooth': return 'חלק';
+      case 'rough': return 'מחוספס';
+      case 'matte': return 'מט';
+      default: return value;
+    }
+  }
+  
+  
+  
+          function updateCartDisplay() {
+              cartCount++;
+              $('#cart-count').text(cartCount);
+          }
+  
+          function addItemToCart() {
+      const height = $('#height-slider').val();
+      const width = $('#width-slider').val();
+      const selectedColorBox = $('.color-box.selected');
+      const color = selectedColorBox.data('color');
+      const texture = $('#texture-select').val();
+  
+      if (!selectedColorBox.length) {
+          alert('אנא בחר צבע לפני הוספה לעגלה.');
+          return;
+      }
+  
+      if (!texture) {
+          alert('אנא בחר טקסטורה לפני הוספה לעגלה.');
+          return;
+      }
+  
+      const colorName = colorNames[color] || color;
+      const price = (parseInt(height) + parseInt(width)) * 2;
+  
+      const item = {
+          id: Date.now(), // מזהה ייחודי לפי זמן
+          height,
+          width,
+          color,
+          texture,
+          price
+      };
+  
+      cartItems.push(item);
+      totalPrice += price;
+  
+      const listItem = `
+          <li data-id="${item.id}">
+              <span style="float:left; color: red; cursor: pointer;" class="remove-item">✖</span>
+              גובה: ${height} ס"מ, רוחב: ${width} ס"מ<br>
+              צבע: ${colorName}, טקסטורה: ${getTextureName(texture)}<br>
+              מחיר: ${price} ש"ח
+          </li>
+      `;
+  
+      $('#cart-items').append(listItem);
+      $('#total-price').text("סה\"כ: " + totalPrice + " ש\"ח");
+      updateCartDisplay();
+  }
+  
+  
+      $(document).ready(function () {
+  
+  
+          // גלילה עם החצים
+      $('.carousel-arrow.left').click(function () {
+      $('#pot-gallery').scrollLeft($('#pot-gallery').scrollLeft() + 200);
+      });
+  
+      $('.carousel-arrow.right').click(function () {
+      $('#pot-gallery').scrollLeft($('#pot-gallery').scrollLeft() - 200);
+      });;
+  
+      // בחירת דגם – מסמן עם outline
+      $('.pot-option').click(function () {
+      $('.pot-option').removeClass('selected');
+      $(this).addClass('selected');
+  
+      const selectedPath = $(this).data('model');
+      currentModelPath = selectedPath;
+      loadSTLModel(selectedPath);
+      });
+  
+  
+          let currentModelPath = 'models/vase1.stl'; // ברירת מחדל
+  
+              $('.pot-option').click(function () {
+                  const selectedPath = $(this).data('model');
+                  currentModelPath = selectedPath;
+                  loadSTLModel(selectedPath);
+              });
+  
+              const updateSliderValues = () => {
+                  $('#height-value').text($('#height-slider').val() + ' ס"מ');
+                  $('#width-value').text($('#width-slider').val() + ' ס"מ');
+              };
+  
+              $('#choose-pot').click(function () {
+                  $('#pot-gallery').toggle();
+                  $('#pot-gallery').html('<img src="pot1.jpg" width="100"><img src="pot2.jpg" width="100">');
+              });
+  
+              $('.color-box').click(function () {
+                  $('.color-box').removeClass('selected');
+                  $(this).addClass('selected');
+                  const selectedColor = $(this).data('color');
+                  if (potMesh) {
+                      potMesh.material.color.set(selectedColor);
+                  }
+              });
+  
+              $('#height-slider').on('input', function () {
+              const height = $(this).val();
+              if (potMesh && potMesh.userData.originalHeight) {
+                  const scaleZ = height / potMesh.userData.originalHeight;
+                  potMesh.scale.z = scaleZ; // <-- גובה
+              }
+              $('#height-value').text(height + ' ס"מ');
+          });
+  
+          $('#width-slider').on('input', function () {
+              const width = $(this).val();
+              if (potMesh && potMesh.userData.originalWidth) {
+                  const scaleXY = width / potMesh.userData.originalWidth;
+                  potMesh.scale.x = scaleXY;
+                  potMesh.scale.y = scaleXY; // <-- רוחב
+              }
+              $('#width-value').text(width + ' ס"מ');
+          });
+  
+              $('#calculate-price').click(function () {
+              const height = $('#height-slider').val();
+              const width = $('#width-slider').val();
+              const selectedColorBox = $('.color-box.selected');
+              const texture = $('#texture-select').val();
+  
+              if (!selectedColorBox.length) {
+                  alert('אנא בחר צבע לפני חישוב מחיר.');
+                  return;
+              }
+  
+              if (!texture) {
+                  alert('אנא בחר טקסטורה לפני חישוב מחיר.');
+                  return;
+              }
+  
+              const price = (parseInt(height) + parseInt(width)) * 2;
+              $('#price-display').text('המחיר: ' + price + ' ש"ח');
+          });
+  
+  
+              $('#order-now').click(function () {
+                  alert('טופס הזמנה יופיע כאן');
+              });
+  
+              $('#add-to-cart').click(function () {
+                  addItemToCart();
+                  alert('הכד נוסף לעגלה');
+              });
+  
+              $('#cart-icon').click(function () {
+                  $('#cart-details').toggle();
+              });
+  
+              $('#continue-shopping').click(function () {
+                  $('#cart-details').hide();
+              });
+  
+              $('#checkout').click(function () {
+      $('#paypal-button-container').empty(); // מנקה כל כפתור ישן
+      paypal.Buttons({
+          createOrder: function(data, actions) {
+              return actions.order.create({
+                  purchase_units: [{
+                      amount: {
+                          value: totalPrice.toFixed(2)
+                      },
+                      description: 'הזמנה מ-SmartVase'
+                  }]
+              });
+          },
+          onApprove: function(data, actions) {
+              return actions.order.capture().then(function(details) {
+                  alert('התשלום הצליח! תודה ' + details.payer.name.given_name);
+                  // איפוס עגלה אחרי תשלום
+                  cartItems = [];
+                  cartCount = 0;
+                  totalPrice = 0;
+                  $('#cart-items').empty();
+                  $('#cart-count').text('0');
+                  $('#total-price').text('סה\"כ: 0 ש\"ח');
+                  $('#paypal-button-container').empty();
+                  $('#cart-details').hide();
+              });
+          },
+          onCancel: function(data) {
+              alert('התשלום בוטל.');
+          },
+          onError: function(err) {
+              console.error('שגיאה בתשלום:', err);
+              alert('אירעה שגיאה במהלך התשלום.');
+          }
+      }).render('#paypal-button-container');
+  });
+  
+              $(document).on('click', '.remove-item', function () {
+      const li = $(this).closest('li');
+      const itemId = parseInt(li.data('id'));
+  
+      const itemIndex = cartItems.findIndex(item => item.id === itemId);
+      if (itemIndex !== -1) {
+          totalPrice -= cartItems[itemIndex].price;
+          cartItems.splice(itemIndex, 1);
+      }
+  
+      li.remove();
+  
+      $('#total-price').text("סה\"כ: " + totalPrice + " ש\"ח");
+      cartCount--;
+      $('#cart-count').text(cartCount);
+  });
+  
+  
+              updateSliderValues();
+          });
+  
+          function getTextureName(value) {
+      switch (value) {
+          case 'smooth': return 'חלק';
+          case 'rough': return 'מחוספס';
+          case 'matte': return 'מט';
+          default: return value;
+      }
+  }
+  function goToCheckout() {
+              $('#design-screen').hide();
+              $('#cart-container').hide(); // מסתיר את עגלת הקניות
+              $('#checkout-screen').show();
+              updateFinalTotal();
+          }
+  
+          function updateFinalTotal() {
+              const selectedShipping = $('#shipping-type option:selected');
+              const shippingCost = parseFloat(selectedShipping.data('price')) || 0;
+              const finalTotal = totalPrice + shippingCost;
+              $('#final-total').text('סה"כ לתשלום: ' + finalTotal + ' ש"ח');
+              return finalTotal;
+          }
+  
+          $('#shipping-type').change(updateFinalTotal);
+  
+          $('#order-now, #checkout').click(function () {
+              if (cartItems.length === 0) {
+                  alert('העגלה ריקה. אנא הוסף מוצר לפני ההזמנה.');
+                  return;
+              }
+              goToCheckout();
+          });
+  
+          $('#order-form').submit(function(e) {
+              e.preventDefault();
+              const formData = $(this).serializeArray();
+              console.log('נתוני טופס:', formData);
+  
+              const selectedShipping = $('#shipping-type option:selected');
+              const shippingCost = parseFloat(selectedShipping.data('price')) || 0;
+              const finalTotal = totalPrice + shippingCost;
+  
+              $('#order-form').hide();
+              $('#paypal-button-container').empty().show();
+  
+              if (!window.paypalRendered) {
+                  window.paypalRendered = true;
+  
+                  paypal.Buttons({
+                      createOrder: function(data, actions) {
+                          return actions.order.create({
+                              purchase_units: [{
+                                  amount: {
+                                      value: finalTotal.toFixed(2)
+                                  },
+                                  description: 'הזמנה מ-SmartVase'
+                              }]
+                          });
+                      },
+                      onApprove: function(data, actions) {
+                          return actions.order.capture().then(function(details) {
+                              alert('תודה, ' + details.payer.name.given_name + '! ההזמנה בוצעה בהצלחה.');
+                              cartItems = [];
+                              cartCount = 0;
+                              totalPrice = 0;
+                              $('#cart-items').empty();
+                              $('#cart-count').text('0');
+                              $('#total-price').text('סה"כ: 0 ש"ח');
+                              $('#paypal-button-container').empty();
+                              $('#checkout-screen').hide();
+                              $('#design-screen').show();
+                              window.paypalRendered = false;
+                          });
+                      },
+                      onCancel: function() {
+                          alert('התשלום בוטל.');
+                          window.paypalRendered = false;
+                      },
+                      onError: function(err) {
+                          console.error('שגיאה בתשלום:', err);
+                          alert('אירעה שגיאה במהלך התשלום.');
+                          window.paypalRendered = false;
+                      }
+                  }).render('#paypal-button-container');
+              }
+          });
+      
+          
