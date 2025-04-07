@@ -19,7 +19,10 @@
             <input type="text" name="last_name" placeholder="שם משפחה" required>
             <input type="email" name="email" placeholder="אימייל" required>
             <input type="tel" name="phone" placeholder="טלפון" required>
-            <input type="text" name="address" placeholder="כתובת למשלוח" required>
+            <input type="text" name="city" placeholder="עיר" required>
+            <input type="text" name="street" placeholder="רחוב" required>
+            <input type="text" name="apartment" placeholder="דירה" required>
+
 
             <label for="shipping-type">סוג משלוח:</label>
             <select name="shipping_type" id="shipping-type" required>
@@ -71,28 +74,28 @@
           
             <div class="carousel-track" id="pot-gallery">
               <!-- הדגמים שלך -->
-              <div class="pot-option" data-model="models/vase1.stl">
+              <div class="pot-option" data-model="models/vase1.stl" value="vase1">
                 <img src="images/vase1.png" alt="כד 1">
               </div>
-              <div class="pot-option" data-model="models/vase2.stl">
+              <div class="pot-option" data-model="models/vase2.stl" value="vase2">
                 <img src="images/vase2.png" alt="כד 2">
               </div>
-              <div class="pot-option" data-model="models/vase3.stl">
+              <div class="pot-option" data-model="models/vase3.stl" value="vase3">
                 <img src="images/vase3.png" alt="כד 3">
               </div>
-              <div class="pot-option" data-model="models/vase4.stl">
+              <div class="pot-option" data-model="models/vase4.stl" value="vase4">
                 <img src="images/vase4.png" alt="כד 4">
               </div>
-              <div class="pot-option" data-model="models/vase5.stl">
+              <div class="pot-option" data-model="models/vase5.stl" value="vase5">
                 <img src="images/vase5.png" alt="כד 5">
               </div>
-              <div class="pot-option" data-model="models/vase6.stl">
+              <div class="pot-option" data-model="models/vase6.stl" value="vase6">
                 <img src="images/vase6.png" alt="כד 6">
               </div>
-              <div class="pot-option" data-model="models/vase7.stl">
+              <div class="pot-option" data-model="models/vase7.stl" value="vase7">
                 <img src="images/vase7.png" alt="כד 7">
               </div>
-              <div class="pot-option" data-model="models/vase8.stl">
+              <div class="pot-option" data-model="models/vase8.stl" value="vase8">
                 <img src="images/vase8.png" alt="כד 8">
               </div>
             </div>
@@ -109,25 +112,25 @@
             <label for="height-slider">גובה:</label>
             <span id="height-value">50 ס"מ</span>
         </div>
-        <input type="range" id="height-slider" min="10" max="100" value="50">
+        <input type="range" id="height-slider" min="5" max="25" value="12">
 
         <div class="slider-label">
             <label for="width-slider">רוחב:</label>
             <span id="width-value">50 ס"מ</span>
         </div>
-        <input type="range" id="width-slider" min="10" max="100" value="50">
+        <input type="range" id="width-slider" min="5" max="25" value="12">
         
 
         <div id="color-options">
             <p>בחר צבע:</p>
-            <div class="color-box" style="background-color:#ffffff" data-color="#ffffff"></div>
+            <div class="color-box" style="background-color:#e7d5d5" data-color="#e7d5d5"></div>
             <div class="color-box" style="background-color:#000000" data-color="#000000"></div>
-            <div class="color-box" style="background-color:#ff0000" data-color="#ff0000"></div>
-            <div class="color-box" style="background-color:#00ff00" data-color="#00ff00"></div>
-            <div class="color-box" style="background-color:#0000ff" data-color="#0000ff"></div>
-            <div class="color-box" style="background-color:#ffff00" data-color="#ffff00"></div>
-            <div class="color-box" style="background-color:#ff00ff" data-color="#ff00ff"></div>
-            <div class="color-box" style="background-color:#00ffff" data-color="#00ffff"></div>
+            <div class="color-box" style="background-color:#f14a4a" data-color="#f14a4a"></div>
+            <div class="color-box" style="background-color:#99db99" data-color="#99db99"></div>
+            <div class="color-box" style="background-color:#7878f1" data-color="#7878f1"></div>
+            <div class="color-box" style="background-color:#ffeb94" data-color="#ffeb94"></div>
+            <div class="color-box" style="background-color:#dd8add" data-color="#dd8add"></div>
+            <div class="color-box" style="background-color:#99dada" data-color="#99dada"></div>
             <div class="color-box" style="background-color:#aaaaaa" data-color="#aaaaaa"></div>
             <div class="color-box" style="background-color:#ffa500" data-color="#ffa500"></div>
         </div>

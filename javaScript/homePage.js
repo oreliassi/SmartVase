@@ -1,16 +1,17 @@
 const colorNames = {
-    "#ffffff": "לבן",
+    "#e7d5d5": "לבן",
     "#000000": "שחור",
-    "#ff0000": "אדום",
-    "#00ff00": "ירוק",
-    "#0000ff": "כחול",
-    "#ffff00": "צהוב",
-    "#ff00ff": "ורוד",
-    "#00ffff": "טורקיז",
+    "#f14a4a": "אדום",
+    "#99db99": "ירוק",
+    "#7878f1": "כחול",
+    "#ffeb94": "צהוב",
+    "#dd8add": "ורוד",
+    "#99dada": "טורקיז",
     "#aaaaaa": "אפור",
     "#ffa500": "כתום"
   };
   
+  let initialCameraDistance = 100;
   let scene, camera, renderer, potMesh, controls;
   let cartCount = 0;
   let cartItems = [];
@@ -82,9 +83,9 @@ const colorNames = {
         geometry.center();
   
         const material = new THREE.MeshStandardMaterial({
-          color: 0xff0000,
-          roughness: 0.4,
-          metalness: 0.1
+            color: new THREE.Color("#f14a4a"),
+            roughness: 0.4,
+            metalness: 0.1
         });
   
         if (potMesh) {
@@ -118,8 +119,10 @@ const colorNames = {
   
         const center = new THREE.Vector3();
         geometry.boundingBox.getCenter(center);
+        const direction = camera.position.clone().sub(controls.target).normalize();
         controls.target.copy(center);
-        camera.position.set(center.x, center.y, center.z + 100);
+        camera.position.copy(center.clone().add(direction.multiplyScalar(initialCameraDistance)));
+
         controls.update();
   
         const ground = new THREE.Mesh(
@@ -266,25 +269,35 @@ const colorNames = {
                   }
               });
   
-              $('#height-slider').on('input', function () {
-              const height = $(this).val();
-              if (potMesh && potMesh.userData.originalHeight) {
+              function updateModelScaleAndCamera() {
+                const height = parseFloat($('#height-slider').val());
+                const width = parseFloat($('#width-slider').val());
+              
+                if (potMesh && potMesh.userData.originalHeight && potMesh.userData.originalWidth) {
                   const scaleZ = height / potMesh.userData.originalHeight;
-                  potMesh.scale.z = scaleZ; // <-- גובה
-              }
-              $('#height-value').text(height + ' ס"מ');
-          });
-  
-          $('#width-slider').on('input', function () {
-              const width = $(this).val();
-              if (potMesh && potMesh.userData.originalWidth) {
                   const scaleXY = width / potMesh.userData.originalWidth;
-                  potMesh.scale.x = scaleXY;
-                  potMesh.scale.y = scaleXY; // <-- רוחב
+                  potMesh.scale.set(scaleXY, scaleXY, scaleZ);
+              
+                  const box = new THREE.Box3().setFromObject(potMesh);
+                  const center = new THREE.Vector3();
+                  box.getCenter(center);
+              
+                  const offset = camera.position.clone().sub(controls.target);
+                  controls.target.copy(center);
+                  camera.position.copy(center.clone().add(offset));
+              
+                  controls.update();
+                }
+              
+                $('#height-value').text(height + ' ס"מ');
+                $('#width-value').text(width + ' ס"מ');
               }
-              $('#width-value').text(width + ' ס"מ');
-          });
-  
+              
+ 
+              
+              $('#height-slider, #width-slider').on('input', updateModelScaleAndCamera);
+              
+              
               $('#calculate-price').click(function () {
               const height = $('#height-slider').val();
               const width = $('#width-slider').val();
@@ -377,7 +390,7 @@ const colorNames = {
       $('#cart-count').text(cartCount);
   });
   
-  
+
               updateSliderValues();
           });
   
