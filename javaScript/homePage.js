@@ -278,20 +278,23 @@ const colorNames = {
                   const scaleXY = width / potMesh.userData.originalWidth;
                   potMesh.scale.set(scaleXY, scaleXY, scaleZ);
               
+                  // מחשבים את המרכז החדש
                   const box = new THREE.Box3().setFromObject(potMesh);
                   const center = new THREE.Vector3();
                   box.getCenter(center);
               
-                  const offset = camera.position.clone().sub(controls.target);
-                  controls.target.copy(center);
-                  camera.position.copy(center.clone().add(offset));
+                  // מזיזים את הכד כך שיישאר במרכז הסצנה תמיד
+                  potMesh.position.sub(center);
               
+                  // יעד הסיבוב תמיד יהיה (0,0,0)
+                  controls.target.set(0, 0, 0);
                   controls.update();
                 }
               
                 $('#height-value').text(height + ' ס"מ');
                 $('#width-value').text(width + ' ס"מ');
               }
+              
               
  
               
