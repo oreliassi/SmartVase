@@ -11,7 +11,7 @@ const colorNames = {
     "#ffa500": "כתום"
   };
   
-  let initialCameraDistance = 100;
+  initialCameraDistance = 150;
   let scene, camera, renderer, potMesh, controls;
   let cartCount = 0;
   let cartItems = [];
@@ -26,7 +26,7 @@ const colorNames = {
     scene = new THREE.Scene();
   
     camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-    camera.position.set(0, 0, 100);
+    camera.position.set(0, 0, 150); // או 200 במקום 100
   
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(width, height);
@@ -83,9 +83,9 @@ const colorNames = {
         geometry.center();
   
         const material = new THREE.MeshStandardMaterial({
-            color: new THREE.Color("#f14a4a"),
-            roughness: 0.4,
-            metalness: 0.1
+          color: new THREE.Color("#f14a4a"),
+          roughness: 0.4,
+          metalness: 0.1
         });
   
         if (potMesh) {
@@ -97,34 +97,48 @@ const colorNames = {
         potMesh.castShadow = true;
         potMesh.receiveShadow = true;
   
-        potMesh.updateMatrixWorld(true);
+        // חישוב גודל מקורי
         const box = new THREE.Box3().setFromObject(potMesh);
         const size = new THREE.Vector3();
         box.getSize(size);
+        const center = new THREE.Vector3();
+        box.getCenter(center);
   
-          // המודל עומד לאורך ציר Z
-          const modelHeight = size.z;
-          const modelWidth = (size.x + size.y) / 2;
+        const modelHeight = size.z;
+        const modelWidth = (size.x + size.y) / 2;
   
-          potMesh.userData.originalHeight = modelHeight;
-          potMesh.userData.originalWidth = modelWidth;
+        potMesh.userData.originalHeight = modelHeight;
+        potMesh.userData.originalWidth = modelWidth;
   
-          // גובה זה Z, רוחב זה X+Y
-          const scaleZ = 50 / modelHeight;
-          const scaleXY = 50 / modelWidth;
-          potMesh.scale.set(scaleXY, scaleXY, scaleZ); // <-- הכי חשוב
+        // גובה ורוחב ברירת מחדל – מהסלאידרים
+        const height = parseFloat($('#height-slider').val());
+        const width = parseFloat($('#width-slider').val());
   
+        const scaleZ = height / modelHeight;
+        const scaleXY = width / modelWidth;
+        potMesh.scale.set(scaleXY, scaleXY, scaleZ);
   
         scene.add(potMesh);
   
-        const center = new THREE.Vector3();
-        geometry.boundingBox.getCenter(center);
-        const direction = camera.position.clone().sub(controls.target).normalize();
-        controls.target.copy(center);
-        camera.position.copy(center.clone().add(direction.multiplyScalar(initialCameraDistance)));
-
+        // עדכון מרכז
+        potMesh.updateMatrixWorld(true);
+        const updatedBox = new THREE.Box3().setFromObject(potMesh);
+        const newCenter = new THREE.Vector3();
+        updatedBox.getCenter(newCenter);
+        controls.target.copy(newCenter);
+  
+        // חישוב מרחק לפי גודל מודל
+        const updatedSize = new THREE.Vector3();
+        updatedBox.getSize(updatedSize);
+        const maxSize = Math.max(updatedSize.x, updatedSize.y, updatedSize.z);
+        const fov = camera.fov * (Math.PI / 180);
+        const distance = (maxSize / 2) / Math.tan(fov / 2);
+        const cameraBackFactor = 2.8; // כמה להרחיק את המצלמה — את יכולה לשחק עם זה
+        camera.position.copy(newCenter.clone().add(new THREE.Vector3(0, 0, distance * cameraBackFactor)));
+        
         controls.update();
   
+        // קרקע
         const ground = new THREE.Mesh(
           new THREE.PlaneGeometry(200, 200),
           new THREE.ShadowMaterial({ opacity: 0.15 })
@@ -133,6 +147,10 @@ const colorNames = {
         ground.position.y = -30;
         ground.receiveShadow = true;
         scene.add(ground);
+  
+        // עדכון טקסט של סלאידרים
+        $('#height-value').text(height + ' ס"מ');
+        $('#width-value').text(width + ' ס"מ');
       },
       undefined,
       function (error) {
@@ -140,6 +158,7 @@ const colorNames = {
       }
     );
   }
+  
   
   
   
@@ -268,7 +287,7 @@ const colorNames = {
                       potMesh.material.color.set(selectedColor);
                   }
               });
-  
+
               function updateModelScaleAndCamera() {
                 const height = parseFloat($('#height-slider').val());
                 const width = parseFloat($('#width-slider').val());
@@ -276,15 +295,15 @@ const colorNames = {
                 if (potMesh && potMesh.userData.originalHeight && potMesh.userData.originalWidth) {
                   const scaleZ = height / potMesh.userData.originalHeight;
                   const scaleXY = width / potMesh.userData.originalWidth;
-                  potMesh.scale.set(scaleXY, scaleXY, scaleZ);
               
+                  potMesh.scale.set(scaleXY, scaleXY, scaleZ);
+                  potMesh.updateMatrixWorld(true);
+              
+                  // עדכון מרכז בלבד, לא מזיזים את המצלמה
                   const box = new THREE.Box3().setFromObject(potMesh);
                   const center = new THREE.Vector3();
                   box.getCenter(center);
-              
-                  const offset = camera.position.clone().sub(controls.target);
                   controls.target.copy(center);
-                  camera.position.copy(center.clone().add(offset));
               
                   controls.update();
                 }
@@ -293,8 +312,7 @@ const colorNames = {
                 $('#width-value').text(width + ' ס"מ');
               }
               
- 
-              
+
               $('#height-slider, #width-slider').on('input', updateModelScaleAndCamera);
               
               
