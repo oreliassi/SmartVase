@@ -46,6 +46,11 @@ const colorNames = {
     directionalLight.shadow.mapSize.height = 1024;
     directionalLight.shadow.radius = 4;
     scene.add(directionalLight);
+
+    const backLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    backLight.position.set(-50, -50, -100);
+    scene.add(backLight);
+
   
     controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
@@ -81,11 +86,15 @@ const colorNames = {
       function (geometry) {
         geometry.computeBoundingBox();
         geometry.center();
+
+        // ברירת מחדל חדשה בכל טעינה
+        $('#height-slider').val(15);
+        $('#width-slider').val(15);
   
         const material = new THREE.MeshStandardMaterial({
           color: new THREE.Color("#f14a4a"),
-          roughness: 0.4,
-          metalness: 0.1
+          roughness: 0.5,
+          metalness: 0.1 
         });
   
         if (potMesh) {
