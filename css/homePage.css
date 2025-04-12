@@ -25,6 +25,12 @@ input, select, button {
     border-radius: 8px;
 }
 
+input[name="phone"] {
+    direction: rtl;
+    text-align: right;
+}
+
+
 button {
     background-color: #ff7a59;
     color: white;

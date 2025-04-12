@@ -18,6 +18,19 @@ const colorNames = {
   let totalPrice = 0;
   let currentModelPath = 'models/vase1.stl';
   
+  
+  function fillOrderFormFromSession() {
+    $.get("php/login.php?getUser=1", function (data) {
+        const user = JSON.parse(data);
+        if (user) {
+            $('input[name="first_name"]').val(user.first_name).prop('readonly', true);
+            $('input[name="last_name"]').val(user.last_name).prop('readonly', true);
+            $('input[name="email"]').val(user.email).prop('readonly', true);
+            $('input[name="phone"]').val(user.phone).prop('readonly', true);
+        }
+    });
+}
+
   function init3DModel() {
     const container = document.getElementById("3d-model-container");
     const width = container.clientWidth;
@@ -485,12 +498,14 @@ function login() {
           $('#shipping-type').change(updateFinalTotal);
   
           $('#order-now, #checkout').click(function () {
-              if (cartItems.length === 0) {
-                  alert('העגלה ריקה. אנא הוסף מוצר לפני ההזמנה.');
-                  return;
-              }
-              goToCheckout();
-          });
+            if (cartItems.length === 0) {
+                alert('העגלה ריקה. אנא הוסף מוצר לפני ההזמנה.');
+                return;
+            }
+            goToCheckout();
+            fillOrderFormFromSession();
+        });
+
   
           $('#order-form').submit(function(e) {
               e.preventDefault();
