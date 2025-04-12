@@ -168,25 +168,25 @@ const colorNames = {
     );
   }
   
-  function login() {
-    const email = $('#username').val();
-    const password = $('#password').val();
+function login() {
+  const user = $('#username').val();
+  const pass = $('#password').val();
 
-    if (email && password) {
-        $.post('php/login.php', { email, password }, function (response) {
-            if (response === 'success') {
-                $('#login-screen').hide();
-                $('#design-screen').show();
-                $('#cart-container').show();
-                init3DModel();
-            } else {
-                alert('אימייל או סיסמה שגויים.');
-            }
-        });
-    } else {
-        alert('נא למלא אימייל וסיסמה.');
-    }
+  if (user && pass) {
+    $.post("../php/login.php", { email: user, password: pass }, function(response) {
+      if (response === 'success') {
+        $('#login-screen').hide();
+        $('#home-screen').show(); // מופיע מסך הבית החדש
+        $('#floating-buttons').show();
+      } else {
+        alert('שם משתמש או סיסמה שגויים');
+      }
+    });
+  } else {
+    alert('נא למלא שם משתמש וסיסמה.');
+  }
 }
+
 
   
   function getTextureName(value) {
@@ -205,56 +205,87 @@ const colorNames = {
               $('#cart-count').text(cartCount);
           }
   
-          function addItemToCart() {
-      const height = $('#height-slider').val();
-      const width = $('#width-slider').val();
-      const selectedColorBox = $('.color-box.selected');
-      const color = selectedColorBox.data('color');
-      const texture = $('#texture-select').val();
-  
-      if (!selectedColorBox.length) {
-          alert('אנא בחר צבע לפני הוספה לעגלה.');
-          return;
-      }
-  
-      if (!texture) {
-          alert('אנא בחר טקסטורה לפני הוספה לעגלה.');
-          return;
-      }
-  
-      const colorName = colorNames[color] || color;
-      const price = (parseInt(height) + parseInt(width)) * 2;
-  
-      const item = {
-          id: Date.now(), // מזהה ייחודי לפי זמן
-          height,
-          width,
-          color,
-          texture,
-          price
-      };
-  
-      cartItems.push(item);
-      totalPrice += price;
-  
-      const listItem = `
-          <li data-id="${item.id}">
-              <span style="float:left; color: red; cursor: pointer;" class="remove-item">✖</span>
-              גובה: ${height} ס"מ, רוחב: ${width} ס"מ<br>
-              צבע: ${colorName}, טקסטורה: ${getTextureName(texture)}<br>
-              מחיר: ${price} ש"ח
-          </li>
-      `;
-  
-      $('#cart-items').append(listItem);
-      $('#total-price').text("סה\"כ: " + totalPrice + " ש\"ח");
-      updateCartDisplay();
-  }
+    function addItemToCart() {
+    const height = $('#height-slider').val();
+    const width = $('#width-slider').val();
+    const selectedColorBox = $('.color-box.selected');
+    const color = selectedColorBox.data('color');
+    const texture = $('#texture-select').val();
+
+    if (!selectedColorBox.length) {
+        alert('אנא בחר צבע לפני הוספה לעגלה.');
+        return false; // ❗ עצרנו כאן
+    }
+
+    if (!texture) {
+        alert('אנא בחר טקסטורה לפני הוספה לעגלה.');
+        return false;
+    }
+
+    const colorName = colorNames[color] || color;
+    const price = (parseInt(height) + parseInt(width)) * 2;
+
+    const item = {
+        id: Date.now(),
+        height,
+        width,
+        color,
+        texture,
+        price
+    };
+
+    cartItems.push(item);
+    totalPrice += price;
+
+    const listItem = `
+        <li data-id="${item.id}">
+            <span style="float:left; color: red; cursor: pointer;" class="remove-item">✖</span>
+            גובה: ${height} ס"מ, רוחב: ${width} ס"מ<br>
+            צבע: ${colorName}, טקסטורה: ${getTextureName(texture)}<br>
+            מחיר: ${price} ש"ח
+        </li>
+    `;
+
+    $('#cart-items').append(listItem);
+    $('#total-price').text("סה\"כ: " + totalPrice + " ש\"ח");
+    updateCartDisplay();
+
+    return true; // ✅ נוספה בהצלחה
+}
+
   
   
       $(document).ready(function () {
   
-  
+        // מסך בית – מעבר למסכים אחרים
+        $('#go-to-design').click(() => {
+            $('#home-screen').hide();
+            $('#design-screen').show();
+            $('#cart-container').show();
+            init3DModel();
+        });
+        
+        $('#go-to-orders').click(() => {
+            $('#home-screen').hide();
+            $('#personal-area').show();
+            loadUserOrders();
+        });
+
+        $('#nav-home').click(() => {
+        $('.container').hide();
+        $('#cart-container').hide();
+        $('#home-screen').show();
+    });
+    
+    $('#nav-logout').click(() => {
+        $('.container').hide();
+        $('#cart-container').hide();
+        $('#floating-buttons').hide();
+        $('#login-screen').show();
+    });;
+
+
+        
           // גלילה עם החצים
       $('.carousel-arrow.left').click(function () {
       $('#pot-gallery').scrollLeft($('#pot-gallery').scrollLeft() + 200);
@@ -313,16 +344,12 @@ const colorNames = {
                   potMesh.scale.set(scaleXY, scaleXY, scaleZ);
                   potMesh.updateMatrixWorld(true);
               
+                  // עדכון מרכז בלבד, לא מזיזים את המצלמה
                   const box = new THREE.Box3().setFromObject(potMesh);
                   const center = new THREE.Vector3();
                   box.getCenter(center);
-              
-                  const offset = camera.position.clone().sub(controls.target);
                   controls.target.copy(center);
-                  camera.position.copy(center.clone().add(offset));
               
-                  // יעד הסיבוב תמיד יהיה (0,0,0)
-                  controls.target.set(0, 0, 0);
                   controls.update();
                 }
               
@@ -330,8 +357,7 @@ const colorNames = {
                 $('#width-value').text(width + ' ס"מ');
               }
               
- 
-              
+
               $('#height-slider, #width-slider').on('input', updateModelScaleAndCamera);
               
               
@@ -361,9 +387,11 @@ const colorNames = {
               });
   
               $('#add-to-cart').click(function () {
-                  addItemToCart();
-                  alert('הכד נוסף לעגלה');
-              });
+            const added = addItemToCart();
+            if (added) {
+                alert('הכד נוסף לעגלה');
+            }
+        });
   
               $('#cart-icon').click(function () {
                   $('#cart-details').toggle();
