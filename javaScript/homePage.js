@@ -169,24 +169,25 @@ const colorNames = {
   }
   
   function login() {
-    const email = $('#username').val();
-    const password = $('#password').val();
-
-    if (email && password) {
-        $.post('php/login.php', { email, password }, function (response) {
+    const user = $('#username').val();
+    const pass = $('#password').val();
+  
+    if (user && pass) {
+    $.post("../php/login.php", { email: user, password: pass }, function(response) {
             if (response === 'success') {
-                $('#login-screen').hide();
-                $('#design-screen').show();
-                $('#cart-container').show();
-                init3DModel();
-            } else {
-                alert('אימייל או סיסמה שגויים.');
-            }
-        });
+          $('#login-screen').hide();
+          $('#design-screen').show();
+          $('#cart-container').show();
+          init3DModel();
+        } else {
+          alert('שם משתמש או סיסמה שגויים');
+        }
+      });
     } else {
-        alert('נא למלא אימייל וסיסמה.');
+      alert('נא למלא שם משתמש וסיסמה.');
     }
-}
+  }
+  
 
   
   function getTextureName(value) {

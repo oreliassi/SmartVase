@@ -1,9 +1,9 @@
 <?php
 session_start();
 $host = "localhost";
-$db = "smartvase_db";
-$user = "your_db_user";
-$pass = "your_db_pass";
+$db = "isinbalbe3_smartVase_db";
+$user = "isinbalbe3_isinbalbe3";
+$pass = "J33v,lSVyK0f";
 
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$stmt = $conn->prepare("SELECT * FROM users WHERE email = ? AND password = ?");
+$stmt = $conn->prepare("SELECT * FROM users WHERE email =? AND password =?");
 $stmt->bind_param("ss", $email, $password);
 $stmt->execute();
 $result = $stmt->get_result();
