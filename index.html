@@ -12,6 +12,13 @@
     <script src="https://www.paypal.com/sdk/js?client-id=AdNNo_Wy7fmERwZ7z3S8yVbETB8pn_OScHvoYELtXOC0CIfJ5YMkLjVE9MHfqv6rtugJi9kRV7NaWRR1&currency=ILS"></script>
 </head>
 <body>
+    
+<div id="floating-buttons" style="display: none;">
+    <button id="nav-home" class="floating-btn">בית</button>
+    <button id="nav-logout" class="floating-btn">התנתק</button>
+</div>
+
+
     <div class="container" id="checkout-screen" style="display: none;">
         <h2>פרטי הזמנה</h2>
         <form id="order-form">
@@ -63,6 +70,29 @@
         <input type="password" id="password" placeholder="סיסמה">
         <button onclick="login()">התחבר</button>
     </div>
+
+    <div class="container" id="home-screen" style="display: none;">
+        <div class="logo">
+            <img src="../images/logo.png" alt="SmartVase Logo">
+        </div>
+        <h2>SmartVase - עמוד הבית</h2>
+        <button id="go-to-design">עצב כד חדש</button>
+        <button id="go-to-orders">ההזמנות שלי</button>
+    </div>
+
+
+  <!-- מסך אזור אישי -->
+  <div class="container" id="personal-area" style="display: none;">
+  <div class="logo">
+      <img src="../images/logo.png" alt="SmartVase Logo">
+  </div>
+  <h2>ההזמנות שלי</h2>
+  <div id="orders-list">
+      <p>... טוען נתונים ...</p>
+  </div>
+  <button id="back-to-menu">חזרה</button>
+  </div>
+  
 
     <div class="container" id="design-screen" style="display:none;">
         <div class="logo">
@@ -147,6 +177,7 @@
 
         <button id="add-to-cart">הוסף לעגלה</button>
     </div>
+
 
 <script src="/javaScript/homePage.js" ></script>
 </body>
