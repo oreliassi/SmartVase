@@ -16,5 +16,8 @@
     "url": "https://github.com/oreliassi/SmartVase/issues"
   },
   "homepage": "https://github.com/oreliassi/SmartVase#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  }
 }
