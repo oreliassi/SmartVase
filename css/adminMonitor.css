@@ -1,0 +1,105 @@
+    body {
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      background: #f0f0f0;
+      padding: 40px;
+      position: relative;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .floating-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #f44336;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .monitor-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .monitor {
+      width: 45%;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .completion-banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      display: none;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #444;
+    }
+    video {
+      border-radius: 12px;
+      width: 100%;
+    }
+    .params {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .param-box {
+      background: #f7f7f7;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      border-right: 5px solid #2196f3;
+    }
+    .warning {
+      background: #ffebee;
+      border-right: 5px solid #e53935;
+      color: #c62828;
+    }
+    .stop-btn {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #e53935;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .next-orders {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+    .next-orders ul {
+      list-style: none;
+      padding: 0;
+    }
+    .next-orders li {
+      margin-top: 5px;
+    }
+    
+    
