@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>התחברות מנהל - SmartVase</title>
+    <link rel="stylesheet" href="css/homePage.css"> <!-- אפשר להשתמש באותו עיצוב -->
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" alt="SmartVase Logo">
+        </div>
+        <h2>התחברות מנהל</h2>
+        <input type="text" id="admin-username" placeholder="שם משתמש מנהל">
+        <input type="password" id="admin-password" placeholder="סיסמה">
+        <button id="admin-login-btn">התחבר</button>
+    </div>
+
+    <script>
+        document.getElementById("admin-login-btn").addEventListener("click", function () {
+            const username = document.getElementById("admin-username").value;
+            const password = document.getElementById("admin-password").value;
+
+            // בדיקת התחברות בסיסית לדוגמה
+            if (username === "admin" && password === "1234") {
+                alert("התחברת בהצלחה!");
+                window.location.href = "admin-dashboard.html"; // נניח שיש דף משימות למנהל
+            } else {
+                alert("שם משתמש או סיסמה שגויים.");
+            }
+        });
+    </script>
+</body>
+</html>

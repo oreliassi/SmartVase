@@ -10,13 +10,15 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
     <script src="https://www.paypal.com/sdk/js?client-id=AdNNo_Wy7fmERwZ7z3S8yVbETB8pn_OScHvoYELtXOC0CIfJ5YMkLjVE9MHfqv6rtugJi9kRV7NaWRR1&currency=ILS"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="../javaScript/bambuAPI.js"></script>
 </head>
 <body>
-
-    <div id="floating-buttons" style="display: none;">
-        <button id="nav-home" class="floating-btn">בית</button>
-        <button id="nav-logout" class="floating-btn">התנתק</button>
-    </div>
+    
+<div id="floating-buttons" style="display: none;">
+    <button id="nav-home" class="floating-btn">בית</button>
+    <button id="nav-logout" class="floating-btn">התנתק</button>
+</div>
 
     <div class="container" id="checkout-screen" style="display: none;">
         <h2>פרטי הזמנה</h2>
@@ -44,7 +46,7 @@
             <button type="submit">אשר והמשך לתשלום</button>
         </form>
         <div id="paypal-button-container" style="margin-top: 20px; display: none;"></div>
-
+        
         <button id="back-to-form" style="display:none; margin-top: 10px;">חזרה</button>
     </div>
 
@@ -69,6 +71,7 @@
         <input type="text" id="username" placeholder="אימייל">
         <input type="password" id="password" placeholder="סיסמה">
         <button id="login-btn">התחבר</button>
+        <button id="admin-login" onclick="window.location.href='../HTML/admin.html'">התחברות כמנהל</button>
     </div>
 
     <div class="container" id="home-screen" style="display: none;">
@@ -85,8 +88,8 @@
         <div class="logo">
             <img src="images/logo.png" alt="SmartVase Logo">
         </div>
-        <h2>ההזמנות שלי</h2>
-        <div id="ordersContainer">טוען הזמנות...</div>
+        <h2 >ההזמנות שלי</h2>
+         <div id="ordersContainer">טוען הזמנות...</div>
         <button id="back-to-menu">חזרה</button>
     </div>
 
@@ -97,7 +100,7 @@
         <h2>עצב את הכד שלך</h2>
         <div class="carousel-wrapper">
             <button class="carousel-arrow left">&#10094;</button>
-
+          
             <div class="carousel-track" id="pot-gallery">
                 <!-- הדגמים שלך -->
                 <div class="pot-option" data-model="models/vase1.stl">
@@ -125,10 +128,10 @@
                     <img src="images/vase8.png" alt="כד 8">
                 </div>
             </div>
-
+          
             <button class="carousel-arrow right">&#10095;</button>
         </div>
-
+          
         <div class="model-wrapper">
             <div id="3d-model-container" style="width: 100%; height: 500px;"></div>
         </div>
@@ -144,7 +147,7 @@
             <span id="width-value">15 ס"מ</span>
         </div>
         <input type="range" id="width-slider" min="5" max="25" value="15">
-
+        
         <div id="color-options">
             <p>בחר צבע:</p>
             <div class="color-box" style="background-color:#e7d5d5" data-color="#e7d5d5"></div>
@@ -169,10 +172,64 @@
 
         <button id="calculate-price">חשב מחיר</button>
         <p id="price-display"></p>
+<!-- הוספת overlay לרקע כהה -->
+<div class="ar-overlay"></div>
 
-        <button id="add-to-cart">הוסף לעגלה</button>
+<!-- כפתור הצגה בסביבה -->
+<button id="show-in-room">הצג בסביבה שלך</button>
+
+<!-- התפריט המשני כ-popup -->
+<div class="ar-submenu">
+    <h3>בחר אפשרות הצגה</h3>
+    <button class="ar-close">✕</button>
+    
+    <button id="ar-camera" class="ar-btn">
+        <i class="ar-icon camera-icon"></i>
+        השתמש במצלמה
+    </button>
+    <button id="ar-upload" class="ar-btn">
+        <i class="ar-icon gallery-icon"></i>
+        העלה תמונה מהגלריה
+    </button>
+</div>
+
+<input type="file" id="image-upload" accept="image/*" style="display: none;">
+    
+    <!-- ואז את כפתור הוסף לעגלה בנפרד -->
+    <button id="add-to-cart">הוסף לעגלה</button>
+</div>
+    
+    
+<div id="ar-container" style="display: none;">
+    <div class="ar-viewer-overlay">  <!-- שינינו את השם כאן -->
+        <div id="close-ar">✖</div>
+        <div id="ar-canvas-container"></div>
+        <div class="ar-controls">
+            <button id="take-photo">צלם תמונה</button>
+            <button id="save-ar-image">שמור תמונה</button>
+        </div>
     </div>
+</div>
 
     <script src="../javaScript/homePage.js"></script>
+    <script src="../javaScript/arFunctionality.js"></script>
+    <script src="../javaScript/bambuOrderIntegration.js"></script>
+<script>
+// קוד בדיקה שיופעל אחרי טעינת הדף
+$(window).on('load', function() {
+    console.log("הדף נטען במלואו");
+    
+    // בדיקה האם האלמנטים קיימים
+    console.log("האם אלמנט התפריט קיים:", $('.ar-submenu').length > 0);
+    console.log("האם אלמנט הרקע קיים:", $('.ar-overlay').length > 0);
+    
+    // בדיקת הגדרות CSS של אלמנט התפריט
+    if ($('.ar-submenu').length > 0) {
+        console.log("מצב תצוגה של התפריט:", $('.ar-submenu').css('display'));
+        console.log("position של התפריט:", $('.ar-submenu').css('position'));
+        console.log("z-index של התפריט:", $('.ar-submenu').css('z-index'));
+    }
+});
+</script>
 </body>
 </html>

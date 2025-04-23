@@ -1,4 +1,5 @@
 <?php
+// The entire PHP file should be replaced with this version with proper fixes
 session_start();
 
 $host = "localhost";
@@ -19,12 +20,8 @@ if (isset($_GET['getUser']) && $_GET['getUser'] == 1) {
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
-        
-        if ($result->num_rows > 0) {
-            echo json_encode($result->fetch_assoc());
-        } else {
-            echo json_encode(null);
-        }
+
+        echo json_encode($result->fetch_assoc() ?: null);
     } else {
         echo json_encode(null);
     }
@@ -34,69 +31,78 @@ if (isset($_GET['getUser']) && $_GET['getUser'] == 1) {
 
 // Get order history
 if (isset($_GET['getOrders']) && $_GET['getOrders'] == 1) {
-    // ודא שרק JSON נשלח חזרה
-    header('Content-Type: application/json'); 
-    
+    header('Content-Type: application/json');
     if (isset($_SESSION['user_email'])) {
         $email = $_SESSION['user_email'];
-        
-        try {
-            // שאילתה פשוטה יותר - רק טבלת orders
-            $stmt = $conn->prepare("SELECT * FROM orders WHERE email = ?");
-            if (!$stmt) {
-                throw new Exception("Query preparation failed: " . $conn->error);
-            }
-            
-            $stmt->bind_param("s", $email);
-            if (!$stmt->execute()) {
-                throw new Exception("Query execution failed: " . $stmt->error);
-            }
-            
-            $result = $stmt->get_result();
-            $orders = [];
-            while ($row = $result->fetch_assoc()) {
-                $orders[] = $row;
-            }
-            
-            // בדוק את ה-JSON לפני שליחה
-            $json = json_encode($orders, JSON_UNESCAPED_UNICODE);
-            if (json_last_error() !== JSON_ERROR_NONE) {
-                throw new Exception("JSON encoding error: " . json_last_error_msg());
-            }
-            
-            echo $json;
-        } catch (Exception $e) {
-            echo json_encode(["error" => $e->getMessage()], JSON_UNESCAPED_UNICODE);
+        $stmt = $conn->prepare("SELECT * FROM orders WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $orders = [];
+        while ($row = $result->fetch_assoc()) {
+            $orders[] = $row;
         }
+        echo json_encode($orders, JSON_UNESCAPED_UNICODE);
     } else {
-        echo json_encode(["error" => "No active session"], JSON_UNESCAPED_UNICODE);
+        echo json_encode(["error" => "No active session"]);
     }
     $conn->close();
     exit;
 }
 
-// Regular login
-$email = $_POST['email'] ?? '';
-$password = $_POST['password'] ?? '';
+// Admin login check
+if (isset($_POST['isAdminLogin']) && $_POST['isAdminLogin'] == 1) {
+    $email = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ? AND password = ?");
+    $stmt->bind_param("ss", $email, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-$stmt = $conn->prepare("SELECT * FROM users WHERE email = ? AND password = ?");
-$stmt->bind_param("ss", $email, $password);
-$stmt->execute();
-$result = $stmt->get_result();
+    if ($result->num_rows === 1) {
+        $user = $result->fetch_assoc();
+        if ($user['type'] === 'Admin') {
+            $_SESSION['user_email'] = $email;
+            $_SESSION['is_admin'] = true;
+            echo "admin_success";
+        } else {
+            echo "not_admin";
+        }
+    } else {
+        echo "fail";
+    }
+    $conn->close();
+    exit;
+}
 
-if ($result->num_rows > 0) {
-    $_SESSION['user_email'] = $email;
-    echo "success";
-} else {
-    echo "fail";
+// Regular login (only if not admin login)
+if (!isset($_POST['isAdminLogin']) && isset($_POST['email']) && isset($_POST['password'])) {
+    $email = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ? AND password = ?");
+    $stmt->bind_param("ss", $email, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $userData = $result->fetch_assoc();
+        $_SESSION['user_email'] = $email;
+        echo json_encode([
+            "status" => "success",
+            "type" => $userData['type']
+        ]);
+    } else {
+        echo json_encode(["status" => "fail"]);
+    }
+    $conn->close();
+    exit;
 }
 
 // Get order details with models
 if (isset($_GET['getOrderDetails'])) {
-    // Set content type to JSON
     header('Content-Type: application/json');
     
-    $orderId = $_GET['getOrderDetails'];
+    $orderNumber = $_GET['getOrderDetails'];
     
     try {
         // First get the order information
@@ -105,7 +111,7 @@ if (isset($_GET['getOrderDetails'])) {
             throw new Exception("Query preparation failed: " . $conn->error);
         }
         
-        $stmt->bind_param("i", $orderId);
+        $stmt->bind_param("i", $orderNumber);
         if (!$stmt->execute()) {
             throw new Exception("Query execution failed: " . $stmt->error);
         }
@@ -130,7 +136,7 @@ if (isset($_GET['getOrderDetails'])) {
             throw new Exception("Model query preparation failed: " . $conn->error);
         }
         
-        $modelStmt->bind_param("i", $orderId);
+        $modelStmt->bind_param("i", $orderNumber);
         if (!$modelStmt->execute()) {
             throw new Exception("Model query execution failed: " . $modelStmt->error);
         }
@@ -139,9 +145,26 @@ if (isset($_GET['getOrderDetails'])) {
         $models = [];
         
         while ($modelRow = $modelResult->fetch_assoc()) {
-            // The model data is already complete from our JOIN query
-            $models[] = $modelRow;
+        // Ensure heights and widths are integers
+        if (isset($modelRow['height'])) {
+            $modelRow['height'] = (int)$modelRow['height'];
         }
+        if (isset($modelRow['width'])) {
+            $modelRow['width'] = (int)$modelRow['width'];
+        }
+        
+        // Ensure model path is correctly formatted
+        if (isset($modelRow['model_number']) && !empty($modelRow['model_number'])) {
+            if (!strstr($modelRow['model_number'], 'models/')) {
+                $modelRow['model_number'] = 'models/' . $modelRow['model_number'];
+            }
+            if (!strstr($modelRow['model_number'], '.stl')) {
+                $modelRow['model_number'] = $modelRow['model_number'] . '.stl';
+            }
+        }
+        
+        $models[] = $modelRow;
+    }
         
         // Add models to order data
         $orderData['models'] = $models;

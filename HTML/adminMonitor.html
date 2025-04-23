@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>מעקב הדפסות</title>
+  <link rel="stylesheet" href="../css/adminMonitor.css"> 
+</head>
+<body>
+   <button id="nav-logout" class="floating-btn" onclick="window.location.href='../index.html'">התנתק</button>
+  <h1>מעקב הדפסות</h1>
+
+  <div class="monitor-wrapper">
+    <!-- הזמנה ראשונה -->
+    <div class="monitor">
+      <div id="banner1" class="completion-banner">✅ ההדפסה הושלמה בהצלחה</div>
+      <h2>הזמנה מספר #1002</h2>
+      <video id="video1" controls autoplay muted>
+        <source src="../images/vase2_print.mp4" type="video/mp4">
+        הדפדפן שלך אינו תומך בווידאו.
+      </video>
+      <div class="params">
+        <div class="param-box" id="speed1">מהירות הדפסה: 60 mm/s</div>
+        <div class="param-box" id="hotend1">טמפרטורת דיזה: 210°C</div>
+        <div class="param-box" id="bed1">טמפרטורת משטח: 60°C</div>
+        <div class="param-box" id="time1">זמן הדפסה: 0 שניות</div>
+        <div class="param-box" id="layer1">עובי שכבה: 0.2mm</div>
+        <div class="param-box warning" id="warning1" style="display:none;">⚠️ זוהה עיוות בשכבה 5 - בדוק את ההדפסה</div>
+        <button class="stop-btn" id="stop1" onclick="stopPrint(1)">עצור הדפסה</button>
+      </div>
+    </div>
+
+    <!-- הזמנה שנייה -->
+    <div class="monitor">
+      <div id="banner2" class="completion-banner">✅ ההדפסה הושלמה בהצלחה</div>
+      <h2>הזמנה מספר #1003</h2>
+      <video id="video2" controls autoplay muted>
+        <source src="../images/vase1_print.mp4" type="video/mp4">
+        הדפדפן שלך אינו תומך בווידאו.
+      </video>
+      <div class="params">
+        <div class="param-box" id="speed2">מהירות הדפסה: 55 mm/s</div>
+        <div class="param-box" id="hotend2">טמפרטורת דיזה: 205°C</div>
+        <div class="param-box" id="bed2">טמפרטורת משטח: 58°C</div>
+        <div class="param-box" id="time2">זמן הדפסה: 0 שניות</div>
+        <div class="param-box" id="layer2">עובי שכבה: 0.25mm</div>
+        <div class="param-box warning" id="warning2" style="display:none;">⚠️ חסר חומר בגליל - יש לעצור את ההדפסה</div>
+        <button class="stop-btn" id="stop2" onclick="stopPrint(2)">עצור הדפסה</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="next-orders">
+    <p>ההזמנות הבאות בתור:</p>
+    <ul>
+      <li>הזמנה מספר #1004</li>
+      <li>הזמנה מספר #1005</li>
+      <li>הזמנה מספר #1006</li>
+    </ul>
+  </div>
+
+  <script>
+    let seconds1 = 0;
+    let interval1;
+    const time1 = document.getElementById("time1");
+    const warning1 = document.getElementById("warning1");
+    const video1 = document.getElementById("video1");
+    const stopBtn1 = document.getElementById("stop1");
+    const banner1 = document.getElementById("banner1");
+    let video1Stopped = false;
+
+    interval1 = setInterval(() => {
+      seconds1++;
+      time1.textContent = `זמן הדפסה: ${seconds1} שניות`;
+      if (seconds1 === 5) warning1.style.display = 'block';
+      if (seconds1 > 30) clearInterval(interval1);
+    }, 1000);
+
+    video1.addEventListener("ended", () => {
+      banner1.style.display = "block";
+      clearInterval(interval1);
+      video1Stopped = true;
+      stopBtn1.disabled = true;
+      stopBtn1.style.opacity = 0.6;
+      stopBtn1.textContent = "הדפסה הושלמה";
+    });
+    
+    video1.addEventListener("play", (e) => {
+      if (video1Stopped) video1.pause();
+    });
+
+    let seconds2 = 0;
+    let interval2;
+    const time2 = document.getElementById("time2");
+    const warning2 = document.getElementById("warning2");
+    const video2 = document.getElementById("video2");
+    const stopBtn2 = document.getElementById("stop2");
+    const banner2 = document.getElementById("banner2");
+    let video2Stopped = false;
+
+    interval2 = setInterval(() => {
+      seconds2++;
+      time2.textContent = `זמן הדפסה: ${seconds2} שניות`;
+      if (seconds2 === 8) warning2.style.display = 'block';
+      if (seconds2 > 30) clearInterval(interval2);
+    }, 1000);
+
+    video2.addEventListener("ended", () => {
+      banner2.style.display = "block";
+      clearInterval(interval2);
+      video2Stopped = true;
+      stopBtn2.disabled = true;
+      stopBtn2.style.opacity = 0.6;
+      stopBtn2.textContent = "הדפסה הושלמה";
+    });
+
+    video2.addEventListener("play", (e) => {
+      if (video2Stopped) video2.pause();
+    });
+
+    function stopPrint(id) {
+      if (id === 1 && !stopBtn1.disabled) {
+        clearInterval(interval1);
+        video1.pause();
+        video1Stopped = true;
+        time1.textContent += " ❌ ההדפסה נעצרה";
+        stopBtn1.disabled = true;
+        stopBtn1.style.opacity = 0.6;
+        stopBtn1.textContent = "הדפסה נעצרה";
+      } else if (id === 2 && !stopBtn2.disabled) {
+        clearInterval(interval2);
+        video2.pause();
+        video2Stopped = true;
+        time2.textContent += " ❌ ההדפסה נעצרה";
+        stopBtn2.disabled = true;
+        stopBtn2.style.opacity = 0.6;
+        stopBtn2.textContent = "הדפסה נעצרה";
+      }
+    }
+  </script>
+</body>
+</html>
