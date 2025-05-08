@@ -29,6 +29,7 @@ def create_order():
     product_id = data.get("product_id")
     qty = data.get("quantity")
 
+    # בדיקה אם יש מלאי מספיק
     product = models.execute_kw(
         db, uid, password,
         'product.product', 'read',
@@ -39,6 +40,10 @@ def create_order():
     if product['qty_available'] < qty:
         return jsonify({"error": "Not enough stock"}), 400
 
+    # כאן את יכולה להוסיף קוד להזמנה בפועל
+
+    # עדכון מלאי (פשוט כהדגמה — לא אמיתי)
+    # תצטרכי לשלב עם מודול המלאי של Odoo
     return jsonify({"status": "order placed", "product_id": product_id})
 
 if __name__ == "__main__":

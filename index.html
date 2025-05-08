@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartVase - עיצוב כדים חכם</title>
     <link rel="stylesheet" type="text/css" href="css/homePage.css">
+    <link rel="stylesheet" type="text/css" href="css/ar.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
@@ -63,7 +64,7 @@
         </div>
     </div>
 
-    <div class="container" id="login-screen">
+    <div class="container" id="login-screen" style="display: block;">
         <div class="logo">
             <img src="images/logo.png" alt="SmartVase Logo">
         </div>
@@ -72,6 +73,29 @@
         <input type="password" id="password" placeholder="סיסמה">
         <button id="login-btn">התחבר</button>
         <button id="admin-login" onclick="window.location.href='../HTML/admin.html'">התחברות כמנהל</button>
+    </div>
+
+    <div class="container" id="home-screen" style="display: none;">
+        <div class="logo">
+            <img src="images/logo.png" alt="SmartVase Logo">
+        </div>
+        <h2 class="home-title">עמוד הבית</h2>
+    
+        <div class="home-buttons">
+            <button id="go-to-design">עצב כד חדש</button>
+            <button id="go-to-orders">ההזמנות שלי</button>
+        </div>
+    </div>
+
+
+    <!-- מסך אזור אישי -->
+    <div class="container" id="personal-area" style="display: none;">
+        <div class="logo">
+            <img src="images/logo.png" alt="SmartVase Logo">
+        </div>
+        <h2 >ההזמנות שלי</h2>
+         <div id="ordersContainer">טוען הזמנות...</div>
+        <button id="back-to-menu">חזרה</button>
     </div>
 
     <div class="container" id="home-screen" style="display: none;">
@@ -133,7 +157,16 @@
         </div>
           
         <div class="model-wrapper">
-            <div id="3d-model-container" style="width: 100%; height: 500px;"></div>
+            <div id="3d-model-container" style="width: 100%; height: 500px; position: relative;">
+        <!-- הקנבס של Three.js יתווסף אוטומטית -->
+        
+        <!-- הספינר חייב להיות בתוך ה־container כדי שימורכז לפי הקנבס -->
+        <div class="ar-loading">
+            <div class="spinner"></div>
+            <p>טוען את הכד...</p>
+            </div>
+        </div>
+
         </div>
 
         <div class="slider-label">
@@ -178,6 +211,7 @@
 <!-- כפתור הצגה בסביבה -->
 <button id="show-in-room">הצג בסביבה שלך</button>
 
+
 <!-- התפריט המשני כ-popup -->
 <div class="ar-submenu">
     <h3>בחר אפשרות הצגה</h3>
@@ -207,6 +241,7 @@
         <div class="ar-controls">
             <button id="take-photo">צלם תמונה</button>
             <button id="save-ar-image">שמור תמונה</button>
+            <button id="retake-photo" style="display:none;">צלם שוב</button>
         </div>
     </div>
 </div>

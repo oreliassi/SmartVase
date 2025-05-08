@@ -1,0 +1,9 @@
+path: yolo
+
+train: images/train
+val: images/val
+
+names:
+  0: clean
+  1: layer
+  2: spaghetti

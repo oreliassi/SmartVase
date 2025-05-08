@@ -98,48 +98,41 @@ function init3DModel() {
   backLight.position.set(-50, -50, -100);
   scene.add(backLight);
 
-  controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.enableDamping = true;
-  controls.dampingFactor = 0.05;
-  controls.rotateSpeed = 0.8;
-
-  loadSTLModel(currentModelPath);
-
-  function animate() {
-    requestAnimationFrame(animate);
-    controls.update();
-    renderer.render(scene, camera);
-  }
-
-  animate();
-
-  // התאמה לגודל חלון משתנה (רספונסיבי)
-  window.addEventListener('resize', () => {
-    const width = container.clientWidth;
-    const height = container.clientHeight;
-    renderer.setSize(width, height);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-  });
-}
-
-function loadSTLModel(modelPath) {
-  console.log("Loading STL model:", modelPath);
-  const loader = new THREE.STLLoader();
-
-  // Get current values from sliders ONCE before loading
-  const height = parseFloat($('#height-slider').val());
-  const width = parseFloat($('#width-slider').val());
   
-  // Get current selected color 
-  const selectedColorBox = $('.color-box.selected');
-  const selectedColor = selectedColorBox.length > 0 ? selectedColorBox.data('color') : "#f14a4a";
-
-  loader.load(
-    modelPath,
-    function (geometry) {
-      geometry.computeBoundingBox();
-      geometry.center();
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.rotateSpeed = 0.8;
+  
+    loadSTLModel(currentModelPath);
+  
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+  
+    animate();
+  
+    // התאמה לגודל חלון משתנה (רספונסיבי)
+    window.addEventListener('resize', () => {
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    });
+  }
+  
+  
+  function loadSTLModel(modelPath) {
+    const loader = new THREE.STLLoader();
+  
+    loader.load(
+      modelPath,
+      function (geometry) {
+        geometry.computeBoundingBox();
+        geometry.center();
 
       const material = new THREE.MeshStandardMaterial({
         color: new THREE.Color(selectedColor), // Use selected color
@@ -206,821 +199,213 @@ function loadSTLModel(modelPath) {
         ground.position.y = -30;
         ground.receiveShadow = true;
         scene.add(ground);
+  
+        // עדכון טקסט של סלאידרים
+        $('#height-value').text(height + ' ס"מ');
+        $('#width-value').text(width + ' ס"מ');
+      },
+      undefined,
+      function (error) {
+        console.error('שגיאה בטעינת STL:', error);
       }
-
-      // עדכון טקסט של סלאידרים
-      $('#height-value').text(height + ' ס"מ');
-      $('#width-value').text(width + ' ס"מ');
-      
-      // Removed automatic price calculation - it will only happen when button is clicked
-    },
-    undefined,
-    function (error) {
-      console.error('שגיאה בטעינת STL:', error, 'Model path:', modelPath);
-      alert('נתקלנו בבעיה בטעינת הדגם. אנא נסה שנית');
-    }
-  );
-}
-
-function getTextureName(value) {
-  switch (value) {
-    case 'smooth': return 'חלק';
-    case 'rough': return 'מחוספס';
-    case 'matte': return 'מט';
-    default: return value;
+    );
   }
-}
-
-function updateCartDisplay() {
-  $('#cart-count').text(cartCount);
-}
-
-function addItemToCart() {
-  const height = $('#height-slider').val();
-  const width = $('#width-slider').val();
-  const selectedColorBox = $('.color-box.selected');
-  const color = selectedColorBox.data('color');
-  const texture = $('#texture-select').val();
-
-  if (!selectedColorBox.length) {
-    alert('אנא בחר צבע לפני הוספה לעגלה.');
-    return false;
-  }
-
-  if (!texture) {
-    alert('אנא בחר טקסטורה לפני הוספה לעגלה.');
-    return false;
-  }
-
-  const colorName = colorNames[color] || color;
-  const price = (parseInt(height) + parseInt(width)) * 2;
-
-  const item = {
-    id: Date.now(),
-    height,
-    width,
-    color,
-    colorName,
-    texture,
-    price,
-    model: currentModelPath
-  };
-
-  cartItems.push(item);
-  totalPrice += price;
-  cartCount++;
-
-  const listItem = `
-    <li data-id="${item.id}">
-      <span style="float:left; color: red; cursor: pointer;" class="remove-item">✖</span>
-      גובה: ${height} ס"מ, רוחב: ${width} ס"מ<br>
-      צבע: ${colorName}, טקסטורה: ${getTextureName(texture)}<br>
-      מחיר: ${price} ש"ח
-    </li>
-  `;
-
-  $('#cart-items').append(listItem);
-  $('#total-price').text("סה\"כ: " + totalPrice + " ש\"ח");
-  updateCartDisplay();
-
-  return true;
-}
-
-function login() {
-  const user = $('#username').val();
-  const pass = $('#password').val();
-
-  if (!user || !pass) {
-    alert("נא למלא שם משתמש וסיסמה.");
-    return;
-  }
-
-  $.post("../php/login.php", { email: user, password: pass }, function (response) {
-    try {
-      const res = typeof response === 'string' ? JSON.parse(response) : response;
-
-      if (res.status === "success") {
-        $('#login-screen').hide();
-        $('#home-screen').show();
-        $('#floating-buttons').show();
-      } else {
-        alert("שם משתמש או סיסמה שגויים");
-      }
-    } catch (error) {
-      console.error("שגיאה בפענוח JSON:", error);
-      alert("שגיאת התחברות.");
-    }
-  }).fail(function (xhr, status, error) {
-    console.error("POST failed:", error);
-    alert("שגיאת התחברות. אנא נסה שנית מאוחר יותר.");
-  });
-}
-
-
-
-function updateModelScaleAndCamera() {
-  const height = parseFloat($('#height-slider').val());
-  const width = parseFloat($('#width-slider').val());
-
-  if (potMesh && potMesh.userData.originalHeight && potMesh.userData.originalWidth) {
-    const scaleZ = height / potMesh.userData.originalHeight;
-    const scaleXY = width / potMesh.userData.originalWidth;
-
-    potMesh.scale.set(scaleXY, scaleXY, scaleZ);
-    potMesh.updateMatrixWorld(true);
-
-    // עדכון מרכז בלבד, לא מזיזים את המצלמה
-    const box = new THREE.Box3().setFromObject(potMesh);
-    const center = new THREE.Vector3();
-    box.getCenter(center);
-    controls.target.copy(center);
-
-    controls.update();
-  }
-
-  $('#height-value').text(height + ' ס"מ');
-  $('#width-value').text(width + ' ס"מ');
-}
-
-function goToCheckout() {
-  $('#design-screen').hide();
-  $('#cart-container').hide();
-  $('#checkout-screen').show();
-  updateFinalTotal();
-}
-
-function updateFinalTotal() {
-  const selectedShipping = $('#shipping-type option:selected');
-  const shippingCost = parseFloat(selectedShipping.data('price')) || 0;
-  const finalTotal = totalPrice + shippingCost;
-  $('#final-total').text('סה"כ לתשלום: ' + finalTotal + ' ש"ח');
-  return finalTotal;
-}
-
-function renderPayPalButton() {
-  $('#paypal-button-container').empty();
   
-  if (paypalRendered) return;
-  
-  const finalTotal = updateFinalTotal();
-  
-  paypal.Buttons({
-    createOrder: function (data, actions) {
-      return actions.order.create({
-        purchase_units: [{
-          amount: {
-            value: finalTotal.toFixed(2)
-          },
-          description: 'הזמנה מ-SmartVase'
-        }]
-      });
-    },
-    onApprove: function (data, actions) {
-      return actions.order.capture().then(function (details) {
-        const formData = $('#order-form').serializeArray();
-        
-        // מקבץ את המזהים של המודלים להזמנה
-        const modelIds = cartItems.map(item => {
-          return {
-            model: item.model,
-            height: item.height,
-            width: item.width,
-            color: item.color,
-            texture: item.texture
-          };
-        });
-        
-        // שליחת הזמנה לשרת
-        $.ajax({
-          url: 'php/submit_order.php',
-          method: 'POST',
-          data: {
-            orderData: formData,
-            cartItems: JSON.stringify(cartItems),
-            total: finalTotal
-          },
-          success: function(response) {
-            if (response === "success") {
-              alert('תודה, ההזמנה בוצעה בהצלחה!');
-              // איפוס עגלה
-              resetCart();
-              $('#checkout-screen').hide();
-              $('#design-screen').show();
+  function login() {
+    const email = $('#username').val();
+    const password = $('#password').val();
+
+    if (email && password) {
+        $.post('php/login.php', { email, password }, function (response) {
+            if (response === 'success') {
+                $('#login-screen').hide();
+                $('#design-screen').show();
+                $('#cart-container').show();
+                init3DModel();
             } else {
-              alert('שגיאה בשליחת ההזמנה: ' + response);
+                alert('אימייל או סיסמה שגויים.');
             }
-          },
-          error: function() {
-            alert('שגיאה בשליחת ההזמנה לשרת');
-          }
         });
-      });
-    },
-    onCancel: function () {
-      alert('התשלום בוטל.');
-    },
-    onError: function (err) {
-      console.error('שגיאה בתשלום:', err);
-      alert('אירעה שגיאה במהלך התשלום.');
-    }
-  }).render('#paypal-button-container');
-  
-  paypalRendered = true;
-}
-
-function resetCart() {
-  cartItems = [];
-  cartCount = 0;
-  totalPrice = 0;
-  $('#cart-items').empty();
-  $('#cart-count').text('0');
-  $('#total-price').text('סה"כ: 0 ש"ח');
-  $('#paypal-button-container').empty();
-  paypalRendered = false;
-}
-
-function loadUserOrders() {
-  $('#ordersContainer').html('<div class="loading"><i class="fas fa-spinner fa-spin"></i> טוען הזמנות...</div>');
-  
-  $.get("../php/login.php?getOrders=1", function(response) {
-    try {
-      const orders = typeof response === 'string' ? JSON.parse(response) : response;
-
-      if (orders.length === 0) {
-        $('#ordersContainer').html('<div class="no-orders"><i class="fas fa-info-circle"></i> אין הזמנות קודמות.</div>');
-        return;
-      }
-      
-      let ordersHtml = '<div class="orders-container">';
-      
-      orders.forEach(order => {
-        // המרת תאריך לפורמט ישראלי
-        const orderDate = new Date(order.date);
-        const formattedDate = orderDate.toLocaleDateString('he-IL', {
-          year: 'numeric',
-          month: 'numeric',
-          day: 'numeric'
-        });
-        
-        // סטטוס הזמנה אם קיים
-        const statusText = order.status ? getStatusText(order.status) : 'בטיפול';
-        
-        ordersHtml += `
-          <div class="order-item">
-            <h3>הזמנה #${order.order_number}</h3>
-            <p><i class="far fa-calendar-alt"></i> <strong>תאריך:</strong> ${formattedDate}</p>
-            <p><i class="fas fa-truck"></i> <strong>משלוח:</strong> ${getShippingText(order.shipping)}</p>
-            <p><i class="fas fa-map-marker-alt"></i> <strong>יעד:</strong> ${order.city || ''}, ${order.street || ''} ${order.apartment || ''}</p>
-            <p><i class="fas fa-shekel-sign"></i> <strong>סכום:</strong> ${order.price} ש"ח</p>
-            <p><i class="fas fa-clipboard-check"></i> <strong>סטטוס:</strong> ${statusText}</p>
-            <button class="order-details-btn" data-id="${order.order_number}">הצג פרטים</button>
-          </div>
-        `;
-      });
-      
-      ordersHtml += '</div>';
-      $('#ordersContainer').html(ordersHtml);
-      
-      // הוספת אירועי לחיצה על כפתורי פרטים
-      $('.order-details-btn').click(function() {
-        const orderId = $(this).data('id');
-        showOrderDetails(orderId);
-      });
-      
-    } catch (e) {
-      console.error("Error parsing orders:", e, "Original response:", response);
-      $('#ordersContainer').html('<p class="error-message"><i class="fas fa-exclamation-triangle"></i> שגיאה בטעינת הזמנות. אנא נסה שנית.</p>');
-    }
-  }).fail(function(xhr, status, error) {
-    console.error("AJAX error:", status, error);
-    $('#ordersContainer').html('<p class="error-message"><i class="fas fa-exclamation-triangle"></i> שגיאה בתקשורת עם השרת. אנא נסה שנית.</p>');
-  });
-}
-
-function getStatusText(status) {
-  switch(status) {
-    case 'pending': return 'ממתין לאישור';
-    case 'confirmed': return 'אושר';
-    case 'shipped': return 'נשלח';
-    case 'delivered': return 'נמסר';
-    default: return status;
-  }
-}
-
-function getShippingText(shipping) {
-  switch(shipping) {
-    case 'regular': return 'משלוח רגיל';
-    case 'express': return 'שליח עד הבית';
-    case 'pickup': return 'איסוף עצמי';
-    default: return shipping;
-  }
-}
-
-function showOrderDetails(orderId) {
-  $.get(`../php/login.php?getOrderDetails=${orderId}`, function(response) {
-    try {
-      // Handle the response properly
-      let orderDetails;
-      if (typeof response === 'string') {
-        // Remove "fail" prefix if present
-        if (response.startsWith("fail")) {
-          response = response.substring(4);
-        }
-        orderDetails = JSON.parse(response);
-      } else {
-        orderDetails = response;
-      }
-      
-      if (!orderDetails || orderDetails.error) {
-        alert('לא נמצאו פרטים עבור הזמנה זו');
-        return;
-      }
-      
-      // Use default values for missing fields - *** THIS IS THE KEY FIX ***
-      const shippingText = orderDetails.shipping ? getShippingText(orderDetails.shipping) : 'רגיל';
-      const price = orderDetails.price ? `${orderDetails.price} ש"ח` : 'לא זמין';
-      const city = orderDetails.city || '';
-      const street = orderDetails.street || '';
-      const apartment = orderDetails.apartment || '';
-      const address = [city, street, apartment].filter(Boolean).join(', ') || 'לא צוין';
-      
-      // Convert date to Israeli format
-      const orderDate = orderDetails.date ? new Date(orderDetails.date) : new Date();
-      const formattedDate = orderDate.toLocaleDateString('he-IL', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit'
-      });
-      
-      // Create HTML for modal
-      let detailsHtml = `
-        <div class="order-details-modal">
-          <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3>פרטי הזמנה #${orderId}</h3>
-            <div class="order-status">
-              <p><strong>תאריך:</strong> ${formattedDate}</p>
-              <p><strong>סוג משלוח:</strong> ${shippingText}</p>
-              <p><strong>כתובת:</strong> ${address}</p>
-              <p><strong>סכום:</strong> ${price}</p>
-            </div>
-            
-            <h4>פריטים בהזמנה:</h4>
-            <div class="order-items">
-      `;
-      
-      if (orderDetails.models && orderDetails.models.length > 0) {
-        orderDetails.models.forEach((model, index) => {
-          // Default values for model properties
-          const modelHeight = model.height || 'לא צוין';
-          const modelWidth = model.width || 'לא צוין';
-          const modelColor = model.color || '#aaaaaa';
-          const modelTexture = model.texture || 'חלק';
-          
-          const colorName = colorNames[modelColor] || modelColor;
-          const colorStyle = `background-color: ${modelColor}; display: inline-block; width: 15px; height: 15px; border-radius: 50%; margin-right: 5px; vertical-align: middle;`;
-          
-          // Ensure we have the full model path
-          const fullModelPath = model.model_number && model.model_number.includes('models/') 
-            ? model.model_number 
-            : `models/${model.model_number || 'vase1.stl'}`;
-          
-          detailsHtml += `
-            <div class="order-item-detail">
-              <h4>פריט ${index + 1}</h4>
-              <div class="item-content">
-                <div class="model-image">
-                  <canvas id="vase-canvas-${orderId}-${index}" width="80" height="80" 
-                          data-image="../images/${fullModelPath.replace('models/', '').replace('.stl', '')}.png"
-                          data-color="${modelColor}"
-                          class="vase-canvas"></canvas>
-                </div>
-                <div class="item-details">
-                  <p><strong>גובה:</strong> ${modelHeight} ס"מ</p>
-                  <p><strong>רוחב:</strong> ${modelWidth} ס"מ</p>
-                  <p><strong>צבע:</strong> <span style="${colorStyle}"></span> ${colorName}</p>
-                  <p><strong>טקסטורה:</strong> ${getTextureName(modelTexture)}</p>
-                </div>
-              </div>
-              <button id="hzamn-mwhw-dwmh" class="reorder-btn" data-model="${fullModelPath}" 
-                  data-height="${modelHeight}" data-width="${modelWidth}" 
-                  data-color="${modelColor}" data-texture="${modelTexture}">
-                  <i class="fas fa-edit"></i> הזמן מוצר דומה
-              </button>
-            </div>
-          `;
-        });
-      } else {
-        detailsHtml += `<p>לא נמצאו פרטי מוצרים להזמנה זו</p>`;
-      }
-      
-      detailsHtml += `
-            </div>
-          </div>
-        </div>
-      `;
-      
-      // Add modal to page
-      $('body').append(detailsHtml);
-      
-      // Animation for opening modal
-      $('.modal-content').css('opacity', '0').animate({
-        opacity: 1
-      }, 300);
-      
-      // Handle closing window
-      $('.close-modal').click(function() {
-        $('.modal-content').animate({
-          opacity: 0
-        }, 300, function() {
-          $('.order-details-modal').remove();
-        });
-      });
-      
-      // Close by clicking outside modal
-      $('.order-details-modal').click(function(e) {
-        if ($(e.target).hasClass('order-details-modal')) {
-          $('.modal-content').animate({
-            opacity: 0
-          }, 300, function() {
-            $('.order-details-modal').remove();
-          });
-        }
-      });
-      
-      // Draw all vases
-      setTimeout(function() {
-        $('.vase-canvas').each(function() {
-          const canvas = this;
-          const imageSrc = $(canvas).data('image');
-          const color = $(canvas).data('color');
-          
-          colorVase(canvas, imageSrc, color);
-        });
-      }, 100);
-      
-    } catch(e) {
-      console.error("Error parsing order details:", e, "Response:", response);
-      alert('שגיאה בטעינת פרטי ההזמנה');
-    }
-  }).fail(function(xhr, status, error) {
-    console.error("AJAX error:", status, error);
-    alert('שגיאה בטעינת פרטי ההזמנה');
-  });
-}
-
-// פונקציה לצביעת הכד
-function colorVase(canvas, imageSrc, color) {
-  const ctx = canvas.getContext('2d');
-  const img = new Image();
-
-  img.onload = function () {
-    const ratio = Math.min(canvas.width / img.width, canvas.height / img.height);
-    const centerX = (canvas.width - img.width * ratio) / 2;
-    const centerY = (canvas.height - img.height * ratio) / 2;
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(img, centerX, centerY, img.width * ratio, img.height * ratio);
-
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const pixels = imageData.data;
-
-    let r = 170, g = 170, b = 170;
-    if (color.startsWith('#')) {
-      r = parseInt(color.slice(1, 3), 16);
-      g = parseInt(color.slice(3, 5), 16);
-      b = parseInt(color.slice(5, 7), 16);
-    }
-
-    for (let i = 0; i < pixels.length; i += 4) {
-      const alpha = pixels[i + 3];
-      if (alpha > 0) {
-        const gray = (pixels[i] + pixels[i + 1] + pixels[i + 2]) / 3 / 255;
-
-        const blendFactor = 0.6; // אפשר גם 0.7–0.8 לצבעים בהירים יותר
-        pixels[i]     = r * blendFactor + gray * r * (1 - blendFactor);
-        pixels[i + 1] = g * blendFactor + gray * g * (1 - blendFactor);
-        pixels[i + 2] = b * blendFactor + gray * b * (1 - blendFactor);
-      }
-    }
-
-    ctx.putImageData(imageData, 0, 0);
-  };
-
-  img.onerror = function () {
-    ctx.fillStyle = color;
-    ctx.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
-    ctx.fillStyle = '#ffffff';
-    ctx.font = '10px Arial';
-    ctx.textAlign = 'center';
-    ctx.fillText('אין תמונה', canvas.width / 2, canvas.height / 2);
-  };
-
-  img.src = imageSrc;
-}
-
-function reorderItem(modelPath, height, width, color, texture) {
-console.log("Reordering item:", modelPath, height, width, color, texture);
-  
-  // Convert dimensions to numbers
-  const heightValue = parseInt(height);
-  const widthValue = parseInt(width);
-  
-  // Close modal first
-  $('.modal-content').animate({
-    opacity: 0
-  }, 300, function() {
-    $('.order-details-modal').remove();
-    
-    // Switch to design screen
-    $('#personal-area').hide();
-    $('#design-screen').show();
-    $('#cart-container').show();
-    
-    // Ensure model path is correctly formatted
-    let fullModelPath = modelPath;
-    if (!fullModelPath.startsWith('models/')) {
-      fullModelPath = 'models/' + fullModelPath;
-    }
-    if (!fullModelPath.endsWith('.stl')) {
-      fullModelPath = fullModelPath + '.stl';
-    }
-    
-    // Set current model path
-    currentModelPath = fullModelPath;
-    
-    // IMPORTANT: Set slider values BEFORE loading model
-    $('#height-slider').val(heightValue);
-    $('#width-slider').val(widthValue);
-    $('#height-value').text(heightValue + ' ס"מ');
-    $('#width-value').text(widthValue + ' ס"מ');
-    
-    // Select color
-    $('.color-box').removeClass('selected');
-    $(`.color-box[data-color="${color}"]`).addClass('selected');
-    
-    // Select texture
-    $('#texture-select').val(texture);
-    
-    // Now load the model with our values already set
-    if (!scene || !renderer) {
-      init3DModel();
     } else {
-      loadSTLModel(fullModelPath);
+        alert('נא למלא אימייל וסיסמה.');
     }
-    
-    // Apply further updates after model is loaded
-    setTimeout(function() {
-      // Update camera and scale
-      updateModelScaleAndCamera();
-      
-      // Set color again to ensure it's applied
-      if (potMesh) {
-        potMesh.material.color.set(color);
-      }
-      
-      // Update price
-      const price = (heightValue + widthValue) * 2;
-      $('#price-display').text('המחיר: ' + price + ' ש"ח');
-    }, 500);
-    
-    // הודעה למשתמש שהוא יכול לערוך ולהוסיף לעגלה
-    const notification = $('<div class="design-notification">פרטי המוצר הוטענו! כעת ניתן לערוך ולהוסיף לעגלה</div>');
-    $('body').append(notification);
-
-    notification.css({
-      'position': 'fixed',
-      'top': '20px',
-      'left': '50%',
-      'transform': 'translateX(-50%)',
-      'background-color': '#3498db',
-      'color': 'white',
-      'padding': '10px 20px',
-      'border-radius': '30px',
-      'font-weight': 'bold',
-      'z-index': '10000',
-      'box-shadow': '0 4px 12px rgba(0,0,0,0.2)',
-      'opacity': '0'
-    }).animate({
-      'top': '30px',
-      'opacity': '1'
-    }, 500);
-
-    // מסתירים את ההודעה אחרי 4 שניות
-    setTimeout(() => {
-      notification.animate({
-        'top': '20px',
-        'opacity': '0'
-      }, 500, function() {
-        $(this).remove();
-      });
-    }, 4000);
-
-    // הדגשה חזותית של כפתור "הוסף לעגלה" כדי למשוך תשומת לב
-    $('#add-to-cart').addClass('highlighted-btn');
-    setTimeout(() => {
-      $('#add-to-cart').removeClass('highlighted-btn');
-    }, 2000);
-  });
 }
 
-// פונקציה לעדכון כפוי של המימדים
-function forceUpdateDimensions(height, width) {
-  console.log("Force updating dimensions to:", height, "x", width);
   
-  // עדכון ערכי סליידרים
-  $('#height-slider').val(height);
-  $('#width-slider').val(width);
-  
-  // עדכון טקסט ערכים
-  $('#height-value').text(height + ' ס"מ');
-  $('#width-value').text(width + ' ס"מ');
-  
-  // עדכון ישיר של משתנים גלובליים
-  if (typeof currentHeight !== 'undefined') currentHeight = height;
-  if (typeof currentWidth !== 'undefined') currentWidth = width;
-  
-  // הפעלת אירועי input
-  $('#height-slider, #width-slider').trigger('input');
-  
-  // ניסיון להפעיל פונקציות עדכון ידועות
-  if (typeof updateModelDimensions === 'function') {
-    updateModelDimensions(height, width);
-  }
-  
-  if (typeof updateModelScale === 'function') {
-    updateModelScale();
-  }
-  
-  if (typeof updateModelScaleAndCamera === 'function') {
-    updateModelScaleAndCamera();
-  }
-  
-  // עדכון מחיר
-  const price = (parseInt(height) + parseInt(width)) * 2;
-  $('#price-display').text('המחיר: ' + price + ' ש"ח');
-}
-
-// הוספת מאזין אירועים ללחיצה על כפתור "הזמן שוב"
-$(document).on('click', '.reorder-btn', function() {
-  const modelPath = $(this).data('model');
-  const height = $(this).data('height');
-  const width = $(this).data('width');
-  const color = $(this).data('color');
-  const texture = $(this).data('texture');
-  
-  reorderItem(modelPath, height, width, color, texture);
-});
-
-$(document).ready(function () {
-    if (document.getElementById('ordersContainer')) {
-        loadUserOrders();
+  function getTextureName(value) {
+    switch (value) {
+      case 'smooth': return 'חלק';
+      case 'rough': return 'מחוספס';
+      case 'matte': return 'מט';
+      default: return value;
     }
-
-  // תיקון סגנון כפתורי "הזמן מוצר דומה" אם קיימים בעמוד
-  setTimeout(function() {
-    $('.reorder-btn').each(function() {
-      if (!$(this).attr('id')) {
-        $(this).attr('id', 'hzamn-mwhw-dwmh');
+  }
+  
+  
+  
+          function updateCartDisplay() {
+              cartCount++;
+              $('#cart-count').text(cartCount);
+          }
+  
+          function addItemToCart() {
+      const height = $('#height-slider').val();
+      const width = $('#width-slider').val();
+      const selectedColorBox = $('.color-box.selected');
+      const color = selectedColorBox.data('color');
+      const texture = $('#texture-select').val();
+  
+      if (!selectedColorBox.length) {
+          alert('אנא בחר צבע לפני הוספה לעגלה.');
+          return;
       }
-      $(this).css({
-        'display': 'block',
-        'width': '80%',
-        'margin': '15px auto 5px',
-        'text-align': 'center',
-        'border-radius': '30px'
-      });
-    });
-  }, 500);
-
-  // כפתורי ניווט
-  $('#login-btn').click(login);
   
-  $('#back-to-menu').click(function () {
-    $('#personal-area').hide();
-    $('#home-screen').show();
-  });
+      if (!texture) {
+          alert('אנא בחר טקסטורה לפני הוספה לעגלה.');
+          return;
+      }
   
-  $('#back-to-cart').click(function () {
-    $('#checkout-screen').hide();
-    $('#design-screen').show();
-    $('#cart-container').show();
-    $('#cart-details').show();
-    $('#floating-buttons').show();
-    
-    if (!scene || !renderer) {
-      init3DModel();
-    }
-    
-    $('#cart-icon').show();
-    paypalRendered = false;
-  });
+      const colorName = colorNames[color] || color;
+      const price = (parseInt(height) + parseInt(width)) * 2;
   
-  $('#back-to-form').click(function () {
-    $('#paypal-button-container').hide();
-    $('#back-to-form').hide();
-    $('#order-form').show();
-    paypalRendered = false;
-  });
+      const item = {
+          id: Date.now(), // מזהה ייחודי לפי זמן
+          height,
+          width,
+          color,
+          texture,
+          price
+      };
   
-  $('#go-to-design').click(function () {
-    $('#home-screen').hide();
-    $('#design-screen').show();
-    $('#cart-container').show();
-      if (!scene || !renderer) {
-    init3DModel();
-  } else {
-    // אם המודל כבר קיים, רק עדכן את המידות שלו
-    updateModelScaleAndCamera();
+      cartItems.push(item);
+      totalPrice += price;
+  
+      const listItem = `
+          <li data-id="${item.id}">
+              <span style="float:left; color: red; cursor: pointer;" class="remove-item">✖</span>
+              גובה: ${height} ס"מ, רוחב: ${width} ס"מ<br>
+              צבע: ${colorName}, טקסטורה: ${getTextureName(texture)}<br>
+              מחיר: ${price} ש"ח
+          </li>
+      `;
+  
+      $('#cart-items').append(listItem);
+      $('#total-price').text("סה\"כ: " + totalPrice + " ש\"ח");
+      updateCartDisplay();
   }
-  });
   
-  $('#go-to-orders').click(() => {
-    $('#home-screen').hide();
-    $('#personal-area').show();
-    loadUserOrders();
-  });
   
-  $('#nav-home').click(() => {
-    $('.container').hide();
-    $('#cart-container').hide();
-    $('#home-screen').show();
-  });
+      $(document).ready(function () {
   
-$('#nav-logout').click(function() {
-  // פשוט נסתיר/נציג את האלמנטים המתאימים
-  $('.container').hide();
-  $('#cart-container').hide();
-  $('#floating-buttons').hide();
-  $('#login-screen').show();
-  resetCart();
   
-  console.log("User logged out");
-});
+          // גלילה עם החצים
+      $('.carousel-arrow.left').click(function () {
+      $('#pot-gallery').scrollLeft($('#pot-gallery').scrollLeft() + 200);
+      });
   
-  // גלילה עם החצים
-  $('.carousel-arrow.left').click(function () {
-    $('#pot-gallery').scrollLeft($('#pot-gallery').scrollLeft() + 200);
-  });
+      $('.carousel-arrow.right').click(function () {
+      $('#pot-gallery').scrollLeft($('#pot-gallery').scrollLeft() - 200);
+      });;
   
-  $('.carousel-arrow.right').click(function () {
-    $('#pot-gallery').scrollLeft($('#pot-gallery').scrollLeft() - 200);
-  });
+      // בחירת דגם – מסמן עם outline
+      $('.pot-option').click(function () {
+      $('.pot-option').removeClass('selected');
+      $(this).addClass('selected');
   
-  // בחירת דגם
-  $('.pot-option').click(function () {
-    $('.pot-option').removeClass('selected');
-    $(this).addClass('selected');
-    
-    const selectedPath = $(this).data('model');
-    currentModelPath = selectedPath;
-    loadSTLModel(selectedPath);
-  });
+      const selectedPath = $(this).data('model');
+      currentModelPath = selectedPath;
+      loadSTLModel(selectedPath);
+      });
   
-  // עגלת קניות
-  $('#height-slider, #width-slider').on('input', updateModelScaleAndCamera);
   
-  $('.color-box').click(function () {
-    $('.color-box').removeClass('selected');
-    $(this).addClass('selected');
-    const selectedColor = $(this).data('color');
-    if (potMesh) {
-      potMesh.material.color.set(selectedColor);
-    }
-  });
+          let currentModelPath = 'models/vase1.stl'; // ברירת מחדל
   
-  $('#calculate-price').click(function () {
-    const height = $('#height-slider').val();
-    const width = $('#width-slider').val();
-    const selectedColorBox = $('.color-box.selected');
-    const texture = $('#texture-select').val();
-    
-    if (!selectedColorBox.length) {
-      alert('אנא בחר צבע לפני חישוב מחיר.');
-      return;
-    }
-    
-    if (!texture) {
-      alert('אנא בחר טקסטורה לפני חישוב מחיר.');
-      return;
-    }
-    
-    const price = (parseInt(height) + parseInt(width)) * 2;
-    $('#price-display').text('המחיר: ' + price + ' ש"ח');
-  });
+              $('.pot-option').click(function () {
+                  const selectedPath = $(this).data('model');
+                  currentModelPath = selectedPath;
+                  loadSTLModel(selectedPath);
+              });
   
-  $('#add-to-cart').click(function () {
-    const added = addItemToCart();
-    if (added) {
-      alert('הכד נוסף לעגלה');
-    }
-  });
+              const updateSliderValues = () => {
+                  $('#height-value').text($('#height-slider').val() + ' ס"מ');
+                  $('#width-value').text($('#width-slider').val() + ' ס"מ');
+              };
   
-  $('#cart-icon').click(function () {
-    $('#cart-details').toggle();
-  });
+              $('#choose-pot').click(function () {
+                  $('#pot-gallery').toggle();
+                  $('#pot-gallery').html('<img src="pot1.jpg" width="100"><img src="pot2.jpg" width="100">');
+              });
+  
+              $('.color-box').click(function () {
+                  $('.color-box').removeClass('selected');
+                  $(this).addClass('selected');
+                  const selectedColor = $(this).data('color');
+                  if (potMesh) {
+                      potMesh.material.color.set(selectedColor);
+                  }
+              });
+
+              function updateModelScaleAndCamera() {
+                const height = parseFloat($('#height-slider').val());
+                const width = parseFloat($('#width-slider').val());
+              
+                if (potMesh && potMesh.userData.originalHeight && potMesh.userData.originalWidth) {
+                  const scaleZ = height / potMesh.userData.originalHeight;
+                  const scaleXY = width / potMesh.userData.originalWidth;
+              
+                  potMesh.scale.set(scaleXY, scaleXY, scaleZ);
+                  potMesh.updateMatrixWorld(true);
+              
+                  // עדכון מרכז בלבד, לא מזיזים את המצלמה
+                  const box = new THREE.Box3().setFromObject(potMesh);
+                  const center = new THREE.Vector3();
+                  box.getCenter(center);
+                  controls.target.copy(center);
+              
+                  controls.update();
+                }
+              
+                $('#height-value').text(height + ' ס"מ');
+                $('#width-value').text(width + ' ס"מ');
+              }
+              
+
+              $('#height-slider, #width-slider').on('input', updateModelScaleAndCamera);
+              
+              
+              $('#calculate-price').click(function () {
+              const height = $('#height-slider').val();
+              const width = $('#width-slider').val();
+              const selectedColorBox = $('.color-box.selected');
+              const texture = $('#texture-select').val();
+  
+              if (!selectedColorBox.length) {
+                  alert('אנא בחר צבע לפני חישוב מחיר.');
+                  return;
+              }
+  
+              if (!texture) {
+                  alert('אנא בחר טקסטורה לפני חישוב מחיר.');
+                  return;
+              }
+  
+              const price = (parseInt(height) + parseInt(width)) * 2;
+              $('#price-display').text('המחיר: ' + price + ' ש"ח');
+          });
+  
+  
+              $('#order-now').click(function () {
+                  alert('טופס הזמנה יופיע כאן');
+              });
+  
+              $('#add-to-cart').click(function () {
+                  addItemToCart();
+                  alert('הכד נוסף לעגלה');
+              });
+  
+              $('#cart-icon').click(function () {
+                  $('#cart-details').toggle();
+              });
   
   $('#continue-shopping').click(function () {
     $('#cart-details').hide();
@@ -1053,7 +438,43 @@ $('#nav-logout').click(function() {
     $('#cart-count').text(cartCount);
   });
   
-    // טיפול בטופס הזמנה
+
+              updateSliderValues();
+          });
+  
+          function getTextureName(value) {
+      switch (value) {
+          case 'smooth': return 'חלק';
+          case 'rough': return 'מחוספס';
+          case 'matte': return 'מט';
+          default: return value;
+      }
+  }
+  function goToCheckout() {
+              $('#design-screen').hide();
+              $('#cart-container').hide(); // מסתיר את עגלת הקניות
+              $('#checkout-screen').show();
+              updateFinalTotal();
+          }
+  
+          function updateFinalTotal() {
+              const selectedShipping = $('#shipping-type option:selected');
+              const shippingCost = parseFloat(selectedShipping.data('price')) || 0;
+              const finalTotal = totalPrice + shippingCost;
+              $('#final-total').text('סה"כ לתשלום: ' + finalTotal + ' ש"ח');
+              return finalTotal;
+          }
+  
+          $('#shipping-type').change(updateFinalTotal);
+  
+          $('#order-now, #checkout').click(function () {
+              if (cartItems.length === 0) {
+                  alert('העגלה ריקה. אנא הוסף מוצר לפני ההזמנה.');
+                  return;
+              }
+              goToCheckout();
+          });
+  
           $('#order-form').submit(function(e) {
               e.preventDefault();
               const formData = $(this).serializeArray();
@@ -1065,17 +486,6 @@ $('#nav-logout').click(function() {
   
               $('#order-form').hide();
               $('#paypal-button-container').empty().show();
-              $('#back-to-form').show();
-
-            // ✅ סימולציית תשלום מוצלח ושליחת קובץ למדפסת
-            if (cartItems.length > 0) {
-              const selectedModelPath = cartItems[0].model; // נניח שיש מוצר אחד בלבד
-              const modelFileName = selectedModelPath.split('/').pop();
-            
-              alert("✅ התשלום בוצע בהצלחה (מדומה)\n🔁 הקובץ נשלח למדפסת.");
-              sendToBambuPrinter(selectedModelPath, modelFileName);
-            }
-
   
               if (!window.paypalRendered) {
                   window.paypalRendered = true;
@@ -1119,22 +529,4 @@ $('#nav-logout').click(function() {
               }
           });
       
-  
-  $('#shipping-type').change(updateFinalTotal);
-  
-  // עדכון טקסט של סלאידרים ביוזמת המשתמש
-  updateModelScaleAndCamera();
-  
-  // הוסף את הקוד הבא בקובץ homePage.js שלך, לאזור ה-$(document).ready
-
-// הוספת מאזין אירועים למקש Enter בשדות הקלט של דף ההתחברות
-$('#username, #password').keypress(function(event) {
-  // אם נלחץ מקש Enter (קוד 13)
-  if (event.keyCode === 13) {
-    // מונע את התנהגות ברירת המחדל של הדפדפן (שליחת טופס)
-    event.preventDefault();
-    // מפעיל את פונקציית ההתחברות
-    login();
-  }
-});
-});
+          

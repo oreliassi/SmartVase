@@ -2,6 +2,7 @@
 // Remove duplicate functions and ensure proper implementation
 
 // הגדרות גלובליות עבור Three.js
+let shouldAnimate = false
 let threeScene, threeCamera, threeRenderer;
 let threeContainer, threePot;
 let isThreeInitialized = false;
@@ -108,7 +109,7 @@ function setupARButtons() {
             </div>
         `);
         
-        const imageUpload = $('<input type="file" id="image-upload" accept="image/*" style="display: none;">');
+        const imageUpload = $('<input type="file" id="image-upload" accept="image/*" >');
         
         // הוספה לדף
         $('#add-to-cart').before(showInRoomBtn);
@@ -119,14 +120,14 @@ function setupARButtons() {
         console.log('יצירת קונטיינר AR');
         
 const arContainer = $(`
-            <div id="ar-container" style="display: none;">
+            <div id="ar-container">
                 <div class="ar-viewer-overlay">
                     <div id="close-ar">✖</div>
                     <div id="ar-canvas-container"></div>
                     <div class="ar-controls">
                         <button id="take-photo">צלם תמונה</button>
-                        <button id="retake-photo" style="display: none;">צלם שוב</button>
-                        <button id="save-ar-image" style="display: none;">שמור תמונה</button>
+                        <button id="retake-photo" >צלם שוב</button>
+                        <button id="save-ar-image" >שמור תמונה</button>
                     </div>
                     <div class="esc-hint">לחץ ESC ליציאה</div>
                 </div>
@@ -143,10 +144,10 @@ function startARWithCamera() {
     
     // יצירת מבנה HTML נכון
     const arContainer = `
-        <video id="ar-video" autoplay playsinline style="width:100%; height:100%; object-fit:cover;"></video>
+        <video id="ar-video" autoplay playsinline></video>
         <div id="ar-pot-container"></div>
         <div id="ar-instructions">גרור את הכד למיקום הרצוי</div>
-        <canvas id="ar-canvas" style="display:none;"></canvas>
+        <canvas id="ar-canvas" ></canvas>
     `;
     
     $('#ar-canvas-container').html(arContainer);
@@ -163,7 +164,7 @@ function startARWithCamera() {
                     // קצת השהייה כדי לוודא שהכל נטען כראוי
                     setTimeout(function() {
                         addPotToAREnvironment();
-                    }, 500);
+                    }, 100);
                 };
             })
             .catch(function(error) {
@@ -187,12 +188,12 @@ function startARWithImage(imageURL) {
 
     // יצירת מבנה HTML כולל כפתור סגירה להנחיה
     const arContainer = `
-       <div id="ar-image-container" style="width:100%; height:100%;">
-            <img id="ar-image" src="${imageURL}" style="width:100%; height:100%; object-fit:cover;">
+       <div id="ar-image-container" >
+            <img id="ar-image" src="${imageURL}" >
         
         <div id="ar-pot-container"></div>
         <div id="ar-instructions" >גרור את הכד למיקום הרצוי</div>
-        <canvas id="ar-canvas" style="display:none;"></canvas>
+        <canvas id="ar-canvas" ></canvas>
     `;
 
     $('#ar-canvas-container').html(arContainer);
@@ -215,7 +216,7 @@ function startARWithImage(imageURL) {
 function addPotToAREnvironment() {
     // בדיקה אם קונטיינר AR-pot קיים
     if ($('#ar-pot-container').length === 0) {
-        $('#ar-canvas-container').append('<div id="ar-pot-container" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:999;"></div>');
+        $('#ar-canvas-container').append('<div id="ar-pot-container"></div>');
     }
     
     const potContainer = $('#ar-pot-container');
@@ -507,6 +508,7 @@ function captureARPhoto() {
     }, 50);
 
     // ביטול גרירה בעת צילום
+    shouldAnimate = false;
     disableDragging();
     console.log("גרירה מבוטלת");
 
@@ -605,15 +607,17 @@ function captureARPhoto() {
 
 function showAlternativeButtons() {
   // Hide all original buttons
+if ($('.ar-controls-alt').length) return;
+
   $('.ar-controls').hide();
   
   // Create a new controls container
   // Updated for proper centering
-  const newControls = $('<div class="ar-controls-alt" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); width: 40%; display: flex; justify-content: center; gap: 15px; z-index: 10003;"></div>');
+  const newControls = $('<div class="ar-controls-alt" ></div>');
   
   // Add new buttons
-  const retakeBtn = $('<button style="background: rgba(255, 122, 89, 0.8); color: white; border: none; border-radius: 30px; padding: 10px 20px; cursor: pointer; font-weight: bold;">צלם שוב</button>');
-  const saveBtn = $('<button style="background: rgba(255, 122, 89, 0.8); color: white; border: none; border-radius: 30px; padding: 10px 20px; cursor: pointer; font-weight: bold;">שמור תמונה</button>');
+  const retakeBtn = $('<button id="ar-btn">צלם שוב</button>');
+  const saveBtn = $('<button id="ar-btn">שמור תמונה</button>');
   
   // Add click handlers
   retakeBtn.on('click', function() {
@@ -660,6 +664,7 @@ function retakePhoto() {
     
     // הפעלה מחדש של אפשרות גרירת הכד
     enableDragging();
+    shouldAnimate = false;
     console.log("Dragging re-enabled");
     
     // אם המשתמש השתמש בתמונה מהמצלמה, נכין הכל מחדש
@@ -892,6 +897,8 @@ function initThreeJS(modelPath, color) {
         
         // התחלת אנימציה
         animate();
+        enableDragging(); // הפעלת גרירה בלבד (לא סיבוב)
+
         
         isThreeInitialized = true;
         console.log('מודל תלת מימדי נטען בהצלחה');
@@ -904,8 +911,8 @@ function initThreeJS(modelPath, color) {
     function animate() {
         requestAnimationFrame(animate);
         
-        if (threePot) {
-            // אפשר להוסיף אנימציות או התנהגויות נוספות כאן
+        if (threePot && shouldAnimate) {
+            threePot.rotation.y += 0.01;
         }
         
         threeRenderer.render(threeScene, threeCamera);
@@ -1157,7 +1164,7 @@ $(document).ready(function() {
     });
     
     // Add this to body element for testing
-    $('body').append('<div id="debug-log" style="display:none; position:fixed; bottom:0; left:0; width:100%; height:200px; overflow:auto; background:rgba(0,0,0,0.8); color:white; padding:10px; font-family:monospace; z-index:10000;"></div>');
+    $('body').append('<div id="debug-log" ></div>');
     
     // Override console.log to show in debug panel (only in development)
     const originalConsoleLog = console.log;
@@ -1208,50 +1215,50 @@ $(document).ready(function() {
 // Enhanced disableDragging function to ensure it works properly
 function disableDragging() {
     console.log("נטרול גרירת הכד");
-    
-    // Remove all drag events from the pot element
-    const potElement = $('#ar-pot-element');
-    
-    if (potElement.length) {
-        // Remove mouse/touch events
-        potElement.off('mousedown touchstart');
-        potElement.css('cursor', 'default');
-        
+
+    const dragElement = $('#three-container'); // זה האלמנט שנטען באמת
+
+    if (dragElement.length) {
+        dragElement.off('mousedown touchstart');
+        dragElement.css({
+            'cursor': 'default',
+            'pointer-events': 'none'
+        });
+
         // Add a visual indicator that dragging is disabled
         potElement.css('pointer-events', 'none');
         
         // Remove document events related to dragging
         $(document).off('mousemove.arDrag touchmove.arDrag mouseup.arDrag touchend.arDrag');
-        
-        // Add data attribute to track state
-        potElement.attr('data-draggable', 'false');
-        
+
+        dragElement.attr('data-draggable', 'false');
+
         console.log("גרירה נוטרלה בהצלחה");
     } else {
         console.warn("אלמנט הכד לא נמצא לנטרול גרירה");
     }
 }
 
+
 // Re-enable dragging function (for future use if needed)
 function enableDragging() {
     console.log("הפעלת גרירת הכד מחדש");
-    
-    const potElement = $('#ar-pot-element');
-    
-    if (potElement.length) {
-        // Reset cursor and pointer events
-        potElement.css({
+
+    const dragElement = $('#three-container');
+
+    if (dragElement.length) {
+        dragElement.css({
             'cursor': 'move',
             'pointer-events': 'auto'
         });
-        
-        // Re-enable dragging
-        makeARPotDraggable(potElement);
-        
-        // Update data attribute
-        potElement.attr('data-draggable', 'true');
-        
+
+        makeARPotDraggable(dragElement);
+
+        dragElement.attr('data-draggable', 'true');
+
         console.log("גרירה הופעלה מחדש בהצלחה");
+    } else {
+        console.warn("אלמנט הכד לא נמצא להפעלת גרירה");
     }
 }
 
@@ -1434,7 +1441,7 @@ arStyle.innerHTML = `
     text-align: center;
     max-width: 90%;
 }
-
+ 
 #ar-instructions {
     position: absolute;
     bottom: 20px;
