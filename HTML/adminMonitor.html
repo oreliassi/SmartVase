@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>מעקב הדפסות</title>
+  <link rel="stylesheet" href="../css/adminMonitor.css">
+</head>
+<body>
+  <button id="nav-logout" class="floating-btn" onclick="window.location.href='../index.html'">התנתק</button>
+  <h1>מעקב הדפסות</h1>
+
+  <div class="monitor-wrapper">
+    <div class="monitor">
+      <div id="banner1" class="completion-banner">✅ ההדפסה הושלמה בהצלחה</div>
+      <h2>הזמנה מספר #1001</h2>
+      <video id="video1" autoplay muted>
+        <source src="../images/vase2_print.mp4" type="video/mp4">
+        הדפדפן שלך אינו תומך בווידאו.
+      </video>
+      <div class="params">
+        <div class="param-box" id="speed1">מהירות הדפסה: 60 mm/s</div>
+        <div class="param-box" id="hotend1">טמפרטורת דיזה: 210°C</div>
+        <div class="param-box" id="bed1">טמפרטורת משטח: 60°C</div>
+        <div class="param-box" id="time1">זמן הדפסה: 0 שניות</div>
+        <div class="param-box" id="layer1">עובי שכבה: 0.2mm</div>
+        <div class="param-box warning" id="warning1" style="display:none;">⚠️ זוהה עיוות בשכבה - בדוק את ההדפסה</div>
+        <button class="stop-btn" id="stop1">עצור הדפסה</button>
+      </div>
+      <canvas id="canvas1" style="display: none;"></canvas>
+    </div>
+
+    <div class="monitor">
+      <div id="banner2" class="completion-banner">✅ ההדפסה הושלמה בהצלחה</div>
+      <h2>הזמנה מספר #1002</h2>
+      <video id="video2" autoplay muted>
+        <source src="../images/vase1_print.mp4" type="video/mp4">
+        הדפדפן שלך אינו תומך בווידאו.
+      </video>
+      <div class="params">
+        <div class="param-box" id="speed2">מהירות הדפסה: 55 mm/s</div>
+        <div class="param-box" id="hotend2">טמפרטורת דיזה: 205°C</div>
+        <div class="param-box" id="bed2">טמפרטורת משטח: 58°C</div>
+        <div class="param-box" id="time2">זמן הדפסה: 0 שניות</div>
+        <div class="param-box" id="layer2">עובי שכבה: 0.25mm</div>
+        <div class="param-box warning" id="warning2" style="display:none;">⚠️ זוהו חוטים דקים (Spaghetti Error) - בדוק את ההדפסה</div>
+        <button class="stop-btn" id="stop2">עצור הדפסה</button>
+      </div>
+      <canvas id="canvas2" style="display: none;"></canvas>
+    </div>
+
+     <div class="monitor">
+      <div id="banner3" class="completion-banner">✅ ההדפסה הושלמה בהצלחה</div>
+      <h2>הזמנה מספר #1003</h2>
+      <video id="video3" autoplay muted>
+        <source src="../images/vase3_print.mp4" type="video/mp4">
+        הדפדפן שלך אינו תומך בווידאו.
+      </video>
+      <div class="params">
+        <div class="param-box" id="speed3">מהירות הדפסה: 50 mm/s</div>
+        <div class="param-box" id="hotend3">טמפרטורת דיזה: 200°C</div>
+        <div class="param-box" id="bed3">טמפרטורת משטח: 55°C</div>
+        <div class="param-box" id="time3">זמן הדפסה: 0 שניות</div>
+        <div class="param-box" id="layer3">עובי שכבה: 0.3mm</div>
+        <div class="param-box warning" id="warning3" style="display:none;">⚠️ זוהה שינוי שכבה (Layer Shifting) - בדוק את ההדפסה</div>
+        <button class="stop-btn" id="stop3">עצור הדפסה</button>
+      </div>
+      <canvas id="canvas3" style="display: none;"></canvas>
+    </div>
+  </div>
+
+<div class="bottom-section">
+  <div class="orders-queue">
+    <h3>ההזמנות הבאות בתור</h3>
+    <div class="queue-container" id="queue-container">
+      <div class="loading-queue">טוען הזמנות...</div>
+    </div>
+  </div>
+  
+  <div class="additional-controls">
+  <h3> ניתוח נתונים חכם </h3>
+  <div class="smart-analysis-panel">
+    
+    <div class="search-section">
+      <h4>חיפוש הדפסה</h4>
+      <div class="search-bar">
+        <input 
+          type="text" 
+          id="order-search-input" 
+          class="search-input" 
+          placeholder="הכנס מספר הזמנה (לדוגמה: 1002)"
+          maxlength="10"
+        >
+        <button id="search-order-btn" class="search-btn">חפש</button>
+      </div>
+      <div id="search-results" class="search-results">
+      </div>
+    </div>
+
+    <div id="analysis-section" class="analysis-section">
+      <div id="selected-order-info" class="selected-order-info">
+      </div>
+      
+      <div class="analysis-actions">
+        <button id="download-report-btn" class="action-btn download-btn">
+          📊 הצג דוח סטטיסטי
+        </button>
+        <button id="show-recommendations-btn" class="action-btn recommendations-btn">
+          💡 הצג המלצות לשיפור
+        </button>
+      </div>
+      <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+        <p>טוען נתונים...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="recommendations-modal" class="recommendations-modal">
+  <div class="recommendations-content">
+    <div class="recommendations-header">
+      <h3>המלצות לשיפור הדפסה</h3>
+      <button class="close-modal" onclick="closeRecommendationsModal()">×</button>
+    </div>
+    <div id="recommendations-body" class="recommendations-body">
+    </div>
+  </div>
+</div>
+</div>
+
+  <script src="../javaScript/admin.js"></script>
+</body>
+</html>

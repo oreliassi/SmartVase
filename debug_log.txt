@@ -1,0 +1,39 @@
+Request received: 2025-04-23 13:08:00
+POST data: Array
+(
+    [orderData] => first_name=Or&last_name=Eliassi&email=oreliassi28%40gmail.com&phone=0549779993&city=%D7%99%D7%91%D7%A0%D7%94&street=%D7%A9%D7%99%20%D7%A2%D7%92%D7%A0%D7%95%D7%9F%207&apartment=3&shipping_type=regular&coupon=
+    [cartItems] => [{"id":1745414251464,"height":"15","width":"15","color":"#ffeb94","colorName":"צהוב","texture":"rough","price":60,"model":"models/vase1.stl"}]
+    [total] => 80
+)
+
+Order data: first_name=Or&last_name=Eliassi&email=oreliassi28%40gmail.com&phone=0549779993&city=%D7%99%D7%91%D7%A0%D7%94&street=%D7%A9%D7%99%20%D7%A2%D7%92%D7%A0%D7%95%D7%9F%207&apartment=3&shipping_type=regular&coupon=
+Cart items: Array
+(
+    [0] => Array
+        (
+            [id] => 1745414251464
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => rough
+            [price] => 60
+            [model] => models/vase1.stl
+        )
+
+)
+
+Total: 80
+Parsed form values: Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 3
+    [shipping_type] => regular
+    [coupon] => 
+)
+

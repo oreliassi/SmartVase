@@ -1,0 +1,5156 @@
+[2025-05-22 17:15:24] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1747934710387,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-22 17:15:24] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-22 17:15:24] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-22 17:15:24] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-22 17:15:24] Exception in order submission | Execute failed: No data supplied for parameters in prepared statement
+[2025-05-22 17:23:39] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1747935207961,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-22 17:23:39] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-22 17:23:39] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-22 17:23:39] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-22 17:23:39] Exception in order submission | Execute failed: No data supplied for parameters in prepared statement
+[2025-05-22 17:29:37] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1747935544798,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-22 17:29:37] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-22 17:29:37] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-22 17:29:37] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-22 17:29:37] Main order inserted | Array
+(
+    [order_number] => 1747657530
+)
+
+[2025-05-22 17:29:37] Cart items for order 1747657530 | Array
+(
+    [0] => Array
+        (
+            [id] => 1747935544798
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-22 17:29:37] Order successfully saved | Array
+(
+    [order_number] => 1747657530
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 13:34:16] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748094235630,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 13:34:16] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 13:34:16] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 13:34:16] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 13:34:16] Main order inserted | Array
+(
+    [order_number] => 1747657531
+)
+
+[2025-05-24 13:34:16] Cart items for order 1747657531 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748094235630
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 13:34:16] Order successfully saved | Array
+(
+    [order_number] => 1747657531
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 13:52:53] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748095361572,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 13:52:53] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 13:52:53] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 13:52:53] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 13:52:53] Main order inserted | Array
+(
+    [order_number] => 1747657532
+)
+
+[2025-05-24 13:52:53] Cart items for order 1747657532 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748095361572
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 13:52:53] Order successfully saved | Array
+(
+    [order_number] => 1747657532
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 14:06:06] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748096156118,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 14:06:06] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 14:06:06] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 14:06:06] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 14:06:06] Main order inserted | Array
+(
+    [order_number] => 1747657533
+)
+
+[2025-05-24 14:06:06] Cart items for order 1747657533 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748096156118
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 14:06:06] Order successfully saved | Array
+(
+    [order_number] => 1747657533
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 14:25:35] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748097321961,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 14:25:35] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 14:25:35] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 14:25:35] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 14:25:35] Main order inserted | Array
+(
+    [order_number] => 1747657534
+)
+
+[2025-05-24 14:25:35] Cart items for order 1747657534 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748097321961
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 14:25:35] Order successfully saved | Array
+(
+    [order_number] => 1747657534
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 14:40:53] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748098242989,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 14:40:53] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 14:40:53] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 14:40:53] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 14:40:53] Main order inserted | Array
+(
+    [order_number] => 1747657535
+)
+
+[2025-05-24 14:40:53] Cart items for order 1747657535 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748098242989
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 14:40:53] Order successfully saved | Array
+(
+    [order_number] => 1747657535
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 14:43:28] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748098388447,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 14:43:28] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 14:43:28] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 14:43:28] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 14:43:28] Main order inserted | Array
+(
+    [order_number] => 1747657536
+)
+
+[2025-05-24 14:43:28] Cart items for order 1747657536 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748098388447
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 14:43:28] Order successfully saved | Array
+(
+    [order_number] => 1747657536
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 14:54:05] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748099013376,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 14:54:05] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 14:54:05] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 14:54:05] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 14:54:05] Main order inserted | Array
+(
+    [order_number] => 1747657537
+)
+
+[2025-05-24 14:54:05] Cart items for order 1747657537 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748099013376
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 14:54:05] Order successfully saved | Array
+(
+    [order_number] => 1747657537
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 14:55:58] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748099149434,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 14:55:58] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 14:55:58] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 14:55:58] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 14:55:58] Main order inserted | Array
+(
+    [order_number] => 1747657538
+)
+
+[2025-05-24 14:55:58] Cart items for order 1747657538 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748099149434
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 14:55:58] Order successfully saved | Array
+(
+    [order_number] => 1747657538
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 14:59:36] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748099366421,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase3.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 14:59:36] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 14:59:36] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 14:59:36] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 14:59:36] Main order inserted | Array
+(
+    [order_number] => 1747657539
+)
+
+[2025-05-24 14:59:36] Cart items for order 1747657539 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748099366421
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase3.stl
+        )
+
+)
+
+[2025-05-24 14:59:36] Order successfully saved | Array
+(
+    [order_number] => 1747657539
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 15:03:12] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748099582725,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 15:03:12] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 15:03:12] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 15:03:12] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 15:03:12] Main order inserted | Array
+(
+    [order_number] => 1747657540
+)
+
+[2025-05-24 15:03:12] Cart items for order 1747657540 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748099582725
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 15:03:12] Order successfully saved | Array
+(
+    [order_number] => 1747657540
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 15:06:51] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748099802131,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 15:06:51] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 15:06:51] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 15:06:51] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 15:06:51] Main order inserted | Array
+(
+    [order_number] => 1747657541
+)
+
+[2025-05-24 15:06:51] Cart items for order 1747657541 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748099802131
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 15:06:51] Order successfully saved | Array
+(
+    [order_number] => 1747657541
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 15:21:35] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => פתח תקווה
+    [street] => מאיר שפיה 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748100669851,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 15:21:35] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => פתח תקווה
+    [street] => מאיר שפיה 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 15:21:35] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 15:21:35] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => פתח תקווה
+    [street] => מאיר שפיה 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 15:21:35] Main order inserted | Array
+(
+    [order_number] => 1747657542
+)
+
+[2025-05-24 15:21:35] Cart items for order 1747657542 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748100669851
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 15:21:35] Order successfully saved | Array
+(
+    [order_number] => 1747657542
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 15:33:25] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748101397000,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 15:33:25] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 15:33:25] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 15:33:25] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 15:33:25] Main order inserted | Array
+(
+    [order_number] => 1747657543
+)
+
+[2025-05-24 15:33:25] Cart items for order 1747657543 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748101397000
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 15:33:25] Order successfully saved | Array
+(
+    [order_number] => 1747657543
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 15:37:00] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748101610102,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 15:37:00] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 15:37:00] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 15:37:00] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 15:37:00] Main order inserted | Array
+(
+    [order_number] => 1747657544
+)
+
+[2025-05-24 15:37:00] Cart items for order 1747657544 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748101610102
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 15:37:00] Order successfully saved | Array
+(
+    [order_number] => 1747657544
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 15:58:31] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748102901807,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 15:58:31] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 15:58:31] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 15:58:31] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 15:58:31] Main order inserted | Array
+(
+    [order_number] => 1747657545
+)
+
+[2025-05-24 15:58:31] Cart items for order 1747657545 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748102901807
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 15:58:31] Order successfully saved | Array
+(
+    [order_number] => 1747657545
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 16:18:00] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748104071143,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 16:18:00] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 16:18:00] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 16:18:00] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 16:18:00] Main order inserted | Array
+(
+    [order_number] => 1747657546
+)
+
+[2025-05-24 16:18:00] Cart items for order 1747657546 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748104071143
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 16:18:00] Order successfully saved | Array
+(
+    [order_number] => 1747657546
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 16:23:04] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748104374978,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+)
+
+[2025-05-24 16:23:04] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 16:23:04] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 16:23:04] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 16:23:04] Main order inserted | Array
+(
+    [order_number] => 1747657547
+)
+
+[2025-05-24 16:23:04] Cart items for order 1747657547 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748104374978
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 16:23:04] Order successfully saved | Array
+(
+    [order_number] => 1747657547
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 16:45:21] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748105704413,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748105718562_f522b7wly
+)
+
+[2025-05-24 16:45:21] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 16:45:21] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 16:45:21] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 16:45:21] Main order inserted | Array
+(
+    [order_number] => 1747657548
+)
+
+[2025-05-24 16:45:21] Cart items for order 1747657548 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748105704413
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 16:45:21] Order successfully saved | Array
+(
+    [order_number] => 1747657548
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 16:52:25] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748106129003,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748106142652_jabm7ieq7
+)
+
+[2025-05-24 16:52:25] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 16:52:25] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 16:52:25] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 16:52:25] Main order inserted | Array
+(
+    [order_number] => 1747657549
+)
+
+[2025-05-24 16:52:25] Cart items for order 1747657549 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748106129003
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 16:52:25] Order successfully saved | Array
+(
+    [order_number] => 1747657549
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 16:58:27] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748106492883,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748106505101_28wzwhpr2
+)
+
+[2025-05-24 16:58:27] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 16:58:27] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 16:58:27] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 16:58:27] Main order inserted | Array
+(
+    [order_number] => 1747657550
+)
+
+[2025-05-24 16:58:27] Cart items for order 1747657550 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748106492883
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 16:58:27] Order successfully saved | Array
+(
+    [order_number] => 1747657550
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 17:04:18] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748106849033,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748106856094_bpma51gov
+)
+
+[2025-05-24 17:04:18] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 17:04:18] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 17:04:18] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 17:04:18] Main order inserted | Array
+(
+    [order_number] => 1747657551
+)
+
+[2025-05-24 17:04:18] Cart items for order 1747657551 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748106849033
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 17:04:18] Order successfully saved | Array
+(
+    [order_number] => 1747657551
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 17:04:30] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748106849033,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748106867857_gkz5elc0n
+)
+
+[2025-05-24 17:04:30] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 17:04:30] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 17:04:30] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 17:04:30] Main order inserted | Array
+(
+    [order_number] => 1747657552
+)
+
+[2025-05-24 17:04:30] Cart items for order 1747657552 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748106849033
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 17:04:30] Order successfully saved | Array
+(
+    [order_number] => 1747657552
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 17:07:43] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748107030483,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748107061089_uijh84r0s
+)
+
+[2025-05-24 17:07:43] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 17:07:43] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 17:07:43] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 17:07:43] Main order inserted | Array
+(
+    [order_number] => 1747657553
+)
+
+[2025-05-24 17:07:43] Cart items for order 1747657553 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748107030483
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 17:07:43] Order successfully saved | Array
+(
+    [order_number] => 1747657553
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 17:09:39] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748107171040,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748107177575_cmyg5e1a0
+)
+
+[2025-05-24 17:09:39] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 17:09:39] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 17:09:39] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 17:09:39] Main order inserted | Array
+(
+    [order_number] => 1747657554
+)
+
+[2025-05-24 17:09:39] Cart items for order 1747657554 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748107171040
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 17:09:39] Order successfully saved | Array
+(
+    [order_number] => 1747657554
+    [email] => hila4616@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-24 17:11:20] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => pickup
+    [cartItems] => [{"id":1748107267427,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 99.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748107278018_cqpmp8jd1
+)
+
+[2025-05-24 17:11:20] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => pickup
+    [total] => 99.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-24 17:11:20] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+)
+
+[2025-05-24 17:11:20] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => pickup
+    [total] => 99.5
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+)
+
+[2025-05-24 17:11:20] Main order inserted | Array
+(
+    [order_number] => 1747657555
+)
+
+[2025-05-24 17:11:20] Cart items for order 1747657555 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748107267427
+            [height] => 15
+            [width] => 15
+            [color] => #ffeb94
+            [colorName] => צהוב
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-24 17:11:20] Order successfully saved | Array
+(
+    [order_number] => 1747657555
+    [email] => hila4616@gmail.com
+    [total] => 99.5
+    [status] => pending
+    [shipping] => pickup
+)
+
+[2025-05-25 06:39:56] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748155783528,"height":15,"width":15,"color":"#99db99","colorName":"ירוק","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748155793922_jsycxy45f
+)
+
+[2025-05-25 06:39:56] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-25 06:39:56] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+)
+
+[2025-05-25 06:39:56] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+)
+
+[2025-05-25 06:39:56] Main order inserted | Array
+(
+    [order_number] => 1747657556
+)
+
+[2025-05-25 06:39:56] Cart items for order 1747657556 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748155783528
+            [height] => 15
+            [width] => 15
+            [color] => #99db99
+            [colorName] => ירוק
+            [texture] => smooth
+            [price] => 99.5
+            [model] => models/vase1.stl
+        )
+
+)
+
+[2025-05-25 06:39:56] Order successfully saved | Array
+(
+    [order_number] => 1747657556
+    [email] => oreliassi28@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-25 17:13:04] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748193774884,"height":15,"width":15,"color":"#dd8add","colorName":"ורוד","texture":"rough","price":103.5,"model":"models/vase7.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748193782408_c3g7npjgv
+)
+
+[2025-05-25 17:13:04] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-25 17:13:04] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+)
+
+[2025-05-25 17:13:04] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+)
+
+[2025-05-25 17:13:04] Main order inserted | Array
+(
+    [order_number] => 1747657557
+)
+
+[2025-05-25 17:13:04] Cart items for order 1747657557 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748193774884
+            [height] => 15
+            [width] => 15
+            [color] => #dd8add
+            [colorName] => ורוד
+            [texture] => rough
+            [price] => 103.5
+            [model] => models/vase7.stl
+        )
+
+)
+
+[2025-05-25 17:13:04] Order successfully saved | Array
+(
+    [order_number] => 1747657557
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-25 17:13:04] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748193774884,"height":15,"width":15,"color":"#dd8add","colorName":"ורוד","texture":"rough","price":103.5,"model":"models/vase7.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748193782413_ga2o5083c
+)
+
+[2025-05-25 17:13:04] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [cart_items_length] => 145
+)
+
+[2025-05-25 17:13:04] Processing order without user_id requirement | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+)
+
+[2025-05-25 17:13:04] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+)
+
+[2025-05-25 17:13:04] Main order inserted | Array
+(
+    [order_number] => 1747657558
+)
+
+[2025-05-25 17:13:04] Cart items for order 1747657558 | Array
+(
+    [0] => Array
+        (
+            [id] => 1748193774884
+            [height] => 15
+            [width] => 15
+            [color] => #dd8add
+            [colorName] => ורוד
+            [texture] => rough
+            [price] => 103.5
+            [model] => models/vase7.stl
+        )
+
+)
+
+[2025-05-25 17:13:04] Order successfully saved | Array
+(
+    [order_number] => 1747657558
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+)
+
+[2025-05-25 17:14:37] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748193868847,"height":15,"width":15,"color":"#99db99","colorName":"ירוק","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748193875429_a9bl3gtwl
+)
+
+[2025-05-25 17:14:37] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748193875429_a9bl3gtwl
+    [cart_items_length] => 145
+)
+
+[2025-05-25 17:14:37] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748193875429_a9bl3gtwl
+)
+
+[2025-05-25 17:14:37] Added paypal_order_id column to orders table
+[2025-05-25 17:14:37] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748193875429_a9bl3gtwl
+)
+
+[2025-05-25 17:14:37] Main order inserted | Array
+(
+    [order_number] => 1747657559
+)
+
+[2025-05-25 17:14:37] Cart items stored | Array
+(
+    [order_number] => 1747657559
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657559_items.json
+)
+
+[2025-05-25 17:14:37] Order successfully saved | Array
+(
+    [order_number] => 1747657559
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748193875429_a9bl3gtwl
+)
+
+[2025-05-25 17:14:37] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748193868847,"height":15,"width":15,"color":"#99db99","colorName":"ירוק","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748193875431_phcsy2xh8
+)
+
+[2025-05-25 17:14:37] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748193875431_phcsy2xh8
+    [cart_items_length] => 145
+)
+
+[2025-05-25 17:14:37] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748193875431_phcsy2xh8
+)
+
+[2025-05-25 17:14:37] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748193875431_phcsy2xh8
+)
+
+[2025-05-25 17:14:37] Main order inserted | Array
+(
+    [order_number] => 1747657560
+)
+
+[2025-05-25 17:14:37] Cart items stored | Array
+(
+    [order_number] => 1747657560
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657560_items.json
+)
+
+[2025-05-25 17:14:37] Order successfully saved | Array
+(
+    [order_number] => 1747657560
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748193875431_phcsy2xh8
+)
+
+[2025-05-25 18:23:49] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748198015579,"height":15,"width":15,"color":"#dd8add","colorName":"ורוד","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198027471_huxjvrfup
+)
+
+[2025-05-25 18:23:49] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198027471_huxjvrfup
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:23:49] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748198027471_huxjvrfup
+)
+
+[2025-05-25 18:23:49] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748198027471_huxjvrfup
+)
+
+[2025-05-25 18:23:49] Main order inserted | Array
+(
+    [order_number] => 1747657561
+)
+
+[2025-05-25 18:23:49] Cart items stored | Array
+(
+    [order_number] => 1747657561
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657561_items.json
+)
+
+[2025-05-25 18:23:49] Order successfully saved | Array
+(
+    [order_number] => 1747657561
+    [email] => oreliassi28@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748198027471_huxjvrfup
+)
+
+[2025-05-25 18:23:49] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748198015579,"height":15,"width":15,"color":"#dd8add","colorName":"ורוד","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198027475_t9sk62ecq
+)
+
+[2025-05-25 18:23:49] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198027475_t9sk62ecq
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:23:49] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748198027475_t9sk62ecq
+)
+
+[2025-05-25 18:23:49] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748198027475_t9sk62ecq
+)
+
+[2025-05-25 18:23:49] Main order inserted | Array
+(
+    [order_number] => 1747657562
+)
+
+[2025-05-25 18:23:49] Cart items stored | Array
+(
+    [order_number] => 1747657562
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657562_items.json
+)
+
+[2025-05-25 18:23:49] Order successfully saved | Array
+(
+    [order_number] => 1747657562
+    [email] => oreliassi28@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748198027475_t9sk62ecq
+)
+
+[2025-05-25 18:28:13] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748198283842,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198291607_wsv4024qm
+)
+
+[2025-05-25 18:28:13] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198291607_wsv4024qm
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:28:13] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748198291607_wsv4024qm
+)
+
+[2025-05-25 18:28:13] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748198291607_wsv4024qm
+)
+
+[2025-05-25 18:28:13] Main order inserted | Array
+(
+    [order_number] => 1747657563
+)
+
+[2025-05-25 18:28:13] Cart items stored | Array
+(
+    [order_number] => 1747657563
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657563_items.json
+)
+
+[2025-05-25 18:28:13] Order successfully saved | Array
+(
+    [order_number] => 1747657563
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748198291607_wsv4024qm
+)
+
+[2025-05-25 18:28:13] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748198283842,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198291611_uu7nej3q3
+)
+
+[2025-05-25 18:28:13] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198291611_uu7nej3q3
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:28:13] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748198291611_uu7nej3q3
+)
+
+[2025-05-25 18:28:13] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748198291611_uu7nej3q3
+)
+
+[2025-05-25 18:28:13] Main order inserted | Array
+(
+    [order_number] => 1747657564
+)
+
+[2025-05-25 18:28:13] Cart items stored | Array
+(
+    [order_number] => 1747657564
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657564_items.json
+)
+
+[2025-05-25 18:28:13] Order successfully saved | Array
+(
+    [order_number] => 1747657564
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748198291611_uu7nej3q3
+)
+
+[2025-05-25 18:28:13] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748198283842,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198291615_65ppi7qls
+)
+
+[2025-05-25 18:28:13] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198291615_65ppi7qls
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:28:13] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748198291615_65ppi7qls
+)
+
+[2025-05-25 18:28:13] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748198291615_65ppi7qls
+)
+
+[2025-05-25 18:28:13] Main order inserted | Array
+(
+    [order_number] => 1747657565
+)
+
+[2025-05-25 18:28:13] Cart items stored | Array
+(
+    [order_number] => 1747657565
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657565_items.json
+)
+
+[2025-05-25 18:28:13] Order successfully saved | Array
+(
+    [order_number] => 1747657565
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748198291615_65ppi7qls
+)
+
+[2025-05-25 18:29:18] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748198350874,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198356654_nfvbw7669
+)
+
+[2025-05-25 18:29:18] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198356654_nfvbw7669
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:29:18] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748198356654_nfvbw7669
+)
+
+[2025-05-25 18:29:18] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748198356654_nfvbw7669
+)
+
+[2025-05-25 18:29:18] Main order inserted | Array
+(
+    [order_number] => 1747657566
+)
+
+[2025-05-25 18:29:18] Cart items stored | Array
+(
+    [order_number] => 1747657566
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657566_items.json
+)
+
+[2025-05-25 18:29:18] Order successfully saved | Array
+(
+    [order_number] => 1747657566
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748198356654_nfvbw7669
+)
+
+[2025-05-25 18:29:18] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748198350874,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198356657_0rp0oxsa2
+)
+
+[2025-05-25 18:29:18] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198356657_0rp0oxsa2
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:29:18] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748198356657_0rp0oxsa2
+)
+
+[2025-05-25 18:29:18] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748198356657_0rp0oxsa2
+)
+
+[2025-05-25 18:29:18] Main order inserted | Array
+(
+    [order_number] => 1747657567
+)
+
+[2025-05-25 18:29:18] Cart items stored | Array
+(
+    [order_number] => 1747657567
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657567_items.json
+)
+
+[2025-05-25 18:29:18] Order successfully saved | Array
+(
+    [order_number] => 1747657567
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748198356657_0rp0oxsa2
+)
+
+[2025-05-25 18:29:18] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748198350874,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198356664_24t90i9wf
+)
+
+[2025-05-25 18:29:18] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198356664_24t90i9wf
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:29:18] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748198356664_24t90i9wf
+)
+
+[2025-05-25 18:29:18] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748198356664_24t90i9wf
+)
+
+[2025-05-25 18:29:18] Main order inserted | Array
+(
+    [order_number] => 1747657568
+)
+
+[2025-05-25 18:29:18] Cart items stored | Array
+(
+    [order_number] => 1747657568
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657568_items.json
+)
+
+[2025-05-25 18:29:18] Order successfully saved | Array
+(
+    [order_number] => 1747657568
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748198356664_24t90i9wf
+)
+
+[2025-05-25 18:34:16] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748198647241,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198654346_tf7b7ycsr
+)
+
+[2025-05-25 18:34:16] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748198654346_tf7b7ycsr
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:34:16] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748198654346_tf7b7ycsr
+)
+
+[2025-05-25 18:34:16] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748198654346_tf7b7ycsr
+)
+
+[2025-05-25 18:34:16] Main order inserted | Array
+(
+    [order_number] => 1747657569
+)
+
+[2025-05-25 18:34:16] Cart items stored | Array
+(
+    [order_number] => 1747657569
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657569_items.json
+)
+
+[2025-05-25 18:34:16] Order successfully saved | Array
+(
+    [order_number] => 1747657569
+    [email] => oreliassi28@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748198654346_tf7b7ycsr
+)
+
+[2025-05-25 18:57:18] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748200031082,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748200036873_tcs6r8j08
+)
+
+[2025-05-25 18:57:18] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748200036873_tcs6r8j08
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:57:18] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748200036873_tcs6r8j08
+)
+
+[2025-05-25 18:57:18] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748200036873_tcs6r8j08
+)
+
+[2025-05-25 18:57:18] Main order inserted | Array
+(
+    [order_number] => 1747657570
+)
+
+[2025-05-25 18:57:18] Cart items stored | Array
+(
+    [order_number] => 1747657570
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657570_items.json
+)
+
+[2025-05-25 18:57:18] Order successfully saved | Array
+(
+    [order_number] => 1747657570
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748200036873_tcs6r8j08
+)
+
+[2025-05-25 18:57:18] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748200031082,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748200036883_mlf9jhsbf
+)
+
+[2025-05-25 18:57:18] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748200036883_mlf9jhsbf
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:57:18] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748200036883_mlf9jhsbf
+)
+
+[2025-05-25 18:57:18] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748200036883_mlf9jhsbf
+)
+
+[2025-05-25 18:57:18] Main order inserted | Array
+(
+    [order_number] => 1747657571
+)
+
+[2025-05-25 18:57:18] Cart items stored | Array
+(
+    [order_number] => 1747657571
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657571_items.json
+)
+
+[2025-05-25 18:57:18] Order successfully saved | Array
+(
+    [order_number] => 1747657571
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748200036883_mlf9jhsbf
+)
+
+[2025-05-25 18:57:18] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748200031082,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748200036877_vb90lvqfb
+)
+
+[2025-05-25 18:57:18] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748200036877_vb90lvqfb
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:57:18] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748200036877_vb90lvqfb
+)
+
+[2025-05-25 18:57:18] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748200036877_vb90lvqfb
+)
+
+[2025-05-25 18:57:18] Main order inserted | Array
+(
+    [order_number] => 1747657572
+)
+
+[2025-05-25 18:57:18] Cart items stored | Array
+(
+    [order_number] => 1747657572
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657572_items.json
+)
+
+[2025-05-25 18:57:18] Order successfully saved | Array
+(
+    [order_number] => 1747657572
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748200036877_vb90lvqfb
+)
+
+[2025-05-25 18:57:26] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748200031082,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748200044540_9ougpfswo
+)
+
+[2025-05-25 18:57:26] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748200044540_9ougpfswo
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:57:26] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748200044540_9ougpfswo
+)
+
+[2025-05-25 18:57:26] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748200044540_9ougpfswo
+)
+
+[2025-05-25 18:57:26] Main order inserted | Array
+(
+    [order_number] => 1747657573
+)
+
+[2025-05-25 18:57:26] Cart items stored | Array
+(
+    [order_number] => 1747657573
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657573_items.json
+)
+
+[2025-05-25 18:57:26] Order successfully saved | Array
+(
+    [order_number] => 1747657573
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748200044540_9ougpfswo
+)
+
+[2025-05-25 18:57:26] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748200031082,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748200044537_8dftxz2ry
+)
+
+[2025-05-25 18:57:26] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748200044537_8dftxz2ry
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:57:26] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748200044537_8dftxz2ry
+)
+
+[2025-05-25 18:57:26] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748200044537_8dftxz2ry
+)
+
+[2025-05-25 18:57:26] Main order inserted | Array
+(
+    [order_number] => 1747657574
+)
+
+[2025-05-25 18:57:26] Cart items stored | Array
+(
+    [order_number] => 1747657574
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657574_items.json
+)
+
+[2025-05-25 18:57:26] Order successfully saved | Array
+(
+    [order_number] => 1747657574
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748200044537_8dftxz2ry
+)
+
+[2025-05-25 18:57:26] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748200031082,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748200044543_neldeuv02
+)
+
+[2025-05-25 18:57:26] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748200044543_neldeuv02
+    [cart_items_length] => 145
+)
+
+[2025-05-25 18:57:26] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748200044543_neldeuv02
+)
+
+[2025-05-25 18:57:26] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748200044543_neldeuv02
+)
+
+[2025-05-25 18:57:26] Main order inserted | Array
+(
+    [order_number] => 1747657575
+)
+
+[2025-05-25 18:57:26] Cart items stored | Array
+(
+    [order_number] => 1747657575
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657575_items.json
+)
+
+[2025-05-25 18:57:26] Order successfully saved | Array
+(
+    [order_number] => 1747657575
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748200044543_neldeuv02
+)
+
+[2025-05-25 19:21:46] Order submission started | Array
+(
+    [orderData] => first_name=Or&last_name=Eliassi&email=oreliassi28%40gmail.com&phone=0549779993&city=%D7%99%D7%91%D7%A0%D7%94&street=%D7%A9%D7%99%20%D7%A2%D7%92%D7%A0%D7%95%D7%9F%207&apartment=26&shipping_type=regular&coupon=
+    [cartItems] => [{"id":1748201494265,"height":"15","width":"15","color":"#ffa500","colorName":"כתום","texture":"smooth","price":60,"model":"models/vase1.stl"}]
+    [total] => 80
+)
+
+[2025-05-25 19:21:46] Parsed form data | Array
+(
+    [first_name] => 
+    [last_name] => 
+    [email] => 
+    [phone] => 
+    [city] => 
+    [street] => 
+    [apartment] => 
+    [shipping] => regular
+    [total] => 80
+    [payment_status] => pending
+    [paypal_order_id] => 
+    [cart_items_length] => 147
+)
+
+[2025-05-25 19:21:46] Missing required fields | Array
+(
+    [first_name_empty] => 1
+    [last_name_empty] => 1
+    [email_empty] => 1
+    [phone_empty] => 1
+)
+
+[2025-05-25 19:22:05] Order submission started | Array
+(
+    [orderData] => first_name=Or&last_name=Eliassi&email=oreliassi28%40gmail.com&phone=0549779993&city=%D7%99%D7%91%D7%A0%D7%94&street=%D7%A9%D7%99%20%D7%A2%D7%92%D7%A0%D7%95%D7%9F%207&apartment=26&shipping_type=regular&coupon=
+    [cartItems] => [{"id":1748201494265,"height":"15","width":"15","color":"#ffa500","colorName":"כתום","texture":"smooth","price":60,"model":"models/vase1.stl"}]
+    [total] => 80
+)
+
+[2025-05-25 19:22:05] Parsed form data | Array
+(
+    [first_name] => 
+    [last_name] => 
+    [email] => 
+    [phone] => 
+    [city] => 
+    [street] => 
+    [apartment] => 
+    [shipping] => regular
+    [total] => 80
+    [payment_status] => pending
+    [paypal_order_id] => 
+    [cart_items_length] => 147
+)
+
+[2025-05-25 19:22:05] Missing required fields | Array
+(
+    [first_name_empty] => 1
+    [last_name_empty] => 1
+    [email_empty] => 1
+    [phone_empty] => 1
+)
+
+[2025-05-25 19:45:05] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748202898647,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"matte","price":106,"model":"models/vase1.stl"}]
+    [total] => 126
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748202903979_751e1086t
+)
+
+[2025-05-25 19:45:05] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 126
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748202903979_751e1086t
+    [cart_items_length] => 143
+)
+
+[2025-05-25 19:45:05] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748202903979_751e1086t
+)
+
+[2025-05-25 19:45:05] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 126
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748202903979_751e1086t
+)
+
+[2025-05-25 19:45:05] Main order inserted | Array
+(
+    [order_number] => 1747657576
+)
+
+[2025-05-25 19:45:05] Cart items stored | Array
+(
+    [order_number] => 1747657576
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657576_items.json
+)
+
+[2025-05-25 19:45:05] Order successfully saved | Array
+(
+    [order_number] => 1747657576
+    [email] => oreliassi28@gmail.com
+    [total] => 126
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748202903979_751e1086t
+)
+
+[2025-05-25 19:45:05] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748202898647,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"matte","price":106,"model":"models/vase1.stl"}]
+    [total] => 126
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748202903981_lhroh0z8q
+)
+
+[2025-05-25 19:45:05] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 126
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748202903981_lhroh0z8q
+    [cart_items_length] => 143
+)
+
+[2025-05-25 19:45:05] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748202903981_lhroh0z8q
+)
+
+[2025-05-25 19:45:05] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 126
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748202903981_lhroh0z8q
+)
+
+[2025-05-25 19:45:05] Main order inserted | Array
+(
+    [order_number] => 1747657577
+)
+
+[2025-05-25 19:45:05] Cart items stored | Array
+(
+    [order_number] => 1747657577
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657577_items.json
+)
+
+[2025-05-25 19:45:05] Order successfully saved | Array
+(
+    [order_number] => 1747657577
+    [email] => oreliassi28@gmail.com
+    [total] => 126
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748202903981_lhroh0z8q
+)
+
+[2025-05-25 19:45:05] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748202898647,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"matte","price":106,"model":"models/vase1.stl"}]
+    [total] => 126
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748202903982_84r9g3fj6
+)
+
+[2025-05-25 19:45:05] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 126
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748202903982_84r9g3fj6
+    [cart_items_length] => 143
+)
+
+[2025-05-25 19:45:05] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748202903982_84r9g3fj6
+)
+
+[2025-05-25 19:45:05] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 126
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748202903982_84r9g3fj6
+)
+
+[2025-05-25 19:45:05] Main order inserted | Array
+(
+    [order_number] => 1747657578
+)
+
+[2025-05-25 19:45:05] Cart items stored | Array
+(
+    [order_number] => 1747657578
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657578_items.json
+)
+
+[2025-05-25 19:45:05] Order successfully saved | Array
+(
+    [order_number] => 1747657578
+    [email] => oreliassi28@gmail.com
+    [total] => 126
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748202903982_84r9g3fj6
+)
+
+[2025-05-25 19:57:40] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748203653298,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"matte","price":106,"model":"models/vase1.stl"}]
+    [total] => 126
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748203658541_lwqzmqwoy
+)
+
+[2025-05-25 19:57:40] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 126
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748203658541_lwqzmqwoy
+    [cart_items_length] => 143
+)
+
+[2025-05-25 19:57:40] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748203658541_lwqzmqwoy
+)
+
+[2025-05-25 19:57:40] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 126
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748203658541_lwqzmqwoy
+)
+
+[2025-05-25 19:57:40] Main order inserted | Array
+(
+    [order_number] => 1747657579
+)
+
+[2025-05-25 19:57:40] Cart items stored | Array
+(
+    [order_number] => 1747657579
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657579_items.json
+)
+
+[2025-05-25 19:57:40] Order successfully saved | Array
+(
+    [order_number] => 1747657579
+    [email] => oreliassi28@gmail.com
+    [total] => 126
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748203658541_lwqzmqwoy
+)
+
+[2025-05-25 19:57:40] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748203653298,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"matte","price":106,"model":"models/vase1.stl"}]
+    [total] => 126
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748203658542_jpraufn54
+)
+
+[2025-05-25 19:57:40] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 126
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748203658542_jpraufn54
+    [cart_items_length] => 143
+)
+
+[2025-05-25 19:57:40] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748203658542_jpraufn54
+)
+
+[2025-05-25 19:57:40] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 126
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748203658542_jpraufn54
+)
+
+[2025-05-25 19:57:40] Main order inserted | Array
+(
+    [order_number] => 1747657580
+)
+
+[2025-05-25 19:57:40] Cart items stored | Array
+(
+    [order_number] => 1747657580
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657580_items.json
+)
+
+[2025-05-25 19:57:40] Order successfully saved | Array
+(
+    [order_number] => 1747657580
+    [email] => oreliassi28@gmail.com
+    [total] => 126
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748203658542_jpraufn54
+)
+
+[2025-05-25 19:57:40] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748203653298,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"matte","price":106,"model":"models/vase1.stl"}]
+    [total] => 126
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748203658544_9uguee74d
+)
+
+[2025-05-25 19:57:40] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 126
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748203658544_9uguee74d
+    [cart_items_length] => 143
+)
+
+[2025-05-25 19:57:40] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748203658544_9uguee74d
+)
+
+[2025-05-25 19:57:40] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 126
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748203658544_9uguee74d
+)
+
+[2025-05-25 19:57:40] Main order inserted | Array
+(
+    [order_number] => 1747657581
+)
+
+[2025-05-25 19:57:40] Cart items stored | Array
+(
+    [order_number] => 1747657581
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657581_items.json
+)
+
+[2025-05-25 19:57:40] Order successfully saved | Array
+(
+    [order_number] => 1747657581
+    [email] => oreliassi28@gmail.com
+    [total] => 126
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748203658544_9uguee74d
+)
+
+[2025-05-25 20:10:49] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748204430879,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204447095_zyj7trusc
+)
+
+[2025-05-25 20:10:49] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204447095_zyj7trusc
+    [cart_items_length] => 145
+)
+
+[2025-05-25 20:10:49] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748204447095_zyj7trusc
+)
+
+[2025-05-25 20:10:49] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748204447095_zyj7trusc
+)
+
+[2025-05-25 20:10:49] Main order inserted | Array
+(
+    [order_number] => 1747657582
+)
+
+[2025-05-25 20:10:49] Cart items stored | Array
+(
+    [order_number] => 1747657582
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657582_items.json
+)
+
+[2025-05-25 20:10:49] Order successfully saved | Array
+(
+    [order_number] => 1747657582
+    [email] => oreliassi28@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748204447095_zyj7trusc
+)
+
+[2025-05-25 20:10:49] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748204430879,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204447099_xffdmbfxd
+)
+
+[2025-05-25 20:10:49] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204447099_xffdmbfxd
+    [cart_items_length] => 145
+)
+
+[2025-05-25 20:10:49] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748204447099_xffdmbfxd
+)
+
+[2025-05-25 20:10:49] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748204447099_xffdmbfxd
+)
+
+[2025-05-25 20:10:49] Main order inserted | Array
+(
+    [order_number] => 1747657583
+)
+
+[2025-05-25 20:10:49] Cart items stored | Array
+(
+    [order_number] => 1747657583
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657583_items.json
+)
+
+[2025-05-25 20:10:49] Order successfully saved | Array
+(
+    [order_number] => 1747657583
+    [email] => oreliassi28@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748204447099_xffdmbfxd
+)
+
+[2025-05-25 20:10:49] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748204430879,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204447104_fmcopcmu8
+)
+
+[2025-05-25 20:10:49] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204447104_fmcopcmu8
+    [cart_items_length] => 145
+)
+
+[2025-05-25 20:10:49] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748204447104_fmcopcmu8
+)
+
+[2025-05-25 20:10:49] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748204447104_fmcopcmu8
+)
+
+[2025-05-25 20:10:49] Main order inserted | Array
+(
+    [order_number] => 1747657584
+)
+
+[2025-05-25 20:10:49] Cart items stored | Array
+(
+    [order_number] => 1747657584
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657584_items.json
+)
+
+[2025-05-25 20:10:49] Order successfully saved | Array
+(
+    [order_number] => 1747657584
+    [email] => oreliassi28@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748204447104_fmcopcmu8
+)
+
+[2025-05-25 20:10:55] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748204430879,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204454038_znqsgvvas
+)
+
+[2025-05-25 20:10:55] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204454038_znqsgvvas
+    [cart_items_length] => 145
+)
+
+[2025-05-25 20:10:55] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748204454038_znqsgvvas
+)
+
+[2025-05-25 20:10:55] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748204454038_znqsgvvas
+)
+
+[2025-05-25 20:10:55] Main order inserted | Array
+(
+    [order_number] => 1747657585
+)
+
+[2025-05-25 20:10:55] Cart items stored | Array
+(
+    [order_number] => 1747657585
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657585_items.json
+)
+
+[2025-05-25 20:10:55] Order successfully saved | Array
+(
+    [order_number] => 1747657585
+    [email] => oreliassi28@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748204454038_znqsgvvas
+)
+
+[2025-05-25 20:10:55] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748204430879,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204454040_8nyj4ho9w
+)
+
+[2025-05-25 20:10:55] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204454040_8nyj4ho9w
+    [cart_items_length] => 145
+)
+
+[2025-05-25 20:10:55] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748204454040_8nyj4ho9w
+)
+
+[2025-05-25 20:10:55] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748204454040_8nyj4ho9w
+)
+
+[2025-05-25 20:10:55] Main order inserted | Array
+(
+    [order_number] => 1747657586
+)
+
+[2025-05-25 20:10:55] Cart items stored | Array
+(
+    [order_number] => 1747657586
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657586_items.json
+)
+
+[2025-05-25 20:10:55] Order successfully saved | Array
+(
+    [order_number] => 1747657586
+    [email] => oreliassi28@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748204454040_8nyj4ho9w
+)
+
+[2025-05-25 20:10:55] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748204430879,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204454043_a467ml9tg
+)
+
+[2025-05-25 20:10:55] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204454043_a467ml9tg
+    [cart_items_length] => 145
+)
+
+[2025-05-25 20:10:55] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748204454043_a467ml9tg
+)
+
+[2025-05-25 20:10:55] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748204454043_a467ml9tg
+)
+
+[2025-05-25 20:10:55] Main order inserted | Array
+(
+    [order_number] => 1747657587
+)
+
+[2025-05-25 20:10:55] Cart items stored | Array
+(
+    [order_number] => 1747657587
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657587_items.json
+)
+
+[2025-05-25 20:10:56] Order successfully saved | Array
+(
+    [order_number] => 1747657587
+    [email] => oreliassi28@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748204454043_a467ml9tg
+)
+
+[2025-05-25 20:15:29] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748204721985,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204727108_x11j0prcn
+)
+
+[2025-05-25 20:15:29] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204727108_x11j0prcn
+    [cart_items_length] => 145
+)
+
+[2025-05-25 20:15:29] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748204727108_x11j0prcn
+)
+
+[2025-05-25 20:15:29] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748204727108_x11j0prcn
+)
+
+[2025-05-25 20:15:29] Main order inserted | Array
+(
+    [order_number] => 1747657588
+)
+
+[2025-05-25 20:15:29] Cart items stored | Array
+(
+    [order_number] => 1747657588
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657588_items.json
+)
+
+[2025-05-25 20:15:29] Order successfully saved | Array
+(
+    [order_number] => 1747657588
+    [email] => oreliassi28@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748204727108_x11j0prcn
+)
+
+[2025-05-25 20:15:29] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748204721985,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204727113_9lwxiwxzr
+)
+
+[2025-05-25 20:15:29] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204727113_9lwxiwxzr
+    [cart_items_length] => 145
+)
+
+[2025-05-25 20:15:29] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748204727113_9lwxiwxzr
+)
+
+[2025-05-25 20:15:29] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748204727113_9lwxiwxzr
+)
+
+[2025-05-25 20:15:29] Main order inserted | Array
+(
+    [order_number] => 1747657589
+)
+
+[2025-05-25 20:15:29] Cart items stored | Array
+(
+    [order_number] => 1747657589
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657589_items.json
+)
+
+[2025-05-25 20:15:29] Order successfully saved | Array
+(
+    [order_number] => 1747657589
+    [email] => oreliassi28@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748204727113_9lwxiwxzr
+)
+
+[2025-05-25 20:15:29] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748204721985,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204727110_uu5ze3j4m
+)
+
+[2025-05-25 20:15:29] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 119.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748204727110_uu5ze3j4m
+    [cart_items_length] => 145
+)
+
+[2025-05-25 20:15:29] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748204727110_uu5ze3j4m
+)
+
+[2025-05-25 20:15:29] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 119.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748204727110_uu5ze3j4m
+)
+
+[2025-05-25 20:15:29] Main order inserted | Array
+(
+    [order_number] => 1747657590
+)
+
+[2025-05-25 20:15:29] Cart items stored | Array
+(
+    [order_number] => 1747657590
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657590_items.json
+)
+
+[2025-05-25 20:15:29] Order successfully saved | Array
+(
+    [order_number] => 1747657590
+    [email] => oreliassi28@gmail.com
+    [total] => 119.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748204727110_uu5ze3j4m
+)
+
+[2025-05-25 20:25:46] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748205339543,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748205344721_9y261sahx
+)
+
+[2025-05-25 20:25:46] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748205344721_9y261sahx
+    [cart_items_length] => 145
+)
+
+[2025-05-25 20:25:46] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748205344721_9y261sahx
+)
+
+[2025-05-25 20:25:46] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748205344721_9y261sahx
+)
+
+[2025-05-25 20:25:46] Main order inserted | Array
+(
+    [order_number] => 1747657591
+)
+
+[2025-05-25 20:25:46] Cart items stored | Array
+(
+    [order_number] => 1747657591
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657591_items.json
+)
+
+[2025-05-25 20:25:46] Order successfully saved | Array
+(
+    [order_number] => 1747657591
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748205344721_9y261sahx
+)
+
+[2025-05-25 20:26:17] Order submission started | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [cartItems] => [{"id":1748205339543,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748205375424_ccybn77q5
+)
+
+[2025-05-25 20:26:17] Parsed form data | Array
+(
+    [first_name] => Or
+    [last_name] => Eliassi
+    [email] => oreliassi28@gmail.com
+    [phone] => 0549779993
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [shipping] => regular
+    [total] => 123.5
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748205375424_ccybn77q5
+    [cart_items_length] => 145
+)
+
+[2025-05-25 20:26:17] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => oreliassi28@gmail.com
+    [paypal_order_id] => PRE_1748205375424_ccybn77q5
+)
+
+[2025-05-25 20:26:17] About to bind parameters | Array
+(
+    [email] => oreliassi28@gmail.com
+    [shipping] => regular
+    [total] => 123.5
+    [city] => יבנה
+    [street] => שי עגנון 7
+    [apartment] => 26
+    [firstName] => Or
+    [lastName] => Eliassi
+    [phone] => 0549779993
+    [status] => pending
+    [paypal_order_id] => PRE_1748205375424_ccybn77q5
+)
+
+[2025-05-25 20:26:17] Main order inserted | Array
+(
+    [order_number] => 1747657592
+)
+
+[2025-05-25 20:26:17] Cart items stored | Array
+(
+    [order_number] => 1747657592
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657592_items.json
+)
+
+[2025-05-25 20:26:17] Order successfully saved | Array
+(
+    [order_number] => 1747657592
+    [email] => oreliassi28@gmail.com
+    [total] => 123.5
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748205375424_ccybn77q5
+)
+
+[2025-05-28 11:55:33] Order submission started | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [cartItems] => [{"id":1748433921673,"height":21,"width":15,"color":"#f14a4a","colorName":"אדום","texture":"smooth","price":127,"model":"models/vase1.stl"}]
+    [total] => 147
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748433933107_j1hpy254i
+)
+
+[2025-05-28 11:55:33] Parsed form data | Array
+(
+    [first_name] => Hila
+    [last_name] => Waskar
+    [email] => hila4616@gmail.com
+    [phone] => 0504778191
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [shipping] => regular
+    [total] => 147
+    [payment_status] => pending
+    [paypal_order_id] => PRE_1748433933107_j1hpy254i
+    [cart_items_length] => 144
+)
+
+[2025-05-28 11:55:33] Processing order with PayPal integration | Array
+(
+    [user_id] => 
+    [email] => hila4616@gmail.com
+    [paypal_order_id] => PRE_1748433933107_j1hpy254i
+)
+
+[2025-05-28 11:55:33] About to bind parameters | Array
+(
+    [email] => hila4616@gmail.com
+    [shipping] => regular
+    [total] => 147
+    [city] => Petah Tiqwa
+    [street] => Meir Shafia 3
+    [apartment] => 1
+    [firstName] => Hila
+    [lastName] => Waskar
+    [phone] => 0504778191
+    [status] => pending
+    [paypal_order_id] => PRE_1748433933107_j1hpy254i
+)
+
+[2025-05-28 11:55:33] Main order inserted | Array
+(
+    [order_number] => 1747657593
+)
+
+[2025-05-28 11:55:33] Cart items stored | Array
+(
+    [order_number] => 1747657593
+    [items_count] => 1
+    [file] => /home/isinbalbe3/public_html/php/logs/order_1747657593_items.json
+)
+
+[2025-05-28 11:55:33] Order successfully saved | Array
+(
+    [order_number] => 1747657593
+    [email] => hila4616@gmail.com
+    [total] => 147
+    [status] => pending
+    [shipping] => regular
+    [paypal_order_id] => PRE_1748433933107_j1hpy254i
+)
+

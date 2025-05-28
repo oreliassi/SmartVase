@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartVase - עיצוב כדים חכם</title>
+    <link rel="stylesheet" type="text/css" href="css/homePage.css">
+    <link rel="stylesheet" type="text/css" href="css/ar.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AdNNo_Wy7fmERwZ7z3S8yVbETB8pn_OScHvoYELtXOC0CIfJ5YMkLjVE9MHfqv6rtugJi9kRV7NaWRR1&currency=USD&locale=he_IL&disable-funding=credit,card"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+</head>
+<body>
+    
+<div id="floating-buttons" style="display: none;">
+    <button id="nav-home" class="floating-btn">בית</button>
+    <button id="nav-logout" class="floating-btn">התנתק</button>
+</div>
+
+    <div class="container" id="checkout-screen" style="display: none;">
+        <h2>פרטי הזמנה</h2>
+        <form id="order-form">
+            <input type="text" name="first_name" placeholder="שם פרטי" required>
+            <input type="text" name="last_name" placeholder="שם משפחה" required>
+            <input type="email" name="email" placeholder="אימייל" required>
+            <input type="tel" name="phone" placeholder="טלפון" required>
+            <input type="text" name="city" placeholder="עיר" required>
+            <input type="text" name="street" placeholder="רחוב" required>
+            <input type="text" name="apartment" placeholder="דירה" required>
+
+            <label for="shipping-type">סוג משלוח:</label>
+            <select name="shipping_type" id="shipping-type" required>
+                <option value="regular" data-price="20">משלוח רגיל - 20 ש"ח</option>
+                <option value="express" data-price="40">שליח עד הבית - 40 ש"ח</option>
+                <option value="pickup" data-price="0">איסוף עצמי - חינם</option>
+            </select>
+
+            <input type="text" name="coupon" placeholder="קוד קופון (אם יש)">
+
+            <p id="final-total" style="font-weight: bold; font-size: 18px;">סה"כ לתשלום: 0 ש"ח</p>
+
+            <button type="button" id="back-to-cart">חזרה</button>
+            <button type="submit">אשר והמשך לתשלום</button>
+        </form>
+        <div id="paypal-button-container" style="margin-top: 20px; display: none;"></div>
+        
+        <button id="back-to-form" style="display:none; margin-top: 10px;">חזרה</button>
+    </div>
+
+    <div id="cart-container" style="display: none;">
+        <div id="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+        <div id="cart-details" style="display: none;">
+            <h3>העגלה שלך</h3>
+            <ul id="cart-items"></ul>
+            <p id="total-price">סה"כ: 0 ש"ח</p>
+            <button id="continue-shopping">המשך קנייה</button>
+            <button id="checkout">לתשלום</button>
+        </div>
+    </div>
+
+    <div class="container" id="login-screen" style="display: block;">
+        <div class="logo">
+            <img src="images/logo.png" alt="SmartVase Logo">
+        </div>
+        <h2>התחברות</h2>
+        <input type="text" id="username" placeholder="אימייל">
+        <input type="password" id="password" placeholder="סיסמה">
+        <button id="login-btn">התחבר</button>
+        <button id="admin-login" onclick="window.location.href='../HTML/admin.html'">התחברות כמנהל</button>
+    </div>
+
+    <div class="container" id="home-screen" style="display: none;">
+        <div class="logo">
+            <img src="images/logo.png" alt="SmartVase Logo">
+        </div>
+        <h2 class="home-title">עמוד הבית</h2>
+    
+        <div class="home-buttons">
+            <button id="go-to-design">עצב כד חדש</button>
+            <button id="go-to-orders">ההזמנות שלי</button>
+        </div>
+    </div>
+
+
+    <!-- מסך אזור אישי -->
+    <div class="container" id="personal-area" style="display: none;">
+        <div class="logo">
+            <img src="images/logo.png" alt="SmartVase Logo">
+        </div>
+        <h2 >ההזמנות שלי</h2>
+         <div id="ordersContainer">טוען הזמנות...</div>
+        <button id="back-to-menu">חזרה</button>
+    </div>
+
+    <div class="container" id="design-screen" style="display:none;">
+        <div class="logo">
+            <img src="images/logo.png" alt="SmartVase Logo">
+        </div>
+        <h2>עצב את הכד שלך</h2>
+        <div class="carousel-wrapper">
+            <button class="carousel-arrow left">&#10094;</button>
+          
+            <div class="carousel-track" id="pot-gallery">
+                <!-- הדגמים שלך -->
+                <div class="pot-option" data-model="models/vase1.stl">
+                    <img src="images/vase1.png" alt="כד 1">
+                </div>
+                <div class="pot-option" data-model="models/vase2.stl">
+                    <img src="images/vase2.png" alt="כד 2">
+                </div>
+                <div class="pot-option" data-model="models/vase3.stl">
+                    <img src="images/vase3.png" alt="כד 3">
+                </div>
+                <div class="pot-option" data-model="models/vase4.stl">
+                    <img src="images/vase4.png" alt="כד 4">
+                </div>
+                <div class="pot-option" data-model="models/vase5.stl">
+                    <img src="images/vase5.png" alt="כד 5">
+                </div>
+                <div class="pot-option" data-model="models/vase6.stl">
+                    <img src="images/vase6.png" alt="כד 6">
+                </div>
+                <div class="pot-option" data-model="models/vase7.stl">
+                    <img src="images/vase7.png" alt="כד 7">
+                </div>
+                <div class="pot-option" data-model="models/vase8.stl">
+                    <img src="images/vase8.png" alt="כד 8">
+                </div>
+            </div>
+          
+            <button class="carousel-arrow right">&#10095;</button>
+        </div>
+          
+        <div class="model-wrapper">
+            <div id="3d-model-container" style="width: 100%; height: 500px; position: relative;">
+        <div class="ar-loading">
+            <div class="spinner"></div>
+            <p>טוען את הכד...</p>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="slider-label">
+            <label for="height-slider">גובה:</label>
+            <span id="height-value">15 ס"מ</span>
+        </div>
+        <input type="range" id="height-slider" min="5" max="25" value="15">
+
+        <div class="slider-label">
+            <label for="width-slider">רוחב:</label>
+            <span id="width-value">15 ס"מ</span>
+        </div>
+        <input type="range" id="width-slider" min="5" max="25" value="15">
+        
+        <div id="color-options">
+            <p>בחר צבע:</p>
+            <div class="color-box" style="background-color:#e7d5d5" data-color="#e7d5d5"></div>
+            <div class="color-box" style="background-color:#000000" data-color="#000000"></div>
+            <div class="color-box" style="background-color:#f14a4a" data-color="#f14a4a"></div>
+            <div class="color-box" style="background-color:#99db99" data-color="#99db99"></div>
+            <div class="color-box" style="background-color:#7878f1" data-color="#7878f1"></div>
+            <div class="color-box" style="background-color:#ffeb94" data-color="#ffeb94"></div>
+            <div class="color-box" style="background-color:#dd8add" data-color="#dd8add"></div>
+            <div class="color-box" style="background-color:#99dada" data-color="#99dada"></div>
+            <div class="color-box" style="background-color:#aaaaaa" data-color="#aaaaaa"></div>
+            <div class="color-box" style="background-color:#ffa500" data-color="#ffa500"></div>
+        </div>
+
+        <label>בחר טקסטורה:</label>
+        <select id="texture-select">
+            <option value="">-- בחר טקסטורה --</option>
+            <option value="smooth">חלק</option>
+            <option value="rough">מחוספס</option>
+            <option value="matte">מט</option>
+        </select>
+
+    <button id="show-in-room">הצג בסביבה שלך</button>
+    <button id="calculate-price">חשב מחיר</button>
+    <p id="price-display"></p>
+    <div class="ar-overlay"></div>
+
+<div class="ar-submenu">
+    <h3>בחר אפשרות הצגה</h3>
+    <button class="ar-close">✕</button>
+    
+    <button id="ar-camera" class="ar-btn">
+        <i class="ar-icon camera-icon"></i>
+        השתמש במצלמה
+    </button>
+    <button id="ar-upload" class="ar-btn">
+        <i class="ar-icon gallery-icon"></i>
+        העלה תמונה מהגלריה
+    </button>
+</div>
+
+<input type="file" id="image-upload" accept="image/*" style="display: none;">
+    <button id="add-to-cart">הוסף לעגלה</button>
+</div>
+    
+    
+<div id="ar-container" style="display: none;">
+    <div class="ar-viewer-overlay">
+        <div id="close-ar">✖</div>
+        <div id="ar-canvas-container"></div>
+        <div class="ar-controls">
+            <button id="take-photo">צלם תמונה</button>
+            <button id="save-ar-image">שמור תמונה</button>
+            <button id="retake-photo" style="display:none;">צלם שוב</button>
+        </div>
+    </div>
+</div>
+
+    <script src="../javaScript/homePage.js"></script>
+    <script src="../javaScript/bambuAPI.js"></script>
+    <script src="../javaScript/arFunctionality.js"></script>
+    <script src="/javaScript/simple_odoo_client.js"></script>
+
+     
+     
+<script>
+$(window).on('load', function() {
+    console.log("הדף נטען במלואו");
+    console.log("האם אלמנט התפריט קיים:", $('.ar-submenu').length > 0);
+    console.log("האם אלמנט הרקע קיים:", $('.ar-overlay').length > 0);
+    
+    if ($('.ar-submenu').length > 0) {
+        console.log("מצב תצוגה של התפריט:", $('.ar-submenu').css('display'));
+        console.log("position של התפריט:", $('.ar-submenu').css('position'));
+        console.log("z-index של התפריט:", $('.ar-submenu').css('z-index'));
+    }
+});
+    document.addEventListener('DOMContentLoaded', function() {
+    const cspMeta = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+    if (cspMeta && cspMeta.content.includes('default-src')) {
+        console.log('Removing CSP restriction for PayPal compatibility');
+        cspMeta.remove();
+    }
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const cspTags = document.querySelectorAll('meta[http-equiv="Content-Security-Policy"]');
+    cspTags.forEach(tag => tag.remove());
+    console.log('All CSP restrictions removed for compatibility');
+});
+</script>
+</body>
+</html>

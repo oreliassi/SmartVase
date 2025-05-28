@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1748198015579,
+        "height": 15,
+        "width": 15,
+        "color": "#dd8add",
+        "colorName": "\u05d5\u05e8\u05d5\u05d3",
+        "texture": "smooth",
+        "price": 99.5,
+        "model": "models\/vase1.stl"
+    }
+]

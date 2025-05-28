@@ -1,0 +1,209 @@
+[2025-05-18 12:50:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 12:50:21] Request data size {"size":0}
+[2025-05-18 12:50:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 12:50:22] API Response {"http_code":200,"total_time":0.27373700000000000809308176030754111707210540771484375,"size":118,"exec_time":0.273788928985595703125}
+[2025-05-18 12:51:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 12:51:21] Request data size {"size":0}
+[2025-05-18 12:51:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 12:51:22] API Response {"http_code":200,"total_time":0.72296300000000002228262019343674182891845703125,"size":118,"exec_time":0.7230031490325927734375}
+[2025-05-18 12:52:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 12:52:21] Request data size {"size":0}
+[2025-05-18 12:52:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 12:52:22] API Response {"http_code":200,"total_time":0.328674999999999994937383007709286175668239593505859375,"size":118,"exec_time":0.3287069797515869140625}
+[2025-05-18 12:53:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 12:53:21] Request data size {"size":0}
+[2025-05-18 12:53:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 12:53:22] API Response {"http_code":200,"total_time":0.79837199999999997057642531217425130307674407958984375,"size":118,"exec_time":0.7984101772308349609375}
+[2025-05-18 12:54:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 12:54:21] Request data size {"size":0}
+[2025-05-18 12:54:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 12:54:22] API Response {"http_code":200,"total_time":0.68757900000000005125144753037602640688419342041015625,"size":118,"exec_time":0.6876208782196044921875}
+[2025-05-18 12:55:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 12:55:21] Request data size {"size":0}
+[2025-05-18 12:55:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 12:55:22] API Response {"http_code":200,"total_time":0.285866000000000008984812893686466850340366363525390625,"size":118,"exec_time":0.2858979701995849609375}
+[2025-05-18 12:56:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 12:56:21] Request data size {"size":0}
+[2025-05-18 12:56:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 12:56:22] API Response {"http_code":200,"total_time":0.295713999999999976875386664687539450824260711669921875,"size":118,"exec_time":0.2957680225372314453125}
+[2025-05-18 12:56:37] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 12:56:37] Request data size {"size":0}
+[2025-05-18 12:56:37] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 12:56:38] API Response {"http_code":200,"total_time":0.7343830000000000080007112046587280929088592529296875,"size":118,"exec_time":0.7344150543212890625}
+[2025-05-18 12:56:38] API Request {"endpoint":"detect","method":"POST"}
+[2025-05-18 12:56:38] Request data size {"size":199914}
+[2025-05-18 12:56:38] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/detect"}
+[2025-05-18 12:56:38] API Response {"http_code":200,"total_time":0.446487000000000022748025685359607450664043426513671875,"size":145,"exec_time":0.4465100765228271484375}
+[2025-05-18 12:56:41] API Request {"endpoint":"detect","method":"POST"}
+[2025-05-18 12:56:41] Request data size {"size":199714}
+[2025-05-18 12:56:41] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/detect"}
+[2025-05-18 12:56:41] API Response {"http_code":200,"total_time":0.58809900000000003839062401311821304261684417724609375,"size":145,"exec_time":0.588122844696044921875}
+[2025-05-18 12:57:05] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 12:57:05] Request data size {"size":0}
+[2025-05-18 12:57:05] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 12:57:05] API Response {"http_code":200,"total_time":0.27877099999999999102584524734993465244770050048828125,"size":118,"exec_time":0.2788031101226806640625}
+[2025-05-18 12:57:35] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 12:57:35] Request data size {"size":0}
+[2025-05-18 12:57:35] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 12:57:35] API Response {"http_code":200,"total_time":0.27499200000000001420374928784440271556377410888671875,"size":118,"exec_time":0.275025844573974609375}
+[2025-05-18 12:58:05] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 12:58:05] Request data size {"size":0}
+[2025-05-18 12:58:05] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 12:58:05] API Response {"http_code":200,"total_time":0.2787990000000000190283344636554829776287078857421875,"size":118,"exec_time":0.2788341045379638671875}
+[2025-05-18 12:58:35] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 12:58:35] Request data size {"size":0}
+[2025-05-18 12:58:35] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 12:58:36] API Response {"http_code":200,"total_time":0.276826999999999989743315609302953816950321197509765625,"size":118,"exec_time":0.276866912841796875}
+[2025-05-18 12:59:05] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 12:59:05] Request data size {"size":0}
+[2025-05-18 12:59:05] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 12:59:06] API Response {"http_code":200,"total_time":0.7196329999999999671445038984529674053192138671875,"size":118,"exec_time":0.7196819782257080078125}
+[2025-05-18 13:00:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 13:00:21] Request data size {"size":0}
+[2025-05-18 13:00:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 13:00:22] API Response {"http_code":200,"total_time":0.2674980000000000135429445435875095427036285400390625,"size":118,"exec_time":0.267529964447021484375}
+[2025-05-18 13:01:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 13:01:21] Request data size {"size":0}
+[2025-05-18 13:01:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 13:01:22] API Response {"http_code":200,"total_time":0.75638000000000005229594535194337368011474609375,"size":118,"exec_time":0.756412982940673828125}
+[2025-05-18 13:02:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 13:02:21] Request data size {"size":0}
+[2025-05-18 13:02:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 13:02:22] API Response {"http_code":200,"total_time":0.79023900000000002474820348652428947389125823974609375,"size":118,"exec_time":0.7902719974517822265625}
+[2025-05-18 13:03:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 13:03:21] Request data size {"size":0}
+[2025-05-18 13:03:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 13:03:22] API Response {"http_code":200,"total_time":0.26154800000000000270716782324598170816898345947265625,"size":118,"exec_time":0.26158905029296875}
+[2025-05-18 13:04:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 13:04:21] Request data size {"size":0}
+[2025-05-18 13:04:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 13:04:22] API Response {"http_code":200,"total_time":0.294991999999999976456166450589080341160297393798828125,"size":118,"exec_time":0.2950458526611328125}
+[2025-05-18 13:05:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 13:05:21] Request data size {"size":0}
+[2025-05-18 13:05:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 13:05:22] API Response {"http_code":200,"total_time":0.272172000000000025021762439791928045451641082763671875,"size":118,"exec_time":0.27221012115478515625}
+[2025-05-18 13:06:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 13:06:21] Request data size {"size":0}
+[2025-05-18 13:06:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 13:06:22] API Response {"http_code":200,"total_time":0.27834199999999997832134113195934332907199859619140625,"size":118,"exec_time":0.2783792018890380859375}
+[2025-05-18 13:07:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 13:07:21] Request data size {"size":0}
+[2025-05-18 13:07:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 13:07:22] API Response {"http_code":200,"total_time":0.719014000000000041978864828706718981266021728515625,"size":118,"exec_time":0.719050884246826171875}
+[2025-05-18 13:08:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 13:08:21] Request data size {"size":0}
+[2025-05-18 13:08:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 13:08:22] API Response {"http_code":200,"total_time":0.7179539999999999810853523740661330521106719970703125,"size":118,"exec_time":0.7179858684539794921875}
+[2025-05-18 17:10:35] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:10:35] Request data size {"size":0}
+[2025-05-18 17:10:35] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:11:07] API Response {"http_code":200,"total_time":32.014262000000002217348082922399044036865234375,"size":118,"exec_time":32.0143148899078369140625}
+[2025-05-18 17:11:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:11:21] Request data size {"size":0}
+[2025-05-18 17:11:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:11:22] API Response {"http_code":200,"total_time":0.2785940000000000082991391536779701709747314453125,"size":118,"exec_time":0.278626918792724609375}
+[2025-05-18 17:12:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:12:21] Request data size {"size":0}
+[2025-05-18 17:12:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:12:22] API Response {"http_code":200,"total_time":0.66850200000000004063593905812012962996959686279296875,"size":118,"exec_time":0.66854095458984375}
+[2025-05-18 17:13:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:13:21] Request data size {"size":0}
+[2025-05-18 17:13:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:13:21] API Response {"http_code":200,"total_time":0.255093000000000014182433005771599709987640380859375,"size":118,"exec_time":0.2551310062408447265625}
+[2025-05-18 17:14:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:14:21] Request data size {"size":0}
+[2025-05-18 17:14:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:14:21] API Response {"http_code":200,"total_time":0.281036000000000008025580200410331599414348602294921875,"size":118,"exec_time":0.281074047088623046875}
+[2025-05-18 17:15:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:15:21] Request data size {"size":0}
+[2025-05-18 17:15:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:15:22] API Response {"http_code":200,"total_time":0.378661999999999998589572669516201131045818328857421875,"size":118,"exec_time":0.378695964813232421875}
+[2025-05-18 17:16:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:16:21] Request data size {"size":0}
+[2025-05-18 17:16:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:16:22] API Response {"http_code":200,"total_time":0.780154000000000014125589586910791695117950439453125,"size":118,"exec_time":0.780191898345947265625}
+[2025-05-18 17:17:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:17:21] Request data size {"size":0}
+[2025-05-18 17:17:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:17:21] API Response {"http_code":200,"total_time":0.2789639999999999897539737503393553197383880615234375,"size":118,"exec_time":0.278995990753173828125}
+[2025-05-18 17:18:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:18:21] Request data size {"size":0}
+[2025-05-18 17:18:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:18:22] API Response {"http_code":200,"total_time":0.7446690000000000253521648119203746318817138671875,"size":118,"exec_time":0.744709014892578125}
+[2025-05-18 17:19:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:19:21] Request data size {"size":0}
+[2025-05-18 17:19:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:19:22] API Response {"http_code":200,"total_time":0.277926999999999979618081624721526168286800384521484375,"size":118,"exec_time":0.277966022491455078125}
+[2025-05-18 17:20:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:20:21] Request data size {"size":0}
+[2025-05-18 17:20:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:20:21] API Response {"http_code":200,"total_time":0.291509000000000018104628907167352735996246337890625,"size":118,"exec_time":0.29154682159423828125}
+[2025-05-18 17:21:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:21:21] Request data size {"size":0}
+[2025-05-18 17:21:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:21:22] API Response {"http_code":200,"total_time":0.67395300000000002427213985356502234935760498046875,"size":118,"exec_time":0.673985004425048828125}
+[2025-05-18 17:22:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:22:21] Request data size {"size":0}
+[2025-05-18 17:22:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:22:22] API Response {"http_code":200,"total_time":0.339162000000000019017676322619081474840641021728515625,"size":118,"exec_time":0.3391940593719482421875}
+[2025-05-18 17:23:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:23:21] Request data size {"size":0}
+[2025-05-18 17:23:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:23:22] API Response {"http_code":200,"total_time":0.698096000000000049823256631498225033283233642578125,"size":118,"exec_time":0.6981260776519775390625}
+[2025-05-18 17:24:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:24:21] Request data size {"size":0}
+[2025-05-18 17:24:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:24:21] API Response {"http_code":200,"total_time":0.2691689999999999916013848633156158030033111572265625,"size":118,"exec_time":0.26920413970947265625}
+[2025-05-18 17:25:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:25:21] Request data size {"size":0}
+[2025-05-18 17:25:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:25:22] API Response {"http_code":200,"total_time":0.75993200000000005189804141991771757602691650390625,"size":118,"exec_time":0.7599680423736572265625}
+[2025-05-18 17:26:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:26:21] Request data size {"size":0}
+[2025-05-18 17:26:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:26:22] API Response {"http_code":200,"total_time":0.72976799999999997226041159592568874359130859375,"size":118,"exec_time":0.72980499267578125}
+[2025-05-18 17:27:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:27:21] Request data size {"size":0}
+[2025-05-18 17:27:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:27:22] API Response {"http_code":200,"total_time":0.724979999999999957793761495850048959255218505859375,"size":118,"exec_time":0.725019931793212890625}
+[2025-05-18 17:28:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:28:21] Request data size {"size":0}
+[2025-05-18 17:28:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:28:22] API Response {"http_code":200,"total_time":0.66346300000000002494715545253711752593517303466796875,"size":118,"exec_time":0.6634991168975830078125}
+[2025-05-18 17:29:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:29:21] Request data size {"size":0}
+[2025-05-18 17:29:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:29:21] API Response {"http_code":200,"total_time":0.2473009999999999930508920442662201821804046630859375,"size":118,"exec_time":0.2473390102386474609375}
+[2025-05-18 17:30:12] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:30:12] Request data size {"size":0}
+[2025-05-18 17:30:12] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:30:12] API Response {"http_code":200,"total_time":0.283857999999999999207744849627488292753696441650390625,"size":118,"exec_time":0.283896923065185546875}
+[2025-05-18 17:30:35] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:30:35] Request data size {"size":0}
+[2025-05-18 17:30:35] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:30:36] API Response {"http_code":200,"total_time":0.683950999999999975642595018143765628337860107421875,"size":118,"exec_time":0.683990001678466796875}
+[2025-05-18 17:31:05] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:31:05] Request data size {"size":0}
+[2025-05-18 17:31:05] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:31:05] API Response {"http_code":200,"total_time":0.2652120000000000032969182939268648624420166015625,"size":118,"exec_time":0.265246868133544921875}
+[2025-05-18 17:32:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:32:21] Request data size {"size":0}
+[2025-05-18 17:32:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:32:22] API Response {"http_code":502,"total_time":0.340546999999999988606447232086793519556522369384765625,"size":222796,"exec_time":0.34057903289794921875}
+[2025-05-18 17:32:22] API Error {"http_code":502,"empty_response":false}
+[2025-05-18 17:32:52] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:32:52] Request data size {"size":0}
+[2025-05-18 17:32:52] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:32:52] API Response {"http_code":200,"total_time":0.282499000000000000110134124042815528810024261474609375,"size":118,"exec_time":0.282539844512939453125}
+[2025-05-18 17:33:22] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:33:22] Request data size {"size":0}
+[2025-05-18 17:33:22] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:33:22] API Response {"http_code":200,"total_time":0.2786239999999999827906549398903734982013702392578125,"size":118,"exec_time":0.27865695953369140625}
+[2025-05-18 17:34:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:34:21] Request data size {"size":0}
+[2025-05-18 17:34:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:34:22] API Response {"http_code":200,"total_time":0.748828000000000049141135605168528854846954345703125,"size":118,"exec_time":0.7488610744476318359375}
+[2025-05-18 17:35:21] API Request {"endpoint":"health","method":"GET"}
+[2025-05-18 17:35:21] Request data size {"size":0}
+[2025-05-18 17:35:21] Sending to API {"url":"https:\/\/onnx-api.onrender.com\/health"}
+[2025-05-18 17:35:21] API Response {"http_code":200,"total_time":0.28095999999999998752997498741024173796176910400390625,"size":118,"exec_time":0.28100299835205078125}

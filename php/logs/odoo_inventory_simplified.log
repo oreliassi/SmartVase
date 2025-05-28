@@ -1,0 +1,3561 @@
+[2025-05-24 16:23:04] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748104374978,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748104381856
+)
+
+[2025-05-24 16:23:04] Authenticating with Odoo
+[2025-05-24 16:23:04] Authentication successful - UID: 7
+[2025-05-24 16:23:04] Odoo connection successful
+[2025-05-24 16:23:05] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 16:23:05] Processing cart item | Array
+(
+    [id] => 1748104374978
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 16:23:05] Processing material usage | Array
+(
+    [material] => PLA Yellow
+    [current_qty_kg] => 50
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 49.303119719656
+)
+
+[2025-05-24 16:23:05] Trying simple quantity update | Array
+(
+    [material_id] => 11
+    [new_quantity] => 49.303119719656
+)
+
+[2025-05-24 16:23:05] Simple quantity update successful
+[2025-05-24 16:23:05] Material usage processed with quantity update | Array
+(
+    [materialId] => 11
+    [materialName] => PLA Yellow
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 50
+    [newQuantity] => 49.303119719656
+    [color] => #ffeb94
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-24 16:23:05] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 11
+                    [materialName] => PLA Yellow
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 50
+                    [newQuantity] => 49.303119719656
+                    [color] => #ffeb94
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-24 17:11:20] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748107267427,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-24 17:11:20] Authenticating with Odoo
+[2025-05-24 17:11:21] Authentication successful - UID: 7
+[2025-05-24 17:11:21] Odoo connection successful
+[2025-05-24 17:11:21] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 17:11:21] Processing cart item | Array
+(
+    [id] => 1748107267427
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 17:11:21] Processing material usage | Array
+(
+    [material] => PLA Yellow
+    [current_qty_kg] => 49.3
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 48.603119719656
+)
+
+[2025-05-24 17:11:21] Trying simple quantity update | Array
+(
+    [material_id] => 11
+    [new_quantity] => 48.603119719656
+)
+
+[2025-05-24 17:11:21] Simple quantity update successful
+[2025-05-24 17:11:21] Material usage processed with quantity update | Array
+(
+    [materialId] => 11
+    [materialName] => PLA Yellow
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 49.3
+    [newQuantity] => 48.603119719656
+    [color] => #ffeb94
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-24 17:11:21] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 11
+                    [materialName] => PLA Yellow
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 49.3
+                    [newQuantity] => 48.603119719656
+                    [color] => #ffeb94
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 06:39:56] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748155783528,"height":15,"width":15,"color":"#99db99","colorName":"ירוק","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 06:39:56] Authenticating with Odoo
+[2025-05-25 06:40:00] Authentication successful - UID: 7
+[2025-05-25 06:40:00] Odoo connection successful
+[2025-05-25 06:40:01] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 06:40:01] Processing cart item | Array
+(
+    [id] => 1748155783528
+    [height] => 15
+    [width] => 15
+    [color] => #99db99
+    [colorName] => ירוק
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 06:40:01] Processing material usage | Array
+(
+    [material] => PLA Green
+    [current_qty_kg] => 67
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 66.303119719656
+)
+
+[2025-05-25 06:40:01] Trying simple quantity update | Array
+(
+    [material_id] => 7
+    [new_quantity] => 66.303119719656
+)
+
+[2025-05-25 06:40:01] Simple quantity update successful
+[2025-05-25 06:40:01] Material usage processed with quantity update | Array
+(
+    [materialId] => 7
+    [materialName] => PLA Green
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 67
+    [newQuantity] => 66.303119719656
+    [color] => #99db99
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 06:40:01] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 7
+                    [materialName] => PLA Green
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 67
+                    [newQuantity] => 66.303119719656
+                    [color] => #99db99
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 17:13:04] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748193774884,"height":15,"width":15,"color":"#dd8add","colorName":"ורוד","texture":"rough","price":103.5,"model":"models/vase7.stl"}]
+)
+
+[2025-05-25 17:13:04] Authenticating with Odoo
+[2025-05-25 17:13:04] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748193774884,"height":15,"width":15,"color":"#dd8add","colorName":"ורוד","texture":"rough","price":103.5,"model":"models/vase7.stl"}]
+)
+
+[2025-05-25 17:13:04] Authenticating with Odoo
+[2025-05-25 17:13:05] Authentication successful - UID: 7
+[2025-05-25 17:13:05] Odoo connection successful
+[2025-05-25 17:13:05] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 17:13:05] Processing cart item | Array
+(
+    [id] => 1748193774884
+    [height] => 15
+    [width] => 15
+    [color] => #dd8add
+    [colorName] => ורוד
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase7.stl
+)
+
+[2025-05-25 17:13:05] Processing material usage | Array
+(
+    [material] => PLA Purple
+    [current_qty_kg] => 90
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 89.303119719656
+)
+
+[2025-05-25 17:13:05] Trying simple quantity update | Array
+(
+    [material_id] => 13
+    [new_quantity] => 89.303119719656
+)
+
+[2025-05-25 17:13:06] Simple quantity update successful
+[2025-05-25 17:13:06] Material usage processed with quantity update | Array
+(
+    [materialId] => 13
+    [materialName] => PLA Purple
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 90
+    [newQuantity] => 89.303119719656
+    [color] => #dd8add
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 17:13:06] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 13
+                    [materialName] => PLA Purple
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 90
+                    [newQuantity] => 89.303119719656
+                    [color] => #dd8add
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 17:13:07] Authentication successful - UID: 7
+[2025-05-25 17:13:07] Odoo connection successful
+[2025-05-25 17:13:07] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 17:13:07] Processing cart item | Array
+(
+    [id] => 1748193774884
+    [height] => 15
+    [width] => 15
+    [color] => #dd8add
+    [colorName] => ורוד
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase7.stl
+)
+
+[2025-05-25 17:13:07] Processing material usage | Array
+(
+    [material] => PLA Purple
+    [current_qty_kg] => 89.3
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 88.603119719656
+)
+
+[2025-05-25 17:13:07] Trying simple quantity update | Array
+(
+    [material_id] => 13
+    [new_quantity] => 88.603119719656
+)
+
+[2025-05-25 17:13:08] Simple quantity update successful
+[2025-05-25 17:13:08] Material usage processed with quantity update | Array
+(
+    [materialId] => 13
+    [materialName] => PLA Purple
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 89.3
+    [newQuantity] => 88.603119719656
+    [color] => #dd8add
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 17:13:08] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 13
+                    [materialName] => PLA Purple
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 89.3
+                    [newQuantity] => 88.603119719656
+                    [color] => #dd8add
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 17:14:37] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748193868847,"height":15,"width":15,"color":"#99db99","colorName":"ירוק","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 17:14:37] Authenticating with Odoo
+[2025-05-25 17:14:37] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748193868847,"height":15,"width":15,"color":"#99db99","colorName":"ירוק","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 17:14:37] Authenticating with Odoo
+[2025-05-25 17:14:38] Authentication successful - UID: 7
+[2025-05-25 17:14:38] Odoo connection successful
+[2025-05-25 17:14:38] Authentication successful - UID: 7
+[2025-05-25 17:14:38] Odoo connection successful
+[2025-05-25 17:14:38] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 17:14:38] Processing cart item | Array
+(
+    [id] => 1748193868847
+    [height] => 15
+    [width] => 15
+    [color] => #99db99
+    [colorName] => ירוק
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 17:14:38] Processing material usage | Array
+(
+    [material] => PLA Green
+    [current_qty_kg] => 66.3
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 65.603119719656
+)
+
+[2025-05-25 17:14:38] Trying simple quantity update | Array
+(
+    [material_id] => 7
+    [new_quantity] => 65.603119719656
+)
+
+[2025-05-25 17:14:38] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 17:14:38] Processing cart item | Array
+(
+    [id] => 1748193868847
+    [height] => 15
+    [width] => 15
+    [color] => #99db99
+    [colorName] => ירוק
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 17:14:38] Processing material usage | Array
+(
+    [material] => PLA Green
+    [current_qty_kg] => 66.3
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 65.603119719656
+)
+
+[2025-05-25 17:14:38] Trying simple quantity update | Array
+(
+    [material_id] => 7
+    [new_quantity] => 65.603119719656
+)
+
+[2025-05-25 17:14:38] Simple quantity update successful
+[2025-05-25 17:14:38] Material usage processed with quantity update | Array
+(
+    [materialId] => 7
+    [materialName] => PLA Green
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 66.3
+    [newQuantity] => 65.603119719656
+    [color] => #99db99
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 17:14:38] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 7
+                    [materialName] => PLA Green
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 66.3
+                    [newQuantity] => 65.603119719656
+                    [color] => #99db99
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 17:14:39] Simple quantity update successful
+[2025-05-25 17:14:39] Material usage processed with quantity update | Array
+(
+    [materialId] => 7
+    [materialName] => PLA Green
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 66.3
+    [newQuantity] => 65.603119719656
+    [color] => #99db99
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 17:14:39] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 7
+                    [materialName] => PLA Green
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 66.3
+                    [newQuantity] => 65.603119719656
+                    [color] => #99db99
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:23:49] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748198015579,"height":15,"width":15,"color":"#dd8add","colorName":"ורוד","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:23:49] Authenticating with Odoo
+[2025-05-25 18:23:49] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748198015579,"height":15,"width":15,"color":"#dd8add","colorName":"ורוד","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:23:49] Authenticating with Odoo
+[2025-05-25 18:23:50] Authentication successful - UID: 7
+[2025-05-25 18:23:50] Odoo connection successful
+[2025-05-25 18:23:50] Authentication successful - UID: 7
+[2025-05-25 18:23:50] Odoo connection successful
+[2025-05-25 18:23:50] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:23:50] Processing cart item | Array
+(
+    [id] => 1748198015579
+    [height] => 15
+    [width] => 15
+    [color] => #dd8add
+    [colorName] => ורוד
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:23:50] Processing material usage | Array
+(
+    [material] => PLA Purple
+    [current_qty_kg] => 88.6
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 87.903119719656
+)
+
+[2025-05-25 18:23:50] Trying simple quantity update | Array
+(
+    [material_id] => 13
+    [new_quantity] => 87.903119719656
+)
+
+[2025-05-25 18:23:50] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:23:50] Processing cart item | Array
+(
+    [id] => 1748198015579
+    [height] => 15
+    [width] => 15
+    [color] => #dd8add
+    [colorName] => ורוד
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:23:50] Processing material usage | Array
+(
+    [material] => PLA Purple
+    [current_qty_kg] => 88.6
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 87.903119719656
+)
+
+[2025-05-25 18:23:50] Trying simple quantity update | Array
+(
+    [material_id] => 13
+    [new_quantity] => 87.903119719656
+)
+
+[2025-05-25 18:23:50] Simple quantity update successful
+[2025-05-25 18:23:50] Material usage processed with quantity update | Array
+(
+    [materialId] => 13
+    [materialName] => PLA Purple
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 88.6
+    [newQuantity] => 87.903119719656
+    [color] => #dd8add
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:23:50] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 13
+                    [materialName] => PLA Purple
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 88.6
+                    [newQuantity] => 87.903119719656
+                    [color] => #dd8add
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:23:50] Simple quantity update successful
+[2025-05-25 18:23:50] Material usage processed with quantity update | Array
+(
+    [materialId] => 13
+    [materialName] => PLA Purple
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 88.6
+    [newQuantity] => 87.903119719656
+    [color] => #dd8add
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:23:50] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 13
+                    [materialName] => PLA Purple
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 88.6
+                    [newQuantity] => 87.903119719656
+                    [color] => #dd8add
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:28:13] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748198283842,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:28:13] Authenticating with Odoo
+[2025-05-25 18:28:13] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748198283842,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:28:13] Authenticating with Odoo
+[2025-05-25 18:28:13] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748198283842,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:28:13] Authenticating with Odoo
+[2025-05-25 18:28:14] Authentication successful - UID: 7
+[2025-05-25 18:28:14] Odoo connection successful
+[2025-05-25 18:28:14] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:28:14] Processing cart item | Array
+(
+    [id] => 1748198283842
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:28:14] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 55
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 54.303119719656
+)
+
+[2025-05-25 18:28:14] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 54.303119719656
+)
+
+[2025-05-25 18:28:15] Simple quantity update successful
+[2025-05-25 18:28:15] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 55
+    [newQuantity] => 54.303119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:28:15] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 55
+                    [newQuantity] => 54.303119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:28:15] Authentication successful - UID: 7
+[2025-05-25 18:28:15] Odoo connection successful
+[2025-05-25 18:28:15] Authentication successful - UID: 7
+[2025-05-25 18:28:15] Odoo connection successful
+[2025-05-25 18:28:16] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:28:16] Processing cart item | Array
+(
+    [id] => 1748198283842
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:28:16] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 54.3
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 53.603119719656
+)
+
+[2025-05-25 18:28:16] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 53.603119719656
+)
+
+[2025-05-25 18:28:16] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:28:16] Processing cart item | Array
+(
+    [id] => 1748198283842
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:28:16] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 54.3
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 53.603119719656
+)
+
+[2025-05-25 18:28:16] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 53.603119719656
+)
+
+[2025-05-25 18:28:16] Simple quantity update successful
+[2025-05-25 18:28:16] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 54.3
+    [newQuantity] => 53.603119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:28:16] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 54.3
+                    [newQuantity] => 53.603119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:28:16] Simple quantity update successful
+[2025-05-25 18:28:16] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 54.3
+    [newQuantity] => 53.603119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:28:16] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 54.3
+                    [newQuantity] => 53.603119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:29:18] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748198350874,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:29:18] Authenticating with Odoo
+[2025-05-25 18:29:18] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748198350874,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:29:18] Authenticating with Odoo
+[2025-05-25 18:29:18] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748198350874,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:29:18] Authenticating with Odoo
+[2025-05-25 18:29:19] Authentication successful - UID: 7
+[2025-05-25 18:29:19] Odoo connection successful
+[2025-05-25 18:29:19] Authentication successful - UID: 7
+[2025-05-25 18:29:19] Odoo connection successful
+[2025-05-25 18:29:19] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:29:19] Processing cart item | Array
+(
+    [id] => 1748198350874
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:29:19] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 53.6
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 52.903119719656
+)
+
+[2025-05-25 18:29:19] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 52.903119719656
+)
+
+[2025-05-25 18:29:19] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:29:19] Processing cart item | Array
+(
+    [id] => 1748198350874
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:29:19] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 53.6
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 52.903119719656
+)
+
+[2025-05-25 18:29:19] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 52.903119719656
+)
+
+[2025-05-25 18:29:19] Simple quantity update successful
+[2025-05-25 18:29:19] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 53.6
+    [newQuantity] => 52.903119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:29:19] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 53.6
+                    [newQuantity] => 52.903119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:29:19] Authentication successful - UID: 7
+[2025-05-25 18:29:19] Odoo connection successful
+[2025-05-25 18:29:20] Simple quantity update successful
+[2025-05-25 18:29:20] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 53.6
+    [newQuantity] => 52.903119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:29:20] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 53.6
+                    [newQuantity] => 52.903119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:29:20] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:29:20] Processing cart item | Array
+(
+    [id] => 1748198350874
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:29:20] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 52.9
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 52.203119719656
+)
+
+[2025-05-25 18:29:20] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 52.203119719656
+)
+
+[2025-05-25 18:29:20] Simple quantity update successful
+[2025-05-25 18:29:20] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 52.9
+    [newQuantity] => 52.203119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:29:20] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 52.9
+                    [newQuantity] => 52.203119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:34:16] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748198647241,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:34:16] Authenticating with Odoo
+[2025-05-25 18:34:18] Authentication successful - UID: 7
+[2025-05-25 18:34:18] Odoo connection successful
+[2025-05-25 18:34:18] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:34:18] Processing cart item | Array
+(
+    [id] => 1748198647241
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:34:18] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 52.2
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 51.503119719656
+)
+
+[2025-05-25 18:34:18] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 51.503119719656
+)
+
+[2025-05-25 18:34:19] Simple quantity update successful
+[2025-05-25 18:34:19] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 52.2
+    [newQuantity] => 51.503119719656
+    [color] => #000000
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:34:19] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 52.2
+                    [newQuantity] => 51.503119719656
+                    [color] => #000000
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:57:18] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748200031082,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:57:18] Authenticating with Odoo
+[2025-05-25 18:57:18] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748200031082,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:57:18] Authenticating with Odoo
+[2025-05-25 18:57:18] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748200031082,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:57:18] Authenticating with Odoo
+[2025-05-25 18:57:19] Authentication successful - UID: 7
+[2025-05-25 18:57:19] Odoo connection successful
+[2025-05-25 18:57:19] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:57:19] Processing cart item | Array
+(
+    [id] => 1748200031082
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:57:19] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 51.5
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 50.803119719656
+)
+
+[2025-05-25 18:57:19] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 50.803119719656
+)
+
+[2025-05-25 18:57:20] Simple quantity update successful
+[2025-05-25 18:57:20] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 51.5
+    [newQuantity] => 50.803119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:57:20] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 51.5
+                    [newQuantity] => 50.803119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:57:21] Authentication successful - UID: 7
+[2025-05-25 18:57:21] Odoo connection successful
+[2025-05-25 18:57:21] Authentication successful - UID: 7
+[2025-05-25 18:57:21] Odoo connection successful
+[2025-05-25 18:57:21] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:57:21] Processing cart item | Array
+(
+    [id] => 1748200031082
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:57:21] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 50.8
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 50.103119719656
+)
+
+[2025-05-25 18:57:21] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 50.103119719656
+)
+
+[2025-05-25 18:57:21] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:57:21] Processing cart item | Array
+(
+    [id] => 1748200031082
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:57:21] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 50.8
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 50.103119719656
+)
+
+[2025-05-25 18:57:21] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 50.103119719656
+)
+
+[2025-05-25 18:57:21] Simple quantity update successful
+[2025-05-25 18:57:21] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 50.8
+    [newQuantity] => 50.103119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:57:21] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 50.8
+                    [newQuantity] => 50.103119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:57:21] Simple quantity update successful
+[2025-05-25 18:57:21] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 50.8
+    [newQuantity] => 50.103119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:57:21] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 50.8
+                    [newQuantity] => 50.103119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:57:28] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748200031082,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:57:28] Authenticating with Odoo
+[2025-05-25 18:57:28] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748200031082,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:57:28] Authenticating with Odoo
+[2025-05-25 18:57:28] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748200031082,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 18:57:28] Authenticating with Odoo
+[2025-05-25 18:57:28] Authentication successful - UID: 7
+[2025-05-25 18:57:28] Odoo connection successful
+[2025-05-25 18:57:28] Authentication successful - UID: 7
+[2025-05-25 18:57:28] Odoo connection successful
+[2025-05-25 18:57:28] Authentication successful - UID: 7
+[2025-05-25 18:57:28] Odoo connection successful
+[2025-05-25 18:57:29] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:57:29] Processing cart item | Array
+(
+    [id] => 1748200031082
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:57:29] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 50.1
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 49.403119719656
+)
+
+[2025-05-25 18:57:29] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 49.403119719656
+)
+
+[2025-05-25 18:57:29] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:57:29] Processing cart item | Array
+(
+    [id] => 1748200031082
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:57:29] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 50.1
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 49.403119719656
+)
+
+[2025-05-25 18:57:29] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 49.403119719656
+)
+
+[2025-05-25 18:57:29] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 18:57:29] Processing cart item | Array
+(
+    [id] => 1748200031082
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 18:57:29] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 50.1
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 49.403119719656
+)
+
+[2025-05-25 18:57:29] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 49.403119719656
+)
+
+[2025-05-25 18:57:29] Simple quantity update successful
+[2025-05-25 18:57:29] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 50.1
+    [newQuantity] => 49.403119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:57:29] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 50.1
+                    [newQuantity] => 49.403119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:57:31] Simple quantity update successful
+[2025-05-25 18:57:31] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 50.1
+    [newQuantity] => 49.403119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:57:31] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 50.1
+                    [newQuantity] => 49.403119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 18:57:33] Simple quantity update successful
+[2025-05-25 18:57:33] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 50.1
+    [newQuantity] => 49.403119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 18:57:33] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 50.1
+                    [newQuantity] => 49.403119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 19:45:05] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748202898647,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"matte","price":106,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 19:45:05] Authenticating with Odoo
+[2025-05-25 19:45:05] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748202898647,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"matte","price":106,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 19:45:05] Authenticating with Odoo
+[2025-05-25 19:45:05] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748202898647,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"matte","price":106,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 19:45:05] Authenticating with Odoo
+[2025-05-25 19:45:08] Authentication successful - UID: 7
+[2025-05-25 19:45:08] Odoo connection successful
+[2025-05-25 19:45:08] Authentication successful - UID: 7
+[2025-05-25 19:45:08] Odoo connection successful
+[2025-05-25 19:45:08] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 19:45:08] Processing cart item | Array
+(
+    [id] => 1748202898647
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => matte
+    [price] => 106
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 19:45:08] Processing material usage | Array
+(
+    [material] => PLA Black Matte
+    [current_qty_kg] => 80
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 79.303119719656
+)
+
+[2025-05-25 19:45:08] Trying simple quantity update | Array
+(
+    [material_id] => 4
+    [new_quantity] => 79.303119719656
+)
+
+[2025-05-25 19:45:08] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 19:45:08] Processing cart item | Array
+(
+    [id] => 1748202898647
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => matte
+    [price] => 106
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 19:45:08] Processing material usage | Array
+(
+    [material] => PLA Black Matte
+    [current_qty_kg] => 80
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 79.303119719656
+)
+
+[2025-05-25 19:45:08] Trying simple quantity update | Array
+(
+    [material_id] => 4
+    [new_quantity] => 79.303119719656
+)
+
+[2025-05-25 19:45:09] Simple quantity update successful
+[2025-05-25 19:45:09] Material usage processed with quantity update | Array
+(
+    [materialId] => 4
+    [materialName] => PLA Black Matte
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 80
+    [newQuantity] => 79.303119719656
+    [color] => #000000
+    [texture] => matte
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 19:45:09] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 4
+                    [materialName] => PLA Black Matte
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 80
+                    [newQuantity] => 79.303119719656
+                    [color] => #000000
+                    [texture] => matte
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 19:45:09] Simple quantity update successful
+[2025-05-25 19:45:09] Material usage processed with quantity update | Array
+(
+    [materialId] => 4
+    [materialName] => PLA Black Matte
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 80
+    [newQuantity] => 79.303119719656
+    [color] => #000000
+    [texture] => matte
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 19:45:09] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 4
+                    [materialName] => PLA Black Matte
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 80
+                    [newQuantity] => 79.303119719656
+                    [color] => #000000
+                    [texture] => matte
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 19:45:10] Authentication successful - UID: 7
+[2025-05-25 19:45:10] Odoo connection successful
+[2025-05-25 19:45:10] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 19:45:10] Processing cart item | Array
+(
+    [id] => 1748202898647
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => matte
+    [price] => 106
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 19:45:10] Processing material usage | Array
+(
+    [material] => PLA Black Matte
+    [current_qty_kg] => 79.3
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 78.603119719656
+)
+
+[2025-05-25 19:45:10] Trying simple quantity update | Array
+(
+    [material_id] => 4
+    [new_quantity] => 78.603119719656
+)
+
+[2025-05-25 19:45:10] Simple quantity update successful
+[2025-05-25 19:45:10] Material usage processed with quantity update | Array
+(
+    [materialId] => 4
+    [materialName] => PLA Black Matte
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 79.3
+    [newQuantity] => 78.603119719656
+    [color] => #000000
+    [texture] => matte
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 19:45:10] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 4
+                    [materialName] => PLA Black Matte
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 79.3
+                    [newQuantity] => 78.603119719656
+                    [color] => #000000
+                    [texture] => matte
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 19:57:40] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748203653298,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"matte","price":106,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 19:57:40] Authenticating with Odoo
+[2025-05-25 19:57:40] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748203653298,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"matte","price":106,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 19:57:40] Authenticating with Odoo
+[2025-05-25 19:57:40] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748203653298,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"matte","price":106,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 19:57:40] Authenticating with Odoo
+[2025-05-25 19:57:41] Authentication successful - UID: 7
+[2025-05-25 19:57:41] Odoo connection successful
+[2025-05-25 19:57:41] Authentication successful - UID: 7
+[2025-05-25 19:57:41] Odoo connection successful
+[2025-05-25 19:57:41] Authentication successful - UID: 7
+[2025-05-25 19:57:41] Odoo connection successful
+[2025-05-25 19:57:41] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 19:57:41] Processing cart item | Array
+(
+    [id] => 1748203653298
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => matte
+    [price] => 106
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 19:57:41] Processing material usage | Array
+(
+    [material] => PLA Black Matte
+    [current_qty_kg] => 78.6
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 77.903119719656
+)
+
+[2025-05-25 19:57:41] Trying simple quantity update | Array
+(
+    [material_id] => 4
+    [new_quantity] => 77.903119719656
+)
+
+[2025-05-25 19:57:41] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 19:57:41] Processing cart item | Array
+(
+    [id] => 1748203653298
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => matte
+    [price] => 106
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 19:57:41] Processing material usage | Array
+(
+    [material] => PLA Black Matte
+    [current_qty_kg] => 78.6
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 77.903119719656
+)
+
+[2025-05-25 19:57:41] Trying simple quantity update | Array
+(
+    [material_id] => 4
+    [new_quantity] => 77.903119719656
+)
+
+[2025-05-25 19:57:41] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 19:57:41] Processing cart item | Array
+(
+    [id] => 1748203653298
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => matte
+    [price] => 106
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 19:57:41] Processing material usage | Array
+(
+    [material] => PLA Black Matte
+    [current_qty_kg] => 78.6
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 77.903119719656
+)
+
+[2025-05-25 19:57:41] Trying simple quantity update | Array
+(
+    [material_id] => 4
+    [new_quantity] => 77.903119719656
+)
+
+[2025-05-25 19:57:41] Simple quantity update successful
+[2025-05-25 19:57:41] Material usage processed with quantity update | Array
+(
+    [materialId] => 4
+    [materialName] => PLA Black Matte
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 78.6
+    [newQuantity] => 77.903119719656
+    [color] => #000000
+    [texture] => matte
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 19:57:41] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 4
+                    [materialName] => PLA Black Matte
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 78.6
+                    [newQuantity] => 77.903119719656
+                    [color] => #000000
+                    [texture] => matte
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 19:57:41] Simple quantity update successful
+[2025-05-25 19:57:41] Material usage processed with quantity update | Array
+(
+    [materialId] => 4
+    [materialName] => PLA Black Matte
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 78.6
+    [newQuantity] => 77.903119719656
+    [color] => #000000
+    [texture] => matte
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 19:57:41] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 4
+                    [materialName] => PLA Black Matte
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 78.6
+                    [newQuantity] => 77.903119719656
+                    [color] => #000000
+                    [texture] => matte
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 19:57:42] Simple quantity update successful
+[2025-05-25 19:57:42] Material usage processed with quantity update | Array
+(
+    [materialId] => 4
+    [materialName] => PLA Black Matte
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 78.6
+    [newQuantity] => 77.903119719656
+    [color] => #000000
+    [texture] => matte
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 19:57:42] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 4
+                    [materialName] => PLA Black Matte
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 78.6
+                    [newQuantity] => 77.903119719656
+                    [color] => #000000
+                    [texture] => matte
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 20:10:49] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748204430879,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 20:10:49] Authenticating with Odoo
+[2025-05-25 20:10:49] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748204430879,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 20:10:49] Authenticating with Odoo
+[2025-05-25 20:10:49] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748204430879,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 20:10:49] Authenticating with Odoo
+[2025-05-25 20:10:49] Authentication successful - UID: 7
+[2025-05-25 20:10:49] Odoo connection successful
+[2025-05-25 20:10:49] Authentication successful - UID: 7
+[2025-05-25 20:10:49] Odoo connection successful
+[2025-05-25 20:10:49] Authentication successful - UID: 7
+[2025-05-25 20:10:49] Odoo connection successful
+[2025-05-25 20:10:50] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 20:10:50] Processing cart item | Array
+(
+    [id] => 1748204430879
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 20:10:50] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 49.4
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 48.703119719656
+)
+
+[2025-05-25 20:10:50] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 48.703119719656
+)
+
+[2025-05-25 20:10:50] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 20:10:50] Processing cart item | Array
+(
+    [id] => 1748204430879
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 20:10:50] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 49.4
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 48.703119719656
+)
+
+[2025-05-25 20:10:50] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 48.703119719656
+)
+
+[2025-05-25 20:10:50] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 20:10:50] Processing cart item | Array
+(
+    [id] => 1748204430879
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 20:10:50] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 49.4
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 48.703119719656
+)
+
+[2025-05-25 20:10:50] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 48.703119719656
+)
+
+[2025-05-25 20:10:50] Simple quantity update successful
+[2025-05-25 20:10:50] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 49.4
+    [newQuantity] => 48.703119719656
+    [color] => #000000
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 20:10:50] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 49.4
+                    [newQuantity] => 48.703119719656
+                    [color] => #000000
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 20:10:51] Simple quantity update successful
+[2025-05-25 20:10:51] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 49.4
+    [newQuantity] => 48.703119719656
+    [color] => #000000
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 20:10:51] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 49.4
+                    [newQuantity] => 48.703119719656
+                    [color] => #000000
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 20:10:52] Simple quantity update successful
+[2025-05-25 20:10:52] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 49.4
+    [newQuantity] => 48.703119719656
+    [color] => #000000
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 20:10:52] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 49.4
+                    [newQuantity] => 48.703119719656
+                    [color] => #000000
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 20:10:57] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748204430879,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 20:10:57] Authenticating with Odoo
+[2025-05-25 20:10:57] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748204430879,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 20:10:57] Authenticating with Odoo
+[2025-05-25 20:10:57] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748204430879,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 20:10:57] Authenticating with Odoo
+[2025-05-25 20:10:58] Authentication successful - UID: 7
+[2025-05-25 20:10:58] Odoo connection successful
+[2025-05-25 20:10:58] Authentication successful - UID: 7
+[2025-05-25 20:10:58] Odoo connection successful
+[2025-05-25 20:10:58] Authentication successful - UID: 7
+[2025-05-25 20:10:58] Odoo connection successful
+[2025-05-25 20:10:58] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 20:10:58] Processing cart item | Array
+(
+    [id] => 1748204430879
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 20:10:58] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 48.7
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 48.003119719656
+)
+
+[2025-05-25 20:10:58] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 48.003119719656
+)
+
+[2025-05-25 20:10:58] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 20:10:58] Processing cart item | Array
+(
+    [id] => 1748204430879
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 20:10:58] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 48.7
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 48.003119719656
+)
+
+[2025-05-25 20:10:58] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 48.003119719656
+)
+
+[2025-05-25 20:10:58] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 20:10:58] Processing cart item | Array
+(
+    [id] => 1748204430879
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 20:10:58] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 48.7
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 48.003119719656
+)
+
+[2025-05-25 20:10:58] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 48.003119719656
+)
+
+[2025-05-25 20:10:59] Simple quantity update successful
+[2025-05-25 20:10:59] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 48.7
+    [newQuantity] => 48.003119719656
+    [color] => #000000
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 20:10:59] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 48.7
+                    [newQuantity] => 48.003119719656
+                    [color] => #000000
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 20:10:59] Simple quantity update successful
+[2025-05-25 20:10:59] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 48.7
+    [newQuantity] => 48.003119719656
+    [color] => #000000
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 20:10:59] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 48.7
+                    [newQuantity] => 48.003119719656
+                    [color] => #000000
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 20:11:01] Simple quantity update successful
+[2025-05-25 20:11:01] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 48.7
+    [newQuantity] => 48.003119719656
+    [color] => #000000
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 20:11:01] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 48.7
+                    [newQuantity] => 48.003119719656
+                    [color] => #000000
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 20:15:29] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748204721985,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 20:15:29] Authenticating with Odoo
+[2025-05-25 20:15:29] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748204721985,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 20:15:29] Authenticating with Odoo
+[2025-05-25 20:15:29] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748204721985,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 20:15:29] Authenticating with Odoo
+[2025-05-25 20:15:29] Authentication successful - UID: 7
+[2025-05-25 20:15:29] Odoo connection successful
+[2025-05-25 20:15:29] Authentication successful - UID: 7
+[2025-05-25 20:15:29] Odoo connection successful
+[2025-05-25 20:15:29] Authentication successful - UID: 7
+[2025-05-25 20:15:29] Odoo connection successful
+[2025-05-25 20:15:30] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 20:15:30] Processing cart item | Array
+(
+    [id] => 1748204721985
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 20:15:30] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 48
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 47.303119719656
+)
+
+[2025-05-25 20:15:30] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 47.303119719656
+)
+
+[2025-05-25 20:15:30] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 20:15:30] Processing cart item | Array
+(
+    [id] => 1748204721985
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 20:15:30] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 48
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 47.303119719656
+)
+
+[2025-05-25 20:15:30] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 47.303119719656
+)
+
+[2025-05-25 20:15:30] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 20:15:30] Processing cart item | Array
+(
+    [id] => 1748204721985
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 20:15:30] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 48
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 47.303119719656
+)
+
+[2025-05-25 20:15:30] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 47.303119719656
+)
+
+[2025-05-25 20:15:30] Simple quantity update successful
+[2025-05-25 20:15:30] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 48
+    [newQuantity] => 47.303119719656
+    [color] => #000000
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 20:15:30] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 48
+                    [newQuantity] => 47.303119719656
+                    [color] => #000000
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 20:15:30] Simple quantity update successful
+[2025-05-25 20:15:30] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 48
+    [newQuantity] => 47.303119719656
+    [color] => #000000
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 20:15:30] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 48
+                    [newQuantity] => 47.303119719656
+                    [color] => #000000
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 20:15:30] Simple quantity update successful
+[2025-05-25 20:15:30] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 48
+    [newQuantity] => 47.303119719656
+    [color] => #000000
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 20:15:30] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 48
+                    [newQuantity] => 47.303119719656
+                    [color] => #000000
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 20:25:46] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748205339543,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 20:25:46] Authenticating with Odoo
+[2025-05-25 20:25:47] Authentication successful - UID: 7
+[2025-05-25 20:25:47] Odoo connection successful
+[2025-05-25 20:25:47] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 20:25:47] Processing cart item | Array
+(
+    [id] => 1748205339543
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 20:25:47] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 47.3
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 46.603119719656
+)
+
+[2025-05-25 20:25:47] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 46.603119719656
+)
+
+[2025-05-25 20:25:48] Simple quantity update successful
+[2025-05-25 20:25:48] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 47.3
+    [newQuantity] => 46.603119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 20:25:48] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 47.3
+                    [newQuantity] => 46.603119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-25 20:26:17] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748205339543,"height":15,"width":15,"color":"#000000","colorName":"שחור","texture":"rough","price":103.5,"model":"models/vase1.stl"}]
+)
+
+[2025-05-25 20:26:17] Authenticating with Odoo
+[2025-05-25 20:26:18] Authentication successful - UID: 7
+[2025-05-25 20:26:18] Odoo connection successful
+[2025-05-25 20:26:18] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-25 20:26:18] Processing cart item | Array
+(
+    [id] => 1748205339543
+    [height] => 15
+    [width] => 15
+    [color] => #000000
+    [colorName] => שחור
+    [texture] => rough
+    [price] => 103.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-25 20:26:18] Processing material usage | Array
+(
+    [material] => PLA Black
+    [current_qty_kg] => 46.6
+    [used_weight_kg] => 0.69688028034392
+    [new_qty_kg] => 45.903119719656
+)
+
+[2025-05-25 20:26:18] Trying simple quantity update | Array
+(
+    [material_id] => 3
+    [new_quantity] => 45.903119719656
+)
+
+[2025-05-25 20:26:18] Simple quantity update successful
+[2025-05-25 20:26:18] Material usage processed with quantity update | Array
+(
+    [materialId] => 3
+    [materialName] => PLA Black
+    [usedWeight] => 696.88028034392
+    [previousQuantity] => 46.6
+    [newQuantity] => 45.903119719656
+    [color] => #000000
+    [texture] => rough
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-25 20:26:18] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 3
+                    [materialName] => PLA Black
+                    [usedWeight] => 696.88028034392
+                    [previousQuantity] => 46.6
+                    [newQuantity] => 45.903119719656
+                    [color] => #000000
+                    [texture] => rough
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+
+[2025-05-28 11:55:33] Simplified inventory tracker started | Array
+(
+    [cartItems] => [{"id":1748433921673,"height":21,"width":15,"color":"#f14a4a","colorName":"אדום","texture":"smooth","price":127,"model":"models/vase1.stl"}]
+)
+
+[2025-05-28 11:55:33] Authenticating with Odoo
+[2025-05-28 11:55:34] Authentication successful - UID: 7
+[2025-05-28 11:55:34] Odoo connection successful
+[2025-05-28 11:55:34] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-28 11:55:34] Processing cart item | Array
+(
+    [id] => 1748433921673
+    [height] => 21
+    [width] => 15
+    [color] => #f14a4a
+    [colorName] => אדום
+    [texture] => smooth
+    [price] => 127
+    [model] => models/vase1.stl
+)
+
+[2025-05-28 11:55:34] Processing material usage | Array
+(
+    [material] => PLA Red 
+    [current_qty_kg] => 30
+    [used_weight_kg] => 0.90408871358094
+    [new_qty_kg] => 29.095911286419
+)
+
+[2025-05-28 11:55:34] Trying simple quantity update | Array
+(
+    [material_id] => 5
+    [new_quantity] => 29.095911286419
+)
+
+[2025-05-28 11:55:34] Simple quantity update successful
+[2025-05-28 11:55:34] Material usage processed with quantity update | Array
+(
+    [materialId] => 5
+    [materialName] => PLA Red 
+    [usedWeight] => 904.08871358094
+    [previousQuantity] => 30
+    [newQuantity] => 29.095911286419
+    [color] => #f14a4a
+    [texture] => smooth
+    [logged] => 1
+    [updated] => 1
+    [method] => simple_update
+)
+
+[2025-05-28 11:55:34] Simplified inventory tracking completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 5
+                    [materialName] => PLA Red 
+                    [usedWeight] => 904.08871358094
+                    [previousQuantity] => 30
+                    [newQuantity] => 29.095911286419
+                    [color] => #f14a4a
+                    [texture] => smooth
+                    [logged] => 1
+                    [updated] => 1
+                    [method] => simple_update
+                )
+
+        )
+
+    [processed_items] => 1
+    [updated_items] => 1
+    [total_items] => 1
+    [odoo_connected] => 1
+    [message] => Material usage tracked successfully! 1 items logged, 1 items updated in Odoo.
+    [log_files] => Array
+        (
+            [detailed_log] => /logs/odoo_inventory_simplified.log
+            [usage_csv] => /logs/material_usage.csv
+            [usage_summary] => /logs/usage_summary.txt
+        )
+
+)
+

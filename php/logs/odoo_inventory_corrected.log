@@ -1,0 +1,124 @@
+[2025-05-24 16:18:00] Corrected inventory update script started | Array
+(
+    [cartItems] => [{"id":1748104071143,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748104078467
+)
+
+[2025-05-24 16:18:00] Authenticating with Odoo
+[2025-05-24 16:18:01] Authentication successful - UID: 7
+[2025-05-24 16:18:01] Fetched materials | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 16:18:01] Processing cart item | Array
+(
+    [id] => 1748104071143
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 16:18:01] Updating inventory | Array
+(
+    [template_id] => 11
+    [used_quantity_kg] => 0.69688028034392
+)
+
+[2025-05-24 16:18:01] Getting product variant for template ID: 11
+[2025-05-24 16:18:02] Found product variant | Array
+(
+    [product_id] => 11
+    [template_id] => 11
+    [name] => [000011] PLA Yellow
+)
+
+[2025-05-24 16:18:02] Getting stock locations
+[2025-05-24 16:18:02] Found locations | Array
+(
+    [stock_location] => 8
+    [customer_location] => 5
+)
+
+[2025-05-24 16:18:02] Failed to create stock move | Array
+(
+    [success] => 1
+    [result] => Array
+        (
+            [jsonrpc] => 2.0
+            [id] => 787919
+            [error] => Array
+                (
+                    [code] => 0
+                    [message] => Odoo Server Error
+                    [data] => Array
+                        (
+                            [name] => builtins.TypeError
+                            [debug] => Traceback (most recent call last):
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2016, in _transactioning
+    return service_model.retrying(func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/service/model.py", line 161, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 1983, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2234, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/ir_http.py", line 340, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 745, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DataSet.call_kw() missing 1 required positional argument: 'kwargs'
+
+                            [message] => DataSet.call_kw() missing 1 required positional argument: 'kwargs'
+                            [arguments] => Array
+                                (
+                                    [0] => DataSet.call_kw() missing 1 required positional argument: 'kwargs'
+                                )
+
+                            [context] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [http_code] => 200
+    [raw_response] => {"jsonrpc": "2.0", "id": 787919, "error": {"code": 0, "message": "Odoo Server Error", "data": {"name": "builtins.TypeError", "debug": "Traceback (most recent call last):\n  File \"/home/odoo/src/odoo/saas-18.2/odoo/http.py\", line 2016, in _transactioning\n    return service_model.retrying(func, env=self.env)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/odoo/src/odoo/saas-18.2/odoo/service/model.py\", line 161, in retrying\n    result = func()\n             ^^^^^^\n  File \"/home/odoo/src/odoo/saas-18.2/odoo/http.py\", line 1983, in _serve_ir_http\n    response = self.dispatcher.dispatch(rule.endpoint, args)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/odoo/src/odoo/saas-18.2/odoo/http.py\", line 2234, in dispatch\n    result = self.request.registry['ir.http']._dispatch(endpoint)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/ir_http.py\", line 340, in _dispatch\n    result = endpoint(**request.params)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/odoo/src/odoo/saas-18.2/odoo/http.py\", line 745, in route_wrapper\n    result = endpoint(self, *args, **params_ok)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: DataSet.call_kw() missing 1 required positional argument: 'kwargs'\n", "message": "DataSet.call_kw() missing 1 required positional argument: 'kwargs'", "arguments": ["DataSet.call_kw() missing 1 required positional argument: 'kwargs'"], "context": {}}}}
+)
+
+[2025-05-24 16:18:02] Failed to update inventory | Array
+(
+    [material] => PLA Yellow
+    [error] => Failed to create stock move
+)
+
+[2025-05-24 16:18:02] Corrected inventory update completed | Array
+(
+    [success] => 
+    [updates] => Array
+        (
+        )
+
+    [processed_items] => 0
+    [total_items] => 1
+    [message] => Some items could not be processed: Failed to update PLA Yellow: Failed to create stock move
+    [errors] => Array
+        (
+            [0] => Failed to update PLA Yellow: Failed to create stock move
+        )
+
+)
+

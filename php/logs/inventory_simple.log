@@ -1,0 +1,30 @@
+[2025-05-22 15:53:23] Simple inventory update script started | Array
+(
+    [cartItems] => [{"id":1747929799563,"height":15,"width":15,"color":"#000000","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => 1747929799563
+)
+
+[2025-05-22 15:53:23] Processing cart items | Array
+(
+    [count] => 1
+)
+
+[2025-05-22 15:53:23] Processing item | Array
+(
+    [color] => #000000
+    [texture] => smooth
+    [height] => 15
+    [width] => 15
+    [weight_grams] => 696.88028034392
+    [weight_kg] => 0.69688028034392
+)
+
+[2025-05-22 15:53:23] Added simulated update | Array
+(
+    [materialId] => 11
+    [materialName] => PLA 000000
+    [usedWeight] => 696.88028034392
+    [newQuantity] => 19.303119719656
+    [previousQuantity] => 17
+)
+

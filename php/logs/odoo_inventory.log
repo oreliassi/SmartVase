@@ -1,0 +1,1544 @@
+[2025-05-22 15:46:40] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1747929396697,"height":15,"width":15,"color":"#000000","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => 1747929396697
+)
+
+[2025-05-22 15:46:40] Processing cart items | Array
+(
+    [count] => 1
+)
+
+[2025-05-22 15:46:43] Invalid JSON or no UID | Array
+(
+    [jsonrpc] => 2.0
+    [id] => 132884
+    [error] => Array
+        (
+            [code] => 0
+            [message] => Odoo Server Error
+            [data] => Array
+                (
+                    [name] => odoo.exceptions.AccessDenied
+                    [debug] => Traceback (most recent call last):
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2016, in _transactioning
+    return service_model.retrying(func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/service/model.py", line 161, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 1983, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2234, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/ir_http.py", line 340, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 745, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/addons/web/controllers/session.py", line 46, in authenticate
+    auth_info = request.session.authenticate(env, credential)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 1100, in authenticate
+    auth_info = env['res.users'].authenticate(credential, wsgienv)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/addons/auth_totp_mail/models/res_users.py", line 51, in authenticate
+    auth_info = super().authenticate(credential, user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/res_users.py", line 757, in authenticate
+    auth_info = self._login(credential, user_agent_env=user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/custom/trial/saas_trial/models/res_users.py", line 382, in _login
+    auth_info = super()._login(credential, user_agent_env=user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/res_users.py", line 728, in _login
+    auth_info = user._check_credentials(credential, user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/custom/trial/saas_trial/models/res_users.py", line 315, in _check_credentials
+    raise access_denied
+  File "/home/odoo/src/custom/trial/saas_trial/models/res_users.py", line 227, in _check_credentials
+    return super(ResUsers, self)._check_credentials(credential, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/res_users.py", line 369, in _check_credentials
+    raise AccessDenied()
+odoo.exceptions.AccessDenied: Access Denied
+
+                    [message] => Access Denied
+                    [arguments] => Array
+                        (
+                            [0] => Access Denied
+                        )
+
+                    [context] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+[2025-05-22 17:29:37] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1747935544798,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1747935574485
+)
+
+[2025-05-22 17:29:37] Starting authentication with Odoo
+[2025-05-22 17:29:39] Authentication failed | Array
+(
+    [jsonrpc] => 2.0
+    [id] => 329800
+    [error] => Array
+        (
+            [code] => 0
+            [message] => Odoo Server Error
+            [data] => Array
+                (
+                    [name] => odoo.exceptions.AccessDenied
+                    [debug] => Traceback (most recent call last):
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2016, in _transactioning
+    return service_model.retrying(func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/service/model.py", line 161, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 1983, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2234, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/ir_http.py", line 340, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 745, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/addons/web/controllers/session.py", line 46, in authenticate
+    auth_info = request.session.authenticate(env, credential)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 1100, in authenticate
+    auth_info = env['res.users'].authenticate(credential, wsgienv)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/addons/auth_totp_mail/models/res_users.py", line 51, in authenticate
+    auth_info = super().authenticate(credential, user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/res_users.py", line 757, in authenticate
+    auth_info = self._login(credential, user_agent_env=user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/custom/trial/saas_trial/models/res_users.py", line 382, in _login
+    auth_info = super()._login(credential, user_agent_env=user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/res_users.py", line 728, in _login
+    auth_info = user._check_credentials(credential, user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/custom/trial/saas_trial/models/res_users.py", line 315, in _check_credentials
+    raise access_denied
+  File "/home/odoo/src/custom/trial/saas_trial/models/res_users.py", line 227, in _check_credentials
+    return super(ResUsers, self)._check_credentials(credential, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/res_users.py", line 369, in _check_credentials
+    raise AccessDenied()
+odoo.exceptions.AccessDenied: Access Denied
+
+                    [message] => Access Denied
+                    [arguments] => Array
+                        (
+                            [0] => Access Denied
+                        )
+
+                    [context] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+[2025-05-24 13:34:16] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748094235630,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748094253862
+)
+
+[2025-05-24 13:34:16] Starting authentication with Odoo
+[2025-05-24 13:34:18] Authentication failed | Array
+(
+    [jsonrpc] => 2.0
+    [id] => 48359
+    [error] => Array
+        (
+            [code] => 0
+            [message] => Odoo Server Error
+            [data] => Array
+                (
+                    [name] => odoo.exceptions.AccessDenied
+                    [debug] => Traceback (most recent call last):
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2016, in _transactioning
+    return service_model.retrying(func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/service/model.py", line 161, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 1983, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2234, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/ir_http.py", line 340, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 745, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/addons/web/controllers/session.py", line 46, in authenticate
+    auth_info = request.session.authenticate(env, credential)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 1100, in authenticate
+    auth_info = env['res.users'].authenticate(credential, wsgienv)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/addons/auth_totp_mail/models/res_users.py", line 51, in authenticate
+    auth_info = super().authenticate(credential, user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/res_users.py", line 757, in authenticate
+    auth_info = self._login(credential, user_agent_env=user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/custom/trial/saas_trial/models/res_users.py", line 382, in _login
+    auth_info = super()._login(credential, user_agent_env=user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/res_users.py", line 728, in _login
+    auth_info = user._check_credentials(credential, user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/custom/trial/saas_trial/models/res_users.py", line 315, in _check_credentials
+    raise access_denied
+  File "/home/odoo/src/custom/trial/saas_trial/models/res_users.py", line 227, in _check_credentials
+    return super(ResUsers, self)._check_credentials(credential, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/res_users.py", line 369, in _check_credentials
+    raise AccessDenied()
+odoo.exceptions.AccessDenied: Access Denied
+
+                    [message] => Access Denied
+                    [arguments] => Array
+                        (
+                            [0] => Access Denied
+                        )
+
+                    [context] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+[2025-05-24 13:52:53] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748095361572,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748095371022
+)
+
+[2025-05-24 13:52:53] Starting authentication with Odoo
+[2025-05-24 13:52:55] Authentication successful - UID: 7
+[2025-05-24 13:52:55] Fetched materials from Odoo | Array
+(
+    [count] => 0
+)
+
+[2025-05-24 13:52:55] Processing cart item | Array
+(
+    [id] => 1748095361572
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 14:06:06] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748096156118,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748096164343
+)
+
+[2025-05-24 14:06:06] Starting authentication with Odoo
+[2025-05-24 14:06:07] Authentication successful - UID: 7
+[2025-05-24 14:06:07] Fetched materials from Odoo | Array
+(
+    [count] => 0
+)
+
+[2025-05-24 14:06:07] Processing cart item | Array
+(
+    [id] => 1748096156118
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 14:25:35] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748097321961,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748097333141
+)
+
+[2025-05-24 14:25:35] Starting authentication with Odoo
+[2025-05-24 14:25:36] Authentication successful - UID: 7
+[2025-05-24 14:25:36] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 14:25:36] Processing cart item | Array
+(
+    [id] => 1748097321961
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 14:40:53] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748098242989,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748098250805
+)
+
+[2025-05-24 14:40:53] Starting authentication with Odoo
+[2025-05-24 14:40:53] Authentication successful - UID: 7
+[2025-05-24 14:40:54] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 14:40:54] First 3 materials | Array
+(
+    [0] => Array
+        (
+            [id] => 3
+            [name] => PLA Black
+            [default_code] => 000003
+            [list_price] => 0.12
+            [qty_available] => 55
+            [virtual_available] => 55
+        )
+
+    [1] => Array
+        (
+            [id] => 4
+            [name] => PLA Black Matte
+            [default_code] => 000004
+            [list_price] => 0.12
+            [qty_available] => 80
+            [virtual_available] => 80
+        )
+
+    [2] => Array
+        (
+            [id] => 9
+            [name] => PLA Blue 
+            [default_code] => 000009
+            [list_price] => 0.12
+            [qty_available] => 0
+            [virtual_available] => 0
+        )
+
+)
+
+[2025-05-24 14:40:54] Processing cart item | Array
+(
+    [id] => 1748098242989
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 14:40:54] Calculated weight | Array
+(
+    [grams] => 270.52839304614
+    [kg] => 0.27052839304614
+)
+
+[2025-05-24 14:43:28] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748098388447,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748098406169
+)
+
+[2025-05-24 14:43:28] Starting authentication with Odoo
+[2025-05-24 14:43:29] Authentication successful - UID: 7
+[2025-05-24 14:43:29] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 14:43:29] First 3 materials | Array
+(
+    [0] => Array
+        (
+            [id] => 3
+            [name] => PLA Black
+            [default_code] => 000003
+            [list_price] => 0.12
+            [qty_available] => 55
+            [virtual_available] => 55
+        )
+
+    [1] => Array
+        (
+            [id] => 4
+            [name] => PLA Black Matte
+            [default_code] => 000004
+            [list_price] => 0.12
+            [qty_available] => 80
+            [virtual_available] => 80
+        )
+
+    [2] => Array
+        (
+            [id] => 9
+            [name] => PLA Blue 
+            [default_code] => 000009
+            [list_price] => 0.12
+            [qty_available] => 0
+            [virtual_available] => 0
+        )
+
+)
+
+[2025-05-24 14:43:29] Processing cart item | Array
+(
+    [id] => 1748098388447
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 14:43:29] Calculated weight | Array
+(
+    [grams] => 270.52839304614
+    [kg] => 0.27052839304614
+)
+
+[2025-05-24 14:50:04] Odoo inventory update script started | Array
+(
+)
+
+[2025-05-24 14:54:05] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748099013376,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748099042913
+)
+
+[2025-05-24 14:54:05] Starting authentication with Odoo
+[2025-05-24 14:54:05] Authentication successful - UID: 7
+[2025-05-24 14:54:06] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 14:54:06] First 3 materials | Array
+(
+    [0] => Array
+        (
+            [id] => 3
+            [name] => PLA Black
+            [default_code] => 000003
+            [list_price] => 0.12
+            [qty_available] => 55
+            [virtual_available] => 55
+        )
+
+    [1] => Array
+        (
+            [id] => 4
+            [name] => PLA Black Matte
+            [default_code] => 000004
+            [list_price] => 0.12
+            [qty_available] => 80
+            [virtual_available] => 80
+        )
+
+    [2] => Array
+        (
+            [id] => 9
+            [name] => PLA Blue 
+            [default_code] => 000009
+            [list_price] => 0.12
+            [qty_available] => 0
+            [virtual_available] => 0
+        )
+
+)
+
+[2025-05-24 14:54:06] Processing cart item | Array
+(
+    [id] => 1748099013376
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 14:54:06] Calculated weight | Array
+(
+    [grams] => 270.52839304614
+    [kg] => 0.27052839304614
+)
+
+[2025-05-24 14:55:58] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748099149434,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748099156313
+)
+
+[2025-05-24 14:55:58] Starting authentication with Odoo
+[2025-05-24 14:56:00] Authentication successful - UID: 7
+[2025-05-24 14:56:01] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 14:56:01] First 3 materials | Array
+(
+    [0] => Array
+        (
+            [id] => 3
+            [name] => PLA Black
+            [default_code] => 000003
+            [list_price] => 0.12
+            [qty_available] => 55
+            [virtual_available] => 55
+        )
+
+    [1] => Array
+        (
+            [id] => 4
+            [name] => PLA Black Matte
+            [default_code] => 000004
+            [list_price] => 0.12
+            [qty_available] => 80
+            [virtual_available] => 80
+        )
+
+    [2] => Array
+        (
+            [id] => 9
+            [name] => PLA Blue 
+            [default_code] => 000009
+            [list_price] => 0.12
+            [qty_available] => 0
+            [virtual_available] => 0
+        )
+
+)
+
+[2025-05-24 14:56:01] Processing cart item | Array
+(
+    [id] => 1748099149434
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 14:56:01] Calculated weight | Array
+(
+    [grams] => 270.52839304614
+    [kg] => 0.27052839304614
+)
+
+[2025-05-24 14:56:01] Looking for material: PLA Yellow
+[2025-05-24 14:56:01] Found exact match: PLA Yellow 
+[2025-05-24 14:56:01] Simulating inventory update for material: PLA Yellow 
+[2025-05-24 14:56:01] Simulated update: Current qty: 50, Used: 0.27052839304614, New qty: 49.729471606954
+[2025-05-24 14:56:01] Successfully processed material update | Array
+(
+    [material] => PLA Yellow 
+    [used_weight] => 270.52839304614
+    [previous_qty] => 50
+    [new_qty] => 49.729471606954
+)
+
+[2025-05-24 14:56:01] Inventory update completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 11
+                    [materialName] => PLA Yellow 
+                    [usedWeight] => 270.52839304614
+                    [previousQuantity] => 50
+                    [newQuantity] => 49.729471606954
+                    [color] => #ffeb94
+                    [texture] => smooth
+                    [simulated] => 1
+                )
+
+        )
+
+    [processed_items] => 1
+    [total_items] => 1
+    [message] => Inventory tracking completed (simulated)
+)
+
+[2025-05-24 14:59:36] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748099366421,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase3.stl"}]
+    [orderNumber] => ORD_1748099374383
+)
+
+[2025-05-24 14:59:36] Starting authentication with Odoo
+[2025-05-24 14:59:37] Authentication successful - UID: 7
+[2025-05-24 14:59:37] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 14:59:37] First 3 materials | Array
+(
+    [0] => Array
+        (
+            [id] => 3
+            [name] => PLA Black
+            [default_code] => 000003
+            [list_price] => 0.12
+            [qty_available] => 55
+            [virtual_available] => 55
+        )
+
+    [1] => Array
+        (
+            [id] => 4
+            [name] => PLA Black Matte
+            [default_code] => 000004
+            [list_price] => 0.12
+            [qty_available] => 80
+            [virtual_available] => 80
+        )
+
+    [2] => Array
+        (
+            [id] => 9
+            [name] => PLA Blue 
+            [default_code] => 000009
+            [list_price] => 0.12
+            [qty_available] => 0
+            [virtual_available] => 0
+        )
+
+)
+
+[2025-05-24 14:59:37] Processing cart item | Array
+(
+    [id] => 1748099366421
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase3.stl
+)
+
+[2025-05-24 14:59:37] Calculated weight | Array
+(
+    [grams] => 270.52839304614
+    [kg] => 0.27052839304614
+)
+
+[2025-05-24 14:59:37] Looking for material: PLA Yellow
+[2025-05-24 14:59:37] Found exact match: PLA Yellow 
+[2025-05-24 14:59:37] REAL UPDATE: Updating material quantity | Array
+(
+    [material_id] => 11
+    [used_quantity_kg] => 0.27052839304614
+)
+
+[2025-05-24 14:59:38] REAL UPDATE: Current qty: 0, Used: 0.27052839304614, New qty: 0
+[2025-05-24 14:59:38] REAL UPDATE: Successfully created stock move | Array
+(
+    [success] => 1
+    [result] => Array
+        (
+            [jsonrpc] => 2.0
+            [id] => 897119
+            [error] => Array
+                (
+                    [code] => 0
+                    [message] => Odoo Server Error
+                    [data] => Array
+                        (
+                            [name] => builtins.TypeError
+                            [debug] => Traceback (most recent call last):
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2016, in _transactioning
+    return service_model.retrying(func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/service/model.py", line 161, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 1983, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2234, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/ir_http.py", line 340, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 745, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DataSet.call_kw() missing 1 required positional argument: 'kwargs'
+
+                            [message] => DataSet.call_kw() missing 1 required positional argument: 'kwargs'
+                            [arguments] => Array
+                                (
+                                    [0] => DataSet.call_kw() missing 1 required positional argument: 'kwargs'
+                                )
+
+                            [context] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+[2025-05-24 14:59:38] REAL UPDATE: Move confirmation result | Array
+(
+    [success] => 1
+    [result] => Array
+        (
+            [jsonrpc] => 2.0
+            [id] => 813070
+            [error] => Array
+                (
+                    [code] => 0
+                    [message] => Odoo Server Error
+                    [data] => Array
+                        (
+                            [name] => builtins.TypeError
+                            [debug] => Traceback (most recent call last):
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2016, in _transactioning
+    return service_model.retrying(func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/service/model.py", line 161, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 1983, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2234, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/ir_http.py", line 340, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 745, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DataSet.call_kw() missing 1 required positional argument: 'kwargs'
+
+                            [message] => DataSet.call_kw() missing 1 required positional argument: 'kwargs'
+                            [arguments] => Array
+                                (
+                                    [0] => DataSet.call_kw() missing 1 required positional argument: 'kwargs'
+                                )
+
+                            [context] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+[2025-05-24 14:59:38] REAL UPDATE: Successfully processed material update | Array
+(
+    [material] => PLA Yellow 
+    [used_weight] => 270.52839304614
+    [previous_qty] => 0
+    [new_qty] => 0
+    [method] => stock_move
+)
+
+[2025-05-24 14:59:38] Inventory update completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 11
+                    [materialName] => PLA Yellow 
+                    [usedWeight] => 270.52839304614
+                    [previousQuantity] => 0
+                    [newQuantity] => 0
+                    [color] => #ffeb94
+                    [texture] => smooth
+                    [real_update] => 1
+                    [method] => stock_move
+                )
+
+        )
+
+    [processed_items] => 1
+    [total_items] => 1
+    [message] => REAL inventory updates completed successfully
+)
+
+[2025-05-24 15:03:12] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748099582725,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748099589948
+)
+
+[2025-05-24 15:03:12] Starting authentication with Odoo
+[2025-05-24 15:03:14] Authentication successful - UID: 7
+[2025-05-24 15:03:14] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 15:03:14] First 3 materials | Array
+(
+    [0] => Array
+        (
+            [id] => 3
+            [name] => PLA Black
+            [default_code] => 000003
+            [list_price] => 0.12
+            [qty_available] => 55
+            [virtual_available] => 55
+        )
+
+    [1] => Array
+        (
+            [id] => 4
+            [name] => PLA Black Matte
+            [default_code] => 000004
+            [list_price] => 0.12
+            [qty_available] => 80
+            [virtual_available] => 80
+        )
+
+    [2] => Array
+        (
+            [id] => 9
+            [name] => PLA Blue 
+            [default_code] => 000009
+            [list_price] => 0.12
+            [qty_available] => 0
+            [virtual_available] => 0
+        )
+
+)
+
+[2025-05-24 15:03:14] Processing cart item | Array
+(
+    [id] => 1748099582725
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 15:03:14] Calculated weight | Array
+(
+    [grams] => 270.52839304614
+    [kg] => 0.27052839304614
+)
+
+[2025-05-24 15:03:14] Looking for material: PLA Yellow
+[2025-05-24 15:03:14] Found exact match: PLA Yellow 
+[2025-05-24 15:03:14] REAL UPDATE: Updating material quantity | Array
+(
+    [material_id] => 11
+    [used_quantity_kg] => 0.27052839304614
+)
+
+[2025-05-24 15:03:15] Failed to get current quantity | Array
+(
+    [success] => 1
+    [result] => Array
+        (
+            [jsonrpc] => 2.0
+            [id] => 860317
+            [error] => Array
+                (
+                    [code] => 0
+                    [message] => Odoo Server Error
+                    [data] => Array
+                        (
+                            [name] => builtins.TypeError
+                            [debug] => Traceback (most recent call last):
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2016, in _transactioning
+    return service_model.retrying(func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/service/model.py", line 161, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 1983, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2234, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/ir_http.py", line 340, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 745, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DataSet.call_kw() missing 1 required positional argument: 'kwargs'
+
+                            [message] => DataSet.call_kw() missing 1 required positional argument: 'kwargs'
+                            [arguments] => Array
+                                (
+                                    [0] => DataSet.call_kw() missing 1 required positional argument: 'kwargs'
+                                )
+
+                            [context] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+[2025-05-24 15:03:15] REAL UPDATE: Successfully processed material update | Array
+(
+    [material] => PLA Yellow 
+    [used_weight] => 270.52839304614
+    [previous_qty] => 
+    [new_qty] => 
+    [method] => stock_move
+)
+
+[2025-05-24 15:03:15] Inventory update completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 11
+                    [materialName] => PLA Yellow 
+                    [usedWeight] => 270.52839304614
+                    [previousQuantity] => 
+                    [newQuantity] => 
+                    [color] => #ffeb94
+                    [texture] => smooth
+                    [real_update] => 
+                    [method] => stock_move
+                )
+
+        )
+
+    [processed_items] => 1
+    [total_items] => 1
+    [message] => REAL inventory updates completed successfully
+)
+
+[2025-05-24 15:06:51] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748099802131,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748099809402
+)
+
+[2025-05-24 15:06:51] Starting authentication with Odoo
+[2025-05-24 15:06:52] Authentication successful - UID: 7
+[2025-05-24 15:06:52] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 15:06:52] First 3 materials | Array
+(
+    [0] => Array
+        (
+            [id] => 3
+            [name] => PLA Black
+            [default_code] => 000003
+            [list_price] => 0.12
+            [qty_available] => 55
+            [virtual_available] => 55
+        )
+
+    [1] => Array
+        (
+            [id] => 4
+            [name] => PLA Black Matte
+            [default_code] => 000004
+            [list_price] => 0.12
+            [qty_available] => 80
+            [virtual_available] => 80
+        )
+
+    [2] => Array
+        (
+            [id] => 9
+            [name] => PLA Blue 
+            [default_code] => 000009
+            [list_price] => 0.12
+            [qty_available] => 0
+            [virtual_available] => 0
+        )
+
+)
+
+[2025-05-24 15:06:52] Processing cart item | Array
+(
+    [id] => 1748099802131
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 15:06:52] Calculated weight | Array
+(
+    [grams] => 270.52839304614
+    [kg] => 0.27052839304614
+)
+
+[2025-05-24 15:06:52] Looking for material: PLA Yellow
+[2025-05-24 15:06:52] Found exact match: PLA Yellow 
+[2025-05-24 15:06:52] REAL UPDATE: Updating material quantity - Direct Approach | Array
+(
+    [material_id] => 11
+    [used_quantity_kg] => 0.27052839304614
+)
+
+[2025-05-24 15:06:53] Trying inventory adjustment method
+[2025-05-24 15:06:53] Created inventory adjustment | Array
+(
+    [inventory_id] => 
+)
+
+[2025-05-24 15:06:53] REAL UPDATE: All methods failed, logging usage for manual adjustment
+[2025-05-24 15:06:53] REAL UPDATE: Failed to update material | Array
+(
+    [material] => PLA Yellow 
+    [error] => Unable to update inventory automatically - logged for manual adjustment
+)
+
+[2025-05-24 15:06:53] Inventory update completed | Array
+(
+    [success] => 
+    [updates] => Array
+        (
+        )
+
+    [processed_items] => 0
+    [total_items] => 1
+    [message] => Some items could not be processed: Failed to update PLA Yellow : Unable to update inventory automatically - logged for manual adjustment
+    [errors] => Array
+        (
+            [0] => Failed to update PLA Yellow : Unable to update inventory automatically - logged for manual adjustment
+        )
+
+)
+
+[2025-05-24 15:21:35] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748100669851,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748100693457
+)
+
+[2025-05-24 15:21:35] Starting authentication with Odoo
+[2025-05-24 15:21:38] Authentication failed | Array
+(
+    [jsonrpc] => 2.0
+    [id] => 968906
+    [error] => Array
+        (
+            [code] => 0
+            [message] => Odoo Server Error
+            [data] => Array
+                (
+                    [name] => odoo.exceptions.AccessDenied
+                    [debug] => Traceback (most recent call last):
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2016, in _transactioning
+    return service_model.retrying(func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/service/model.py", line 161, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 1983, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 2234, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/ir_http.py", line 340, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 745, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/addons/web/controllers/session.py", line 46, in authenticate
+    auth_info = request.session.authenticate(env, credential)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/http.py", line 1100, in authenticate
+    auth_info = env['res.users'].authenticate(credential, wsgienv)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/addons/auth_totp_mail/models/res_users.py", line 51, in authenticate
+    auth_info = super().authenticate(credential, user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/res_users.py", line 757, in authenticate
+    auth_info = self._login(credential, user_agent_env=user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/custom/trial/saas_trial/models/res_users.py", line 382, in _login
+    auth_info = super()._login(credential, user_agent_env=user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/res_users.py", line 728, in _login
+    auth_info = user._check_credentials(credential, user_agent_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/custom/trial/saas_trial/models/res_users.py", line 315, in _check_credentials
+    raise access_denied
+  File "/home/odoo/src/custom/trial/saas_trial/models/res_users.py", line 227, in _check_credentials
+    return super(ResUsers, self)._check_credentials(credential, env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo/src/odoo/saas-18.2/odoo/addons/base/models/res_users.py", line 369, in _check_credentials
+    raise AccessDenied()
+odoo.exceptions.AccessDenied: Access Denied
+
+                    [message] => Access Denied
+                    [arguments] => Array
+                        (
+                            [0] => Access Denied
+                        )
+
+                    [context] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+[2025-05-24 15:33:25] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748101397000,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748101403487
+)
+
+[2025-05-24 15:33:25] Starting authentication with Odoo
+[2025-05-24 15:33:26] Authentication successful - UID: 7
+[2025-05-24 15:33:26] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 15:33:26] First 3 materials | Array
+(
+    [0] => Array
+        (
+            [id] => 3
+            [name] => PLA Black
+            [default_code] => 000003
+            [list_price] => 0.12
+            [qty_available] => 55
+            [virtual_available] => 55
+        )
+
+    [1] => Array
+        (
+            [id] => 4
+            [name] => PLA Black Matte
+            [default_code] => 000004
+            [list_price] => 0.12
+            [qty_available] => 80
+            [virtual_available] => 80
+        )
+
+    [2] => Array
+        (
+            [id] => 9
+            [name] => PLA Blue 
+            [default_code] => 000009
+            [list_price] => 0.12
+            [qty_available] => 0
+            [virtual_available] => 0
+        )
+
+)
+
+[2025-05-24 15:33:26] Processing cart item | Array
+(
+    [id] => 1748101397000
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 15:33:26] Calculated weight | Array
+(
+    [grams] => 270.52839304614
+    [kg] => 0.27052839304614
+)
+
+[2025-05-24 15:33:26] Looking for material: PLA Yellow
+[2025-05-24 15:33:26] Found exact match: PLA Yellow
+[2025-05-24 15:33:26] USAGE TRACKING: Material usage logged | Array
+(
+    [material_id] => 11
+    [material_name] => PLA Yellow
+    [used_quantity_kg] => 0.27052839304614
+    [current_quantity] => 50
+    [action_needed] => Manual adjustment required in Odoo
+)
+
+[2025-05-24 15:33:26] Successfully logged material usage | Array
+(
+    [material] => PLA Yellow
+    [used_weight] => 270.52839304614
+    [needs_manual_adjustment] => 1
+)
+
+[2025-05-24 15:33:26] Inventory update completed | Array
+(
+    [success] => 1
+    [updates] => Array
+        (
+            [0] => Array
+                (
+                    [materialId] => 11
+                    [materialName] => PLA Yellow
+                    [usedWeight] => 270.52839304614
+                    [previousQuantity] => 50
+                    [newQuantity] => 49.729471606954
+                    [color] => #ffeb94
+                    [texture] => smooth
+                    [real_update] => 
+                    [method] => usage_logged
+                    [manual_adjustment_needed] => 1
+                )
+
+        )
+
+    [processed_items] => 1
+    [total_items] => 1
+    [message] => Material usage logged - manual adjustment needed in Odoo
+)
+
+[2025-05-24 15:37:00] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748101610102,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748101618056
+)
+
+[2025-05-24 15:37:00] Starting authentication with Odoo
+[2025-05-24 15:37:01] Authentication successful - UID: 7
+[2025-05-24 15:37:01] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 15:37:01] First 3 materials | Array
+(
+    [0] => Array
+        (
+            [id] => 3
+            [name] => PLA Black
+            [default_code] => 000003
+            [list_price] => 0.12
+            [qty_available] => 55
+            [virtual_available] => 55
+        )
+
+    [1] => Array
+        (
+            [id] => 4
+            [name] => PLA Black Matte
+            [default_code] => 000004
+            [list_price] => 0.12
+            [qty_available] => 80
+            [virtual_available] => 80
+        )
+
+    [2] => Array
+        (
+            [id] => 9
+            [name] => PLA Blue 
+            [default_code] => 000009
+            [list_price] => 0.12
+            [qty_available] => 0
+            [virtual_available] => 0
+        )
+
+)
+
+[2025-05-24 15:37:01] Processing cart item | Array
+(
+    [id] => 1748101610102
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 15:37:01] Calculated weight | Array
+(
+    [grams] => 270.52839304614
+    [kg] => 0.27052839304614
+)
+
+[2025-05-24 15:37:01] Looking for material: PLA Yellow
+[2025-05-24 15:37:01] Found exact match: PLA Yellow
+[2025-05-24 15:54:03] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748102641308,"height":15,"width":15,"color":"#f14a4a","texture":"smooth","price":25,"model":"models/vase1.stl"}]
+)
+
+[2025-05-24 15:54:03] Starting authentication with Odoo
+[2025-05-24 15:54:04] Authentication successful - UID: 7
+[2025-05-24 15:54:04] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 15:54:04] Processing cart item | Array
+(
+    [id] => 1748102641308
+    [height] => 15
+    [width] => 15
+    [color] => #f14a4a
+    [texture] => smooth
+    [price] => 25
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 15:54:04] Attempting to update material quantity | Array
+(
+    [material_id] => 5
+    [used_quantity_kg] => 0.27052839304614
+)
+
+[2025-05-24 15:54:04] Failed to get current quantity
+[2025-05-24 15:54:04] Inventory update completed | Array
+(
+    [success] => 
+    [updates] => Array
+        (
+        )
+
+    [processed_items] => 0
+    [total_items] => 1
+    [message] => Failed to process items: Failed to update PLA Red : Failed to get current quantity
+    [errors] => Array
+        (
+            [0] => Failed to update PLA Red : Failed to get current quantity
+        )
+
+)
+
+[2025-05-24 15:54:11] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748102649447,"height":15,"width":15,"color":"#f14a4a","texture":"smooth","price":25,"model":"models/vase1.stl"}]
+)
+
+[2025-05-24 15:54:11] Starting authentication with Odoo
+[2025-05-24 15:54:12] Authentication successful - UID: 7
+[2025-05-24 15:54:12] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 15:54:12] Processing cart item | Array
+(
+    [id] => 1748102649447
+    [height] => 15
+    [width] => 15
+    [color] => #f14a4a
+    [texture] => smooth
+    [price] => 25
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 15:54:12] Attempting to update material quantity | Array
+(
+    [material_id] => 5
+    [used_quantity_kg] => 0.27052839304614
+)
+
+[2025-05-24 15:54:13] Failed to get current quantity
+[2025-05-24 15:54:13] Inventory update completed | Array
+(
+    [success] => 
+    [updates] => Array
+        (
+        )
+
+    [processed_items] => 0
+    [total_items] => 1
+    [message] => Failed to process items: Failed to update PLA Red : Failed to get current quantity
+    [errors] => Array
+        (
+            [0] => Failed to update PLA Red : Failed to get current quantity
+        )
+
+)
+
+[2025-05-24 15:58:31] Odoo inventory update script started | Array
+(
+    [cartItems] => [{"id":1748102901807,"height":15,"width":15,"color":"#ffeb94","colorName":"צהוב","texture":"smooth","price":99.5,"model":"models/vase1.stl"}]
+    [orderNumber] => ORD_1748102908740
+)
+
+[2025-05-24 15:58:31] Starting authentication with Odoo
+[2025-05-24 15:58:31] Authentication successful - UID: 7
+[2025-05-24 15:58:32] Fetched materials from Odoo | Array
+(
+    [count] => 20
+)
+
+[2025-05-24 15:58:32] First 3 materials | Array
+(
+    [0] => Array
+        (
+            [id] => 3
+            [name] => PLA Black
+            [default_code] => 000003
+            [list_price] => 0.12
+            [qty_available] => 55
+            [virtual_available] => 55
+        )
+
+    [1] => Array
+        (
+            [id] => 4
+            [name] => PLA Black Matte
+            [default_code] => 000004
+            [list_price] => 0.12
+            [qty_available] => 80
+            [virtual_available] => 80
+        )
+
+    [2] => Array
+        (
+            [id] => 9
+            [name] => PLA Blue 
+            [default_code] => 000009
+            [list_price] => 0.12
+            [qty_available] => 0
+            [virtual_available] => 0
+        )
+
+)
+
+[2025-05-24 15:58:32] Processing cart item | Array
+(
+    [id] => 1748102901807
+    [height] => 15
+    [width] => 15
+    [color] => #ffeb94
+    [colorName] => צהוב
+    [texture] => smooth
+    [price] => 99.5
+    [model] => models/vase1.stl
+)
+
+[2025-05-24 15:58:32] Calculated weight | Array
+(
+    [grams] => 270.52839304614
+    [kg] => 0.27052839304614
+)
+
+[2025-05-24 15:58:32] Looking for material: PLA Yellow
+[2025-05-24 15:58:32] Found exact match: PLA Yellow
+[2025-05-24 15:58:32] REAL UPDATE: Attempting to update material quantity | Array
+(
+    [material_id] => 11
+    [used_quantity_kg] => 0.27052839304614
+)
+
+[2025-05-24 15:58:32] Trying stock inventory adjustment method
+[2025-05-24 15:58:32] REAL UPDATE: All automatic methods failed, logging for manual adjustment
+[2025-05-24 15:58:32] Failed to update inventory | Array
+(
+    [material] => PLA Yellow
+    [error] => Could not update inventory automatically - manual adjustment needed
+)
+
+[2025-05-24 15:58:32] Inventory update completed | Array
+(
+    [success] => 
+    [updates] => Array
+        (
+        )
+
+    [processed_items] => 0
+    [total_items] => 1
+    [message] => Some items could not be processed: Failed to update PLA Yellow: Could not update inventory automatically - manual adjustment needed
+    [errors] => Array
+        (
+            [0] => Failed to update PLA Yellow: Could not update inventory automatically - manual adjustment needed
+        )
+
+)
+

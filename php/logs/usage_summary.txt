@@ -1,0 +1,40 @@
+[2025-05-24 16:23:05] Used 696.88028034392 g (0.697 kg) of PLA Yellow for order by order_20250524162305
+[2025-05-24 17:11:21] Used 696.88028034392 g (0.697 kg) of PLA Yellow for order by order_20250524171121
+[2025-05-25 06:40:01] Used 696.88028034392 g (0.697 kg) of PLA Green for order by order_20250525064001
+[2025-05-25 17:13:05] Used 696.88028034392 g (0.697 kg) of PLA Purple for order by order_20250525171305
+[2025-05-25 17:13:07] Used 696.88028034392 g (0.697 kg) of PLA Purple for order by order_20250525171307
+[2025-05-25 17:14:38] Used 696.88028034392 g (0.697 kg) of PLA Green for order by order_20250525171438
+[2025-05-25 17:14:38] Used 696.88028034392 g (0.697 kg) of PLA Green for order by order_20250525171438
+[2025-05-25 18:23:50] Used 696.88028034392 g (0.697 kg) of PLA Purple for order by order_20250525182350
+[2025-05-25 18:23:50] Used 696.88028034392 g (0.697 kg) of PLA Purple for order by order_20250525182350
+[2025-05-25 18:28:14] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525182814
+[2025-05-25 18:28:16] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525182816
+[2025-05-25 18:28:16] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525182816
+[2025-05-25 18:29:19] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525182919
+[2025-05-25 18:29:19] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525182919
+[2025-05-25 18:29:20] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525182920
+[2025-05-25 18:34:18] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525183418
+[2025-05-25 18:57:19] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525185719
+[2025-05-25 18:57:21] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525185721
+[2025-05-25 18:57:21] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525185721
+[2025-05-25 18:57:29] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525185729
+[2025-05-25 18:57:29] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525185729
+[2025-05-25 18:57:29] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525185729
+[2025-05-25 19:45:08] Used 696.88028034392 g (0.697 kg) of PLA Black Matte for order by order_20250525194508
+[2025-05-25 19:45:08] Used 696.88028034392 g (0.697 kg) of PLA Black Matte for order by order_20250525194508
+[2025-05-25 19:45:10] Used 696.88028034392 g (0.697 kg) of PLA Black Matte for order by order_20250525194510
+[2025-05-25 19:57:41] Used 696.88028034392 g (0.697 kg) of PLA Black Matte for order by order_20250525195741
+[2025-05-25 19:57:41] Used 696.88028034392 g (0.697 kg) of PLA Black Matte for order by order_20250525195741
+[2025-05-25 19:57:41] Used 696.88028034392 g (0.697 kg) of PLA Black Matte for order by order_20250525195741
+[2025-05-25 20:10:50] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525201050
+[2025-05-25 20:10:50] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525201050
+[2025-05-25 20:10:50] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525201050
+[2025-05-25 20:10:58] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525201058
+[2025-05-25 20:10:58] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525201058
+[2025-05-25 20:10:58] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525201058
+[2025-05-25 20:15:30] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525201530
+[2025-05-25 20:15:30] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525201530
+[2025-05-25 20:15:30] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525201530
+[2025-05-25 20:25:47] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525202547
+[2025-05-25 20:26:18] Used 696.88028034392 g (0.697 kg) of PLA Black for order by order_20250525202618
+[2025-05-28 11:55:34] Used 904.08871358094 g (0.904 kg) of PLA Red  for order by order_20250528115534
