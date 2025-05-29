@@ -11,16 +11,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// NEW: Check Admin Session - for protecting admin pages
 if (isset($_GET['checkAdminSession']) && $_GET['checkAdminSession'] == 1) {
     try {
-        // Check if session indicates admin user
         if (!isset($_SESSION['is_admin']) || !isset($_SESSION['user_email']) || $_SESSION['is_admin'] !== true) {
             echo 'not_authenticated';
             exit;
         }
         
-        // Double-check in database that user is still admin
         $email = $_SESSION['user_email'];
         $stmt = $conn->prepare("SELECT type FROM users WHERE email = ?");
         
@@ -38,12 +35,10 @@ if (isset($_GET['checkAdminSession']) && $_GET['checkAdminSession'] == 1) {
             if ($userData['type'] === 'Admin') {
                 echo 'authenticated_admin';
             } else {
-                // User exists but is not admin
                 session_destroy();
                 echo 'not_admin';
             }
         } else {
-            // User not found in database
             session_destroy();
             echo 'user_not_found';
         }
@@ -59,7 +54,6 @@ if (isset($_GET['checkAdminSession']) && $_GET['checkAdminSession'] == 1) {
     exit;
 }
 
-// Get User Info - for filling forms
 if (isset($_GET['getUser']) && $_GET['getUser'] == 1) {
     if (isset($_SESSION['user_email'])) {
         $email = $_SESSION['user_email'];
@@ -76,7 +70,6 @@ if (isset($_GET['getUser']) && $_GET['getUser'] == 1) {
     exit;
 }
 
-// Get User Orders
 if (isset($_GET['getOrders']) && $_GET['getOrders'] == 1) {
     header('Content-Type: application/json');
     if (isset($_SESSION['user_email'])) {
@@ -97,7 +90,6 @@ if (isset($_GET['getOrders']) && $_GET['getOrders'] == 1) {
     exit;
 }
 
-// ADMIN LOGIN - Handle admin authentication
 if (isset($_POST['isAdminLogin']) && $_POST['isAdminLogin'] == 1) {
     $email = trim($_POST['email'] ?? '');
     $password = trim($_POST['password'] ?? '');
@@ -124,7 +116,6 @@ if (isset($_POST['isAdminLogin']) && $_POST['isAdminLogin'] == 1) {
         $user = $result->fetch_assoc();
         
         if ($user['type'] === 'Admin') {
-            // SUCCESS - User is admin
             $_SESSION['user_email'] = $email;
             $_SESSION['is_admin'] = true;
             $_SESSION['user_id'] = $user['user_id'];
@@ -132,11 +123,9 @@ if (isset($_POST['isAdminLogin']) && $_POST['isAdminLogin'] == 1) {
             
             echo "admin_success";
         } else {
-            // User exists but is not admin
             echo "not_admin";
         }
     } else {
-        // Invalid credentials
         echo "fail";
     }
     
@@ -145,7 +134,6 @@ if (isset($_POST['isAdminLogin']) && $_POST['isAdminLogin'] == 1) {
     exit;
 }
 
-// REGULAR USER LOGIN - Handle regular user authentication
 if (!isset($_POST['isAdminLogin']) && isset($_POST['email']) && isset($_POST['password'])) {
     $email = trim($_POST['email'] ?? '');
     $password = trim($_POST['password'] ?? '');
@@ -177,14 +165,13 @@ if (!isset($_POST['isAdminLogin']) && isset($_POST['email']) && isset($_POST['pa
     exit;
 }
 
-// GET ORDER DETAILS - for order management
 if (isset($_GET['getOrderDetails'])) {
     header('Content-Type: application/json');
     
     $orderNumber = $_GET['getOrderDetails'];
     
     try {
-        // Get main order details
+        
         $stmt = $conn->prepare("SELECT * FROM orders WHERE order_number = ?");
         if (!$stmt) {
             throw new Exception("Query preparation failed: " . $conn->error);
@@ -203,7 +190,6 @@ if (isset($_GET['getOrderDetails'])) {
         
         $orderData = $result->fetch_assoc();
         
-        // Get order models/items
         $modelStmt = $conn->prepare("
             SELECT om.order_id, om.model_id, m.model_number, m.height, m.width, m.color, m.texture
             FROM order_models om
@@ -211,38 +197,62 @@ if (isset($_GET['getOrderDetails'])) {
             WHERE om.order_id = ?
         ");
         
-        if (!$modelStmt) {
-            throw new Exception("Model query preparation failed: " . $conn->error);
-        }
-        
-        $modelStmt->bind_param("i", $orderNumber);
-        if (!$modelStmt->execute()) {
-            throw new Exception("Model query execution failed: " . $modelStmt->error);
-        }
-        
-        $modelResult = $modelStmt->get_result();
         $models = [];
         
-        while ($modelRow = $modelResult->fetch_assoc()) {
-            // Ensure heights and widths are integers
-            if (isset($modelRow['height'])) {
-                $modelRow['height'] = (int)$modelRow['height'];
-            }
-            if (isset($modelRow['width'])) {
-                $modelRow['width'] = (int)$modelRow['width'];
-            }
-            
-            // Ensure model path is correctly formatted
-            if (isset($modelRow['model_number']) && !empty($modelRow['model_number'])) {
-                if (!strstr($modelRow['model_number'], 'models/')) {
-                    $modelRow['model_number'] = 'models/' . $modelRow['model_number'];
+        if ($modelStmt) {
+            $modelStmt->bind_param("i", $orderNumber);
+            if ($modelStmt->execute()) {
+                $modelResult = $modelStmt->get_result();
+                
+                while ($modelRow = $modelResult->fetch_assoc()) {
+                    if (isset($modelRow['height'])) {
+                        $modelRow['height'] = (int)$modelRow['height'];
+                    }
+                    if (isset($modelRow['width'])) {
+                        $modelRow['width'] = (int)$modelRow['width'];
+                    }
+                    
+                    if (isset($modelRow['model_number']) && !empty($modelRow['model_number'])) {
+                        if (!strstr($modelRow['model_number'], 'models/')) {
+                            $modelRow['model_number'] = 'models/' . $modelRow['model_number'];
+                        }
+                        if (!strstr($modelRow['model_number'], '.stl')) {
+                            $modelRow['model_number'] = $modelRow['model_number'] . '.stl';
+                        }
+                    }
+                    
+                    $models[] = $modelRow;
                 }
-                if (!strstr($modelRow['model_number'], '.stl')) {
-                    $modelRow['model_number'] = $modelRow['model_number'] . '.stl';
+            }
+        }
+        
+        if (empty($models)) {
+            $cartItemsFile = __DIR__ . '/logs/order_' . $orderNumber . '_items.json';
+            if (file_exists($cartItemsFile)) {
+                $cartItemsJson = file_get_contents($cartItemsFile);
+                $cartItems = json_decode($cartItemsJson, true);
+                
+                if ($cartItems && is_array($cartItems)) {
+                    foreach ($cartItems as $item) {
+                        $modelPath = $item['model'] ?? 'models/vase1.stl';
+                        
+                        if (!strstr($modelPath, 'models/')) {
+                            $modelPath = 'models/' . $modelPath;
+                        }
+                        if (!strstr($modelPath, '.stl')) {
+                            $modelPath = $modelPath . '.stl';
+                        }
+                        
+                        $models[] = [
+                            'model_number' => $modelPath,
+                            'height' => intval($item['height'] ?? 15),
+                            'width' => intval($item['width'] ?? 15),
+                            'color' => $item['color'] ?? '#f14a4a',
+                            'texture' => $item['texture'] ?? 'smooth'
+                        ];
+                    }
                 }
             }
-            
-            $models[] = $modelRow;
         }
         
         $orderData['models'] = $models;
