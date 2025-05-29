@@ -152,10 +152,57 @@ try {
             if (!$stmt->execute()) {
                 throw new Exception("Execute failed: " . $stmt->error);
             }
+
             
             $orderNumber = $conn->insert_id;
             write_log("Main order inserted", ['order_number' => $orderNumber]);
             
+            foreach ($cartItemsArray as $item) {
+                $modelStmt = $conn->prepare("
+                    INSERT INTO models (model_number, height, width, color, texture) 
+                    VALUES (?, ?, ?, ?, ?)
+                    ON DUPLICATE KEY UPDATE 
+                    height = VALUES(height), 
+                    width = VALUES(width), 
+                    color = VALUES(color), 
+                    texture = VALUES(texture)
+                ");
+                
+                $modelPath = $item['model'] ?? 'models/vase1.stl';
+                $height = intval($item['height'] ?? 15);
+                $width = intval($item['width'] ?? 15);
+                $color = $item['color'] ?? '#f14a4a';
+                $texture = $item['texture'] ?? 'smooth';
+                
+                $modelStmt->bind_param("siiss", $modelPath, $height, $width, $color, $texture);
+                $modelStmt->execute();
+                
+                $modelId = $conn->insert_id;
+                if ($modelId == 0) {
+                    $result = $conn->query("SELECT model_id FROM models WHERE model_number = '" . $conn->real_escape_string($modelPath) . "'");
+                    if ($result && $row = $result->fetch_row()) {
+                        $modelId = $row[0];
+                    }
+                }
+                
+                $orderModelStmt = $conn->prepare("
+                    INSERT INTO order_models (order_id, model_id) 
+                    VALUES (?, ?)
+                ");
+                
+                $orderModelStmt->bind_param("ii", $orderNumber, $modelId);
+                $orderModelStmt->execute();
+                
+                write_log("Added model to order", [
+                    'order_number' => $orderNumber,
+                    'model_id' => $modelId,
+                    'model_path' => $modelPath,
+                    'height' => $height,
+                    'width' => $width,
+                    'color' => $color,
+                    'texture' => $texture
+                ]);
+            }
             
             $cartItemsJson = json_encode($cartItemsArray, JSON_PRETTY_PRINT);
             $cartItemsFile = __DIR__ . '/logs/order_' . $orderNumber . '_items.json';
