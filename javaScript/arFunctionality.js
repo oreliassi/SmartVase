@@ -147,32 +147,79 @@ function startARWithCamera() {
     }
 }
 
-function startARWithImage(imageURL) {
+function startARWithImage(file) {
+    console.log("Starting AR with image file:", file.name);
     $('#ar-container').show();
 
     const arContainer = `
-       <div id="ar-image-container" >
-            <img id="ar-image" src="${imageURL}" >
-        
-        <div id="ar-pot-container"></div>
-        <div id="ar-instructions" >גרור את הכד למיקום הרצוי</div>
-        <canvas id="ar-canvas" ></canvas>
+        <div id="ar-image-container">
+            <img id="ar-image" style="width: 100%; height: 100%; object-fit: cover; display: block;" crossorigin="anonymous">
+            <div id="ar-pot-container"></div>
+            <div id="ar-instructions">גרור את הכד למיקום הרצוי</div>
+            <canvas id="ar-canvas" style="display: none;"></canvas>
+        </div>
     `;
 
     $('#ar-canvas-container').html(arContainer);
-    
     setupARControls();
 
-    $('#ar-image').on('load', function () {
-        setTimeout(function () {
-            addPotToAREnvironment();
-        }, 500);
-    });
-
-    setTimeout(function () {
-        $('#ar-instructions').fadeOut();
-    }, 5000);
+    const reader = new FileReader();
+    
+    reader.onload = function(e) {
+        console.log("FileReader loaded successfully");
+        const imageElement = document.getElementById('ar-image');
+        
+        imageElement.onload = function() {
+            console.log("Image loaded successfully, dimensions:", this.naturalWidth, "x", this.naturalHeight);
+            setTimeout(function() {
+                addPotToAREnvironment();
+            }, 500);
+            
+            setTimeout(function() {
+                $('#ar-instructions').fadeOut();
+            }, 3000);
+        };
+        
+        imageElement.onerror = function() {
+            console.error("Failed to load image");
+            alert("שגיאה בטעינת התמונה - נסה תמונה אחרת");
+        };
+        
+        imageElement.src = e.target.result;
+    };
+    
+    reader.onerror = function() {
+        console.error("FileReader error");
+        alert("שגיאה בקריאת הקובץ");
+    };
+    
+    reader.readAsDataURL(file);
 }
+
+$(document).on('change', '#image-upload', function(event) {
+    console.log("Image upload triggered");
+    
+    if (event.target.files.length > 0) {
+        const file = event.target.files[0];
+        console.log("File selected:", file.name, "Size:", file.size, "Type:", file.type);
+        
+        if (!file.type.startsWith('image/')) {
+            alert("אנא בחר קובץ תמונה בלבד");
+            return;
+        }
+        
+        if (file.size > 10 * 1024 * 1024) {
+            alert("קובץ התמונה גדול מדי. אנא בחר תמונה קטנה יותר");
+            return;
+        }
+        
+        closeARSubmenu();
+        
+        setTimeout(function() {
+            startARWithImage(file);
+        }, 300);
+    }
+});
 
 function addPotToAREnvironment() {
   showLoadingSpinner();
@@ -340,8 +387,19 @@ function makeARPotDraggable(element) {
         const moveX = (deltaX / screenWidth) * moveFactor;
         const moveY = -(deltaY / screenHeight) * moveFactor;
         
-        threePot.position.x = startPosition.x + moveX;
-        threePot.position.y = startPosition.y + moveY;
+        let newX = startPosition.x + moveX;
+        let newY = startPosition.y + moveY;
+        
+        const maxX = 2.2;
+        const minX = -2.2;
+        const maxY = 0.8;
+        const minY = -1.8;
+        
+        newX = Math.max(minX, Math.min(maxX, newX));
+        newY = Math.max(minY, Math.min(maxY, newY));
+        
+        threePot.position.x = newX;
+        threePot.position.y = newY;
     });
     
     $(document).on('mouseup.arDrag touchend.arDrag', function() {
